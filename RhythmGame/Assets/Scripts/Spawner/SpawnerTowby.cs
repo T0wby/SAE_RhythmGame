@@ -7,19 +7,27 @@ public class SpawnerTowby : MonoBehaviour
 {
     [SerializeField] private GameObject _target;
     [SerializeField] private float _spawntimer = 2f;
+    [SerializeField] private float _startOffsetTimer = 2f;
     [SerializeField] private GameObject _button;
     private GameObject _newButton;
+    private float _timer;
+    private Coroutine _lastCoroutine;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(SpawnButton());
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_timer < _startOffsetTimer)
+        {
+            _timer += Time.deltaTime;
+        }
+        else
+        {
+            if (_lastCoroutine == null)
+            {
+                _lastCoroutine = StartCoroutine(SpawnButton());
+            }
+        }
     }
 
     IEnumerator SpawnButton()

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class HitLineTowby : MonoBehaviour
@@ -21,7 +20,9 @@ public class HitLineTowby : MonoBehaviour
         {
             if (buttons.Count > 0)
             {
+                Debug.Log("Pressed");
                 buttons[0].gameObject.SetActive(false);
+                buttons.Remove(buttons[0]);
             }
         }
     }
@@ -31,6 +32,7 @@ public class HitLineTowby : MonoBehaviour
         tmp = other.gameObject.GetComponent<ButtonTowby>();
         if (tmp != null)
         {
+            Debug.Log($"Added {tmp.name}");
             buttons.Add(tmp);
         }
     }

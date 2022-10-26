@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonTowby : MonoBehaviour
 {
     private GameObject _target;
-    private float _travelTime = 10f;
+    private float _travelTime = 20f;
 
 
     public GameObject Target { get => _target; set => _target = value; }
