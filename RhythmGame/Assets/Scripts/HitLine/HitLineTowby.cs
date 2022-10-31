@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class HitLineTowby : MonoBehaviour
 {
-    private List<ButtonTowby> buttons;
-    private ButtonTowby tmp;
+    private List<AButton> buttons;
+    private AButton tmp;
 
     // Start is called before the first frame update
     void Start()
     {
-        buttons = new List<ButtonTowby>();
+        buttons = new List<AButton>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class HitLineTowby : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        tmp = other.gameObject.GetComponent<ButtonTowby>();
+        tmp = other.gameObject.GetComponent<AButton>();
         if (tmp != null)
         {
             Debug.Log($"Added {tmp.name}");
@@ -39,7 +39,7 @@ public class HitLineTowby : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        tmp = other.gameObject.GetComponent<ButtonTowby>();
+        tmp = other.gameObject.GetComponent<AButton>();
         if (tmp != null)
         {
             buttons.Remove(tmp);
