@@ -6,20 +6,17 @@ namespace AudioManaging
 {
     public enum ESources
     {
-        PLAYER,
-        ENEMY1,
-        ENEMY2,
-        ENVIRONMENT,
-        OTHER,
+        KEY,
         MENU,
+        LEVEL,
+        BUTTON
     } 
     public enum ESoundTypes
     {
-        WALK,
-        JUMP,
-        ATTACK1,
-        ATTACK2,
-        CLICK,
+        HOVER,
+        PRESS,
+        BACKGROUND,
+        ACTION
     }
 
 }
