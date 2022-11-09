@@ -15,8 +15,15 @@ namespace AudioManaging
     {
         HOVER,
         PRESS,
-        BACKGROUND,
         ACTION
+    }
+
+    public enum EMusicTypes
+    {
+        MENUMUSIC,
+        INGAMEMUSIC,
+        WINGAMEMUSIC,
+        LOSEGAMEMUSIC
     }
 
 }

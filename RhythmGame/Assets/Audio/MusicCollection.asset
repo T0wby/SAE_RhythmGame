@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24eeacc749c7b2e46b8acf9756ee13e2, type: 3}
-  m_Name: HitClipCollection
+  m_Script: {fileID: 11500000, guid: 046d0be742c82234bb5eb7e9ebcf3b04, type: 3}
+  m_Name: MusicCollection
   m_EditorClassIdentifier: 
-  m_soundSouce: 0
+  m_soundSource: 2
   m_clipLibrary:
-  - m_type: 3
+  - m_type: 1
     m_fileReference:
       m_volume: 0.5
       m_audioClips:
-      - {fileID: 8300000, guid: 5d464de935104934fadc9d4e7fc41122, type: 3}
+      - {fileID: 8300000, guid: 1901cfd33ec25a74dabe21b0015cc1f7, type: 3}

@@ -31,9 +31,9 @@ namespace AudioManaging
 
     public class ClipCollection<ESource,EType> : ScriptableObject where ESource : System.Enum where EType : System.Enum
     {
-        public ESource Source => m_soundSouce;
+        public ESource Source => m_soundSource;
 
-        [SerializeField] private ESource m_soundSouce;
+        [SerializeField] private ESource m_soundSource;
 
         [SerializeField] private List<ClipLibrary<EType>> m_clipLibrary = new List<ClipLibrary<EType>>();
 
