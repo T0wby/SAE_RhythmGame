@@ -1,3 +1,4 @@
+using AudioManaging;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class HitLineTowby : MonoBehaviour
 {
     private List<AButton> buttons;
     private AButton tmp;
+
+    //Temp
+    [SerializeField] private NotifyEntityRequestCollection _requestCollection; 
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class HitLineTowby : MonoBehaviour
                 buttons[0].gameObject.SetActive(false);
                 buttons.Remove(buttons[0]);
             }
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.ACTION, transform));
         }
     }
 
@@ -32,7 +37,6 @@ public class HitLineTowby : MonoBehaviour
         tmp = other.gameObject.GetComponent<AButton>();
         if (tmp != null)
         {
-            Debug.Log($"Added {tmp.name}");
             buttons.Add(tmp);
         }
     }

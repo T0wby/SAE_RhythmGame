@@ -230,7 +230,7 @@ MonoBehaviour:
   _startOffsetTimer: 3
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 20
+  _travelTime: 50
 --- !u!1001 &147853027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -664,6 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c77c4dc61bd5594199e44a6e153af3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
 --- !u!1 &398696851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1009,7 @@ MonoBehaviour:
   _startOffsetTimer: 2
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 13
+  _travelTime: 50
 --- !u!1 &550122236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1111,7 @@ MonoBehaviour:
   _startOffsetTimer: 4
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 21
+  _travelTime: 50
 --- !u!1001 &581625271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1345,7 +1346,7 @@ MonoBehaviour:
   _startOffsetTimer: 0
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 10
+  _travelTime: 50
 --- !u!1 &1052536862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1531,8 @@ MonoBehaviour:
   m_mixingGroup: {fileID: 4773877607314650349, guid: b12424e80f8222c49ad7b85257b324a0,
     type: 2}
   m_poolSize: 20
-  m_audioObjectPrefab: {fileID: 0}
+  m_audioObjectPrefab: {fileID: 2072358939382768122, guid: 02320cbab868e6249ae8a02a93f098ac,
+    type: 3}
   m_entityClipCollections:
   - {fileID: 11400000, guid: d7494ca6a020fcd4488f03d45a3a41f2, type: 2}
 --- !u!4 &1263359138
@@ -1662,8 +1664,10 @@ MonoBehaviour:
   m_mixingGroup: {fileID: -7061288503743543439, guid: b12424e80f8222c49ad7b85257b324a0,
     type: 2}
   m_poolSize: 10
-  m_audioObjectPrefab: {fileID: 0}
-  m_entityMusicCollections: []
+  m_audioObjectPrefab: {fileID: 2072358939382768122, guid: 02320cbab868e6249ae8a02a93f098ac,
+    type: 3}
+  m_entityMusicCollections:
+  - {fileID: 11400000, guid: 4e166a508cc926f4d9247b70bba48d3b, type: 2}
 --- !u!1001 &1753484148
 PrefabInstance:
   m_ObjectHideFlags: 0
