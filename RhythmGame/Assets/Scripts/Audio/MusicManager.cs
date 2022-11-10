@@ -60,9 +60,7 @@ public class MusicManager : MonoBehaviour
         tmp.transform.parent = _request.Parent;
         tmp.transform.position = _request.Position;
 
-        //Beim Object init schon setzen, falls nur ein SFX output
         tmpSource.outputAudioMixerGroup = m_mixingGroup;
-        //FileList[0], wenn nicht ein random sound gewählt werden soll
         tmpSource.clip = library.FileList[0];
         tmpSource.volume = library.Volume;
 
