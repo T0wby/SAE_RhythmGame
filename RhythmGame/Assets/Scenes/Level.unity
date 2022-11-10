@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -226,11 +226,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 226345210}
-  _spawntimer: 2.5
-  _startOffsetTimer: 3
+  _spawntimer: 3
+  _startOffsetTimer: 0
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 50
+  _travelTime: 30
 --- !u!1001 &147853027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,6 +665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
+  _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
+    type: 2}
 --- !u!1 &398696851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,11 +1007,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1426757631}
-  _spawntimer: 2.5
-  _startOffsetTimer: 2
+  _spawntimer: 3
+  _startOffsetTimer: 0
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 50
+  _travelTime: 30
 --- !u!1 &550122236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,11 +1109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1078316014}
-  _spawntimer: 2.5
-  _startOffsetTimer: 4
+  _spawntimer: 3
+  _startOffsetTimer: 0
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 50
+  _travelTime: 30
 --- !u!1001 &581625271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1342,11 +1344,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 439248866}
-  _spawntimer: 2.5
+  _spawntimer: 3
   _startOffsetTimer: 0
   _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 50
+  _travelTime: 30
 --- !u!1 &1052536862
 GameObject:
   m_ObjectHideFlags: 0

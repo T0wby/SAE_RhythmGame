@@ -1,6 +1,7 @@
 using AudioManaging;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class HitLineTowby : MonoBehaviour
@@ -9,26 +10,30 @@ public class HitLineTowby : MonoBehaviour
     private AButton tmp;
 
     //Temp
-    [SerializeField] private NotifyEntityRequestCollection _requestCollection; 
+    [SerializeField] private NotifyEntityRequestCollection _requestCollection;
+    [SerializeField] private NotifyMusicRequestCollection _musicRequestCollection;
 
     // Start is called before the first frame update
     void Start()
     {
         buttons = new List<AButton>();
+        StartLevelMusic();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (buttons.Count > 0)
+            int count = buttons.Count;
+            if (count > 0)
             {
-                Debug.Log("Pressed");
-                buttons[0].gameObject.SetActive(false);
-                buttons.Remove(buttons[0]);
+                for (int i = 0; i < count; i++)
+                {
+                    _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.ACTION, Camera.main.transform));
+                    buttons[i].gameObject.SetActive(false);
+                }
+                buttons.Clear();
             }
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.ACTION, transform));
         }
     }
 
@@ -48,5 +53,11 @@ public class HitLineTowby : MonoBehaviour
         {
             buttons.Remove(tmp);
         }
+    }
+
+    private void StartLevelMusic()
+    {
+        Task.Delay(5000);
+        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, EMusicTypes.INGAMEMUSIC, Camera.main.transform));
     }
 }
