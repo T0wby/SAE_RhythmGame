@@ -16,44 +16,44 @@ public class HitLineTowby : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttons = new List<AButton>();
-        StartLevelMusic();
+        //buttons = new List<AButton>();
+        //StartLevelMusic();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            int count = buttons.Count;
-            if (count > 0)
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.ACTION, Camera.main.transform));
-                    buttons[i].gameObject.SetActive(false);
-                }
-                buttons.Clear();
-            }
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        int count = buttons.Count;
+    //        if (count > 0)
+    //        {
+    //            for (int i = 0; i < count; i++)
+    //            {
+    //                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINEONE, Camera.main.transform));
+    //                buttons[i].gameObject.SetActive(false);
+    //            }
+    //            buttons.Clear();
+    //        }
+    //    }
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        tmp = other.gameObject.GetComponent<AButton>();
-        if (tmp != null)
-        {
-            buttons.Add(tmp);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    tmp = other.gameObject.GetComponent<AButton>();
+    //    if (tmp != null)
+    //    {
+    //        buttons.Add(tmp);
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        tmp = other.gameObject.GetComponent<AButton>();
-        if (tmp != null)
-        {
-            buttons.Remove(tmp);
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    tmp = other.gameObject.GetComponent<AButton>();
+    //    if (tmp != null)
+    //    {
+    //        buttons.Remove(tmp);
+    //    }
+    //}
 
     private void StartLevelMusic()
     {

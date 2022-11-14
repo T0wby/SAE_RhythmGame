@@ -30,11 +30,11 @@ namespace AudioManaging
 
         public void Reset()
         {
-            gameObject.SetActive(true);
+            gameObject?.SetActive(true);
         }
         public void Deactivate()
         {
-            gameObject.SetActive(false);
+            gameObject?.SetActive(false);
         }
     } 
 }

@@ -15,7 +15,10 @@ namespace AudioManaging
     {
         HOVER,
         PRESS,
-        ACTION
+        LINEONE,
+        LINETWO,
+        LINETHREE,
+        LINEFOUR
     }
 
     public enum EMusicTypes
