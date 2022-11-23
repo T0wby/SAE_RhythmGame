@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Initilaizer : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Initilaizer : MonoBehaviour
     {
         yield return new WaitForSeconds(_logoTime);
         GameManager.Instance.ChangeGamestate<GameStateMenu>();
-        // TODO: Load Menu scene
+        SceneManager.LoadScene("LevelSelection");
     }
 
     private void Awake()

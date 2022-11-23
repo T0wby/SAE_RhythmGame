@@ -10,6 +10,13 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
 
+    public GameState ActiveState
+    {
+        get { return _activeState; }
+    }
+
+
+
     #region Methods
 
     #region Gamestates
@@ -20,7 +27,9 @@ public class GameManager : Singleton<GameManager>
         {
             if(state.GetType() == typeof(T))
             {
+                //_activeState.Finalize();
                 _activeState = state;
+                //_activeState.Initialize();
             }
         }
     }

@@ -7,7 +7,7 @@ public class ObserverListener : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private SubjectEvent _subject = null;
+    [SerializeField] protected SubjectEvent _subject = null;
     [SerializeField] private UnityEvent _response = null;
 
     #endregion
@@ -18,18 +18,18 @@ public class ObserverListener : MonoBehaviour
 
     #region Unity
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _response ??= new UnityEvent();
         _subject ??= FindObjectOfType<SubjectEvent>();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         _subject?.RegisterObservers(this);
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         _subject?.ReleaseObservers(this);
     }

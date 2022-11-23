@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4722bd22be9627b40ba6a1914349ad9b, type: 3}
   m_Name: Logo
   m_EditorClassIdentifier: 
+  _observers: []

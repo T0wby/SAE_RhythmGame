@@ -5,7 +5,7 @@ using UnityEngine;
 public class SubjectEvent : ScriptableObject
 {
     #region Fields
-    [SerializeField] private List<ObserverListener> _observers= null;
+    [SerializeField] protected List<ObserverListener> _observers= null;
     #endregion
 
     #region Methods
