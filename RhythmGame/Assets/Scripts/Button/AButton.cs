@@ -1,3 +1,4 @@
+using AudioManaging;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,6 @@ public abstract class AButton : MonoBehaviour
     public GameObject Target { get => _target; set => _target = value; }
     public float TravelTime { get => _travelTime; set => _travelTime = value; }
     public EButtonType Type { get; set; }
-
 
     public void StartButton(GameObject target, float travelTime)
     {

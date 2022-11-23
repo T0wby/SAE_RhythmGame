@@ -20,7 +20,6 @@ namespace AudioManaging
         {
             T tmp;
 
-            //TODO: anzahl maximaler objects beschränken und stattdessen ältestes direkt re-usen
             if (m_queue.Count == 0)
             {
                 tmp = GameObject.Instantiate(m_prefab).GetComponent<T>();

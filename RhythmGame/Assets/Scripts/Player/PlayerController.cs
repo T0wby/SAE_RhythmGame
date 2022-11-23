@@ -8,10 +8,9 @@ public class PlayerController : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private HitArea _lineOne;
-    [SerializeField] private HitArea _lineTwo;
-    [SerializeField] private HitArea _lineThree;
-    [SerializeField] private HitArea _lineFour;
+    [SerializeField] private HitLine _lineGoodOne;
+    [SerializeField] private HitLine _lineGoodTwo;
+    [SerializeField] private HitLine _linePerfect;
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
 
     #endregion
@@ -42,38 +41,29 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Callbacks
-
-    public void OnLineOne(InputAction.CallbackContext context)
+    
+    public void OnHit(InputAction.CallbackContext context)
     {
-        if (context.started && _lineOne.Buttons.Count > 0)
+        if (context.started)
         {
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINEONE, Camera.main.transform));
+            if (_linePerfect.Buttons.Count > 0)
+            {
+                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
+            }
+            else if (_lineGoodOne.Buttons.Count > 0 || _lineGoodTwo.Buttons.Count > 0)
+            {
+                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
+            }
         }
     }
     
-    public void OnLineTwo(InputAction.CallbackContext context)
-    {
-        if (context.started && _lineTwo.Buttons.Count > 0)
-        {
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINETWO, Camera.main.transform));
-        }
-    }
-    
-    public void OnLineThree(InputAction.CallbackContext context)
-    {
-        if (context.started && _lineThree.Buttons.Count > 0)
-        {
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINETHREE, Camera.main.transform));
-        }
-    }
-    
-    public void OnLineFour(InputAction.CallbackContext context)
-    {
-        if (context.started && _lineFour.Buttons.Count > 0)
-        {
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINEFOUR, Camera.main.transform));
-        }
-    }
+    //public void OnGoodHit(InputAction.CallbackContext context)
+    //{
+    //    if (context.started && _lineThree.Buttons.Count > 0)
+    //    {
+    //        _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.LINETHREE, Camera.main.transform));
+    //    }
+    //}
 
     #endregion
 

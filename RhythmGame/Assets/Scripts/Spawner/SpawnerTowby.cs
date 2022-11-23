@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using AudioManaging;
 using UnityEngine;
 
 public class SpawnerTowby : MonoBehaviour
@@ -8,12 +9,18 @@ public class SpawnerTowby : MonoBehaviour
     [SerializeField] private GameObject _target;
     [SerializeField] private float _spawntimer = 2f;
     [SerializeField] private float _startOffsetTimer = 2f;
-    [SerializeField] private GameObject _shortButton;
+    [SerializeField] private GameObject _shortButtonPrefab;
     [SerializeField] private float _travelTime;
+    [SerializeField] private int _poolSize;
+    private ObjectPool<ShortButton> _pool;
     private float _timer;
     private GameObject _newButton;
     private Coroutine _lastCoroutine;
 
+    private void Awake()
+    {
+        _pool = new ObjectPool<ShortButton>(_shortButtonPrefab, _poolSize, transform);
+    }
 
     void Update()
     {
@@ -34,8 +41,7 @@ public class SpawnerTowby : MonoBehaviour
     {
         while (true)
         {
-            _newButton = Instantiate(_shortButton, transform.position, Quaternion.identity);
-            //TODO: Set button type to later identify it on trigger enter/stay
+            _newButton = _pool.GetItem().gameObject;
             _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
             yield return new WaitForSeconds(_spawntimer);
         }

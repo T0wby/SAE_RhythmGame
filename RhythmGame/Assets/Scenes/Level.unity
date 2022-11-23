@@ -287,9 +287,10 @@ MonoBehaviour:
   _target: {fileID: 226345210}
   _spawntimer: 3
   _startOffsetTimer: 0
-  _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
+  _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 30
+  _travelTime: 60
+  _poolSize: 15
 --- !u!1001 &147853027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -713,6 +714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c77c4dc61bd5594199e44a6e153af3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lineType: 0
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
     type: 2}
@@ -989,10 +991,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea8d6dc221d69e4580985d4add3e233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lineOne: {fileID: 77317782}
-  _lineTwo: {fileID: 905894245}
-  _lineThree: {fileID: 942582648}
-  _lineFour: {fileID: 648581237}
+  _lineGoodOne: {fileID: 0}
+  _lineGoodTwo: {fileID: 0}
+  _linePerfect: {fileID: 0}
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
 --- !u!4 &445129404
 Transform:
@@ -1203,9 +1204,10 @@ MonoBehaviour:
   _target: {fileID: 1426757631}
   _spawntimer: 3
   _startOffsetTimer: 0
-  _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
+  _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 30
+  _travelTime: 60
+  _poolSize: 15
 --- !u!1 &550122236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,9 +1307,10 @@ MonoBehaviour:
   _target: {fileID: 1078316014}
   _spawntimer: 3
   _startOffsetTimer: 0
-  _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
+  _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 30
+  _travelTime: 60
+  _poolSize: 15
 --- !u!1001 &581625271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,9 +1602,10 @@ MonoBehaviour:
   _target: {fileID: 439248866}
   _spawntimer: 3
   _startOffsetTimer: 0
-  _shortButton: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
+  _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 30
+  _travelTime: 60
+  _poolSize: 15
 --- !u!1 &905894242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +1911,7 @@ MonoBehaviour:
   m_audioObjectPrefab: {fileID: 2072358939382768122, guid: 02320cbab868e6249ae8a02a93f098ac,
     type: 3}
   m_entityClipCollections:
-  - {fileID: 11400000, guid: d7494ca6a020fcd4488f03d45a3a41f2, type: 2}
+  - {fileID: 11400000, guid: 72e5060812f8d5b4bb5346d1638809ad, type: 2}
 --- !u!4 &1263359138
 Transform:
   m_ObjectHideFlags: 0

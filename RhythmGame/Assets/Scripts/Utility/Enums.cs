@@ -15,10 +15,9 @@ namespace AudioManaging
     {
         HOVER,
         PRESS,
-        LINEONE,
-        LINETWO,
-        LINETHREE,
-        LINEFOUR
+        KEYMISS,
+        KEYGOOD,
+        KEYPERFECT
     }
 
     public enum EMusicTypes
@@ -29,4 +28,32 @@ namespace AudioManaging
         LOSEGAMEMUSIC
     }
 
+}
+
+public enum ELineIndex
+{
+    ONE,
+    TWO,
+    THREE,
+    FOUR
+}
+public enum ELineType
+{
+    MISS,
+    GOOD,
+    PERFECT
+}
+
+public enum EButtonType
+{
+    SHORT,
+    LONG,
+    NONE
+}
+
+public enum ELevelDifficulty
+{
+    EASY,
+    NORMAL,
+    HARD
 }
