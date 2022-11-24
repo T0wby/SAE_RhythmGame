@@ -65,10 +65,11 @@ public class LevelManager : MonoBehaviour
                     default:
                         break;
                 }
+
             }
 
-                
-            
+            //Disable Button if Level not unlocked yet
+            levelButton.interactable = _levelCollection[i].IsUnlocked;
         }
     }
 }
