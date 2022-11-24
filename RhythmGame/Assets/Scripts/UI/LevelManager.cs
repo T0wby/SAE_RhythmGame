@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject _levelParent;
     [SerializeField] GameObject _scoreParent;
 
+    [Header("LevelInfo Objects")]
+    [SerializeField] Button _easyButton;
+    [SerializeField] Button _normalButton;
+    [SerializeField] Button _hardButton;
+
+
     private void Awake()
     {
         for (int i = 0; i < _levelCollection.Length; i++)
@@ -26,6 +33,42 @@ public class LevelManager : MonoBehaviour
             txtComponents[0].text = _levelCollection[i].SongName;
             txtComponents[1].text = _levelCollection[i].ArtistName;
             txtComponents[2].text = _levelCollection[i].LevelDifficulty.ToString();
+
+            //Setting OnClick Event
+
+            Button levelButton= tmp.GetComponent<Button>();
+            if (levelButton is not null)
+            {
+                switch (_levelCollection[i].LevelDifficulty)
+                {
+                    case ELevelDifficulty.EASY:
+                        levelButton.onClick.AddListener(() =>
+                        {
+                            _normalButton.interactable = false;
+                            _hardButton.interactable = false;
+                        });
+                        break;
+                    case ELevelDifficulty.NORMAL:
+                        levelButton.onClick.AddListener(() =>
+                        {
+                            _normalButton.interactable = true;
+                            _hardButton.interactable = false;
+                        });
+                        break;
+                    case ELevelDifficulty.HARD:
+                        levelButton.onClick.AddListener(() =>
+                        {
+                            _normalButton.interactable = true;
+                            _hardButton.interactable = true;
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+                
+            
         }
     }
 }

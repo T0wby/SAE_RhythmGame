@@ -25,19 +25,30 @@ public class Spawner : MonoBehaviour
         _pool = new ObjectPool<ShortButton>(_shortButtonPrefab, _poolSize, transform);
     }
 
+    private void Start()
+    {
+        StartCoroutine(StartSpawning());
+    }
+
     void Update()
     {
-        if (_timer < _startOffsetTimer)
-        {
-            _timer += Time.deltaTime;
-        }
-        else
-        {
-            if (_lastCoroutine == null)
-            {
-                _lastCoroutine = StartCoroutine(SpawnButton());
-            }
-        }
+        //if (_timer < _startOffsetTimer)
+        //{
+        //    _timer += Time.deltaTime;
+        //}
+        //else
+        //{
+        //    if (_lastCoroutine == null)
+        //    {
+        //        _lastCoroutine = StartCoroutine(SpawnButton());
+        //    }
+        //}
+    }
+
+    IEnumerator StartSpawning()
+    {
+        yield return new WaitForSeconds(_startOffsetTimer);
+        StartCoroutine(SpawnButton());
     }
 
     IEnumerator SpawnButton()

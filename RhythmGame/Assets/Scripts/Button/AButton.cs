@@ -23,11 +23,13 @@ public abstract class AButton : MonoBehaviour
     protected IEnumerator StartMovement()
     {
         float time = 0;
-        while (_travelTime > time)
+        float currProg = 0;
+        while (time <=_travelTime )
         {
-            transform.position = Vector3.Lerp(transform.position, Target.transform.position, time / _travelTime);
+            currProg = time / _travelTime;
+            transform.position = Vector3.Lerp(transform.position, Target.transform.position, currProg);
+            yield return new WaitForEndOfFrame();
             time += Time.deltaTime;
-            yield return null;
         }
 
         transform.position = Target.transform.position;

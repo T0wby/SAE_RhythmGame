@@ -2274,6 +2274,9 @@ MonoBehaviour:
     type: 3}
   _levelParent: {fileID: 243382650}
   _scoreParent: {fileID: 408917485}
+  _easyButton: {fileID: 129769616}
+  _normalButton: {fileID: 2122613076}
+  _hardButton: {fileID: 1648329934}
 --- !u!1 &559464475
 GameObject:
   m_ObjectHideFlags: 0

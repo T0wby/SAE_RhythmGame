@@ -12,10 +12,8 @@ public class MissLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYMISS, Camera.main.transform));
-        //other.gameObject.SetActive(false);
 
         ShortButton tmp = other.GetComponent<ShortButton>();
-        //Might need to seperate into each line
         if (tmp is not null)
         {
             _spawner.Pool.ReturnItem(tmp);
