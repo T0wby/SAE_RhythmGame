@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using AudioManaging;
 using UnityEngine;
 
-public class SpawnerTowby : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _target;
     [SerializeField] private float _spawntimer = 2f;
@@ -16,6 +16,9 @@ public class SpawnerTowby : MonoBehaviour
     private float _timer;
     private GameObject _newButton;
     private Coroutine _lastCoroutine;
+
+    public ObjectPool<ShortButton> Pool => _pool;
+
 
     private void Awake()
     {

@@ -6,8 +6,7 @@ public class HitArea : MonoBehaviour
 {
     #region Fields
 
-    [Range(1, 4)]
-    [SerializeField] private int _lineIndex = 1;
+    [SerializeField] private Spawner _spawner;
     private List<AButton> _buttons;
     private AButton _tmp;
 
@@ -15,7 +14,6 @@ public class HitArea : MonoBehaviour
 
     #region Properties
 
-    public int LineIndex => _lineIndex;
     public List<AButton> Buttons => _buttons;
 
     #endregion
@@ -48,6 +46,19 @@ public class HitArea : MonoBehaviour
     }
 
     #endregion
+
+    public void ResetArea()
+    {
+        for (int i = 0; i < _buttons.Count; i++)
+        {
+            //_buttons[i].gameObject.SetActive(false);
+            if (_buttons[i].GetType() == typeof(ShortButton))
+            {
+                _spawner.Pool.ReturnItem((ShortButton)_buttons[i]);
+            }
+        }
+        _buttons.Clear();
+    }
 
     #endregion
 
