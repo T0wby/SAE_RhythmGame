@@ -27,7 +27,7 @@ public abstract class AButton : MonoBehaviour
         while (time <=_travelTime )
         {
             currProg = time / _travelTime;
-            transform.position = Vector3.Lerp(transform.position, Target.transform.position, currProg);
+            transform.position = Vector3.Lerp(transform.parent.position, Target.transform.position, currProg);
             yield return new WaitForEndOfFrame();
             time += Time.deltaTime;
         }
