@@ -12,7 +12,13 @@ namespace Scriptable
         [SerializeField] private bool _isUnlocked;
         [SerializeField] private float _price;
         [SerializeField] private ELevelDifficulty _levelDifficulty;
+        [SerializeField] private List<ScoreInfo> _scoreCollection;
 
-        public List<ScoreInfo> ScoreInfos;
+        public string SongName => _songName;
+        public string ArtistName => _artistName;
+        public bool IsUnlocked => _isUnlocked;
+        public float Price => _price;
+        public ELevelDifficulty LevelDifficulty => _levelDifficulty;
+        public List<ScoreInfo> ScoreCollection => _scoreCollection;
     } 
 }
