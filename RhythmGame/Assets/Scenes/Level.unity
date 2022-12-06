@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2576,6 +2576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651112619}
   - component: {fileID: 1651112620}
+  - component: {fileID: 1651112621}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: MusicManager
@@ -2618,6 +2619,22 @@ MonoBehaviour:
     type: 3}
   m_entityMusicCollections:
   - {fileID: 11400000, guid: 4e166a508cc926f4d9247b70bba48d3b, type: 2}
+--- !u!114 &1651112621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651112618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e533521c063380d42b0e314e6f48549e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
+    type: 2}
+  _musicOffset: 5
+  _songBPM: 120
 --- !u!1001 &1753484148
 PrefabInstance:
   m_ObjectHideFlags: 0
