@@ -34,7 +34,10 @@ namespace AudioManaging
         }
         public void Deactivate()
         {
-            gameObject?.SetActive(false);
+            if (gameObject is not null)
+            {
+                gameObject.SetActive(false);
+            }
         }
     } 
 }

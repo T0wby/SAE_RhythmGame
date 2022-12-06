@@ -289,7 +289,7 @@ MonoBehaviour:
   _startOffsetTimer: 7
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 4
+  _travelTime: 3
   _poolSize: 15
 --- !u!1001 &147853027
 PrefabInstance:
@@ -1037,7 +1037,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398696851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1208,7 +1208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
@@ -1346,7 +1346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &445129405
 MonoBehaviour:
@@ -1544,7 +1544,7 @@ MonoBehaviour:
   _startOffsetTimer: 2
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 6
+  _travelTime: 3
   _poolSize: 15
 --- !u!1 &550122236
 GameObject:
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   _startOffsetTimer: 1.5
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 5
+  _travelTime: 3
   _poolSize: 15
 --- !u!1001 &581625271
 PrefabInstance:
@@ -1898,7 +1898,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874410349
 GameObject:
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   _startOffsetTimer: 5
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
-  _travelTime: 5
+  _travelTime: 3
   _poolSize: 15
 --- !u!1 &905894242
 GameObject:
@@ -2121,6 +2121,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner: {fileID: 85189623}
+--- !u!1 &1025327270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025327272}
+  - component: {fileID: 1025327271}
+  m_Layer: 0
+  m_Name: Conductor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025327271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025327270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e533521c063380d42b0e314e6f48549e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
+    type: 2}
+  _musicOffset: 5
+  _songBPM: 60
+  _currentSongPos: 0
+  _dspSongTime: 0
+  _beatPerSec: 0
+  _currentBeatPos: 0
+--- !u!4 &1025327272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025327270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049522826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2266,7 @@ Transform:
   - {fileID: 1786210726}
   - {fileID: 1770789646}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078316014
 GameObject:
@@ -2504,7 +2556,7 @@ Transform:
   - {fileID: 85189620}
   - {fileID: 550122237}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426757631
 GameObject:
@@ -2576,7 +2628,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1651112619}
   - component: {fileID: 1651112620}
-  - component: {fileID: 1651112621}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: MusicManager
@@ -2619,22 +2670,6 @@ MonoBehaviour:
     type: 3}
   m_entityMusicCollections:
   - {fileID: 11400000, guid: 4e166a508cc926f4d9247b70bba48d3b, type: 2}
---- !u!114 &1651112621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651112618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e533521c063380d42b0e314e6f48549e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
-    type: 2}
-  _musicOffset: 5
-  _songBPM: 120
 --- !u!1001 &1753484148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2769,7 +2804,7 @@ Transform:
   - {fileID: 376928767}
   - {fileID: 1952110070}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952110066
 GameObject:
@@ -2811,7 +2846,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952110066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3048,7 +3083,7 @@ Transform:
   - {fileID: 226345211}
   - {fileID: 1078316015}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!114 &2082896306
 MonoBehaviour:
