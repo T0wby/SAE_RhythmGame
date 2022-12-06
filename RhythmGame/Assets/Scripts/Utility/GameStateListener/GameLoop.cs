@@ -19,7 +19,7 @@ public class GameLoop : ObserverListener
     public void InvokeUpdate() => _updateResponse?.Invoke();
     public void InvokeFinalize() => _finResponse?.Invoke();
 
-    protected virtual void Awake()
+    protected new void Awake()
     {
         base.Awake();
         _gameManager ??= GameManager.Instance;
@@ -29,7 +29,7 @@ public class GameLoop : ObserverListener
 
     }
 
-    protected virtual void OnEnable()
+    protected new void OnEnable()
     {
         base.OnEnable();
         _initResponse?.AddListener(OnInit);
@@ -37,7 +37,7 @@ public class GameLoop : ObserverListener
         _finResponse?.AddListener(OnFinalize);
     }
 
-    protected virtual void OnDisable()
+    protected new void OnDisable()
     {
         base.OnDisable();
         _finResponse?.RemoveListener(OnFinalize);

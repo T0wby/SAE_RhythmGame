@@ -27,14 +27,14 @@ public abstract class GameState : SubjectEvent
         }
     }
 
-    public void Finalize()
-    {
-        if (_observers.GetType() == typeof(GameLoop))
-        {
-            for (int i = _observers.Count - 1; i >= 0; i--)
-            {
-                ((GameLoop)_observers[i]).InvokeFinalize();
-            }
-        }
-    }
+    //public void Finalize()
+    //{
+    //    if (_observers.GetType() == typeof(GameLoop))
+    //    {
+    //        for (int i = _observers.Count - 1; i >= 0; i--)
+    //        {
+    //            ((GameLoop)_observers[i]).InvokeFinalize();
+    //        }
+    //    }
+    //}
 }

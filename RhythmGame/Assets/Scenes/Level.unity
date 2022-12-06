@@ -285,11 +285,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 226345210}
-  _spawntimer: 3
-  _startOffsetTimer: 7
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
+  _spawntimer: 3
+  _startOffsetTimer: 7
+  _conductor: {fileID: 1025327271}
   _poolSize: 15
 --- !u!1001 &147853027
 PrefabInstance:
@@ -1540,11 +1541,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1426757631}
-  _spawntimer: 3
-  _startOffsetTimer: 2
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
+  _spawntimer: 3
+  _startOffsetTimer: 2
+  _conductor: {fileID: 1025327271}
   _poolSize: 15
 --- !u!1 &550122236
 GameObject:
@@ -1643,11 +1645,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1078316014}
-  _spawntimer: 3
-  _startOffsetTimer: 1.5
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
+  _spawntimer: 3
+  _startOffsetTimer: 1.5
+  _conductor: {fileID: 1025327271}
   _poolSize: 15
 --- !u!1001 &581625271
 PrefabInstance:
@@ -1997,11 +2000,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 439248866}
-  _spawntimer: 3
-  _startOffsetTimer: 5
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
+  _spawntimer: 3
+  _startOffsetTimer: 5
+  _conductor: {fileID: 1025327271}
   _poolSize: 15
 --- !u!1 &905894242
 GameObject:

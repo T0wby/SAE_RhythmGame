@@ -14,6 +14,8 @@ public class Conductor : MonoBehaviour
     [SerializeField] private float _currentBeatPos = 0;
     private bool IsSongStarted = false;
 
+    public float CurrentBeatPos => _currentBeatPos;
+
     private void Start()
     {
         _beatPerSec = 60f / _songBPM;
