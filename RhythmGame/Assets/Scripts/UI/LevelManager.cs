@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
             //Setting OnClick Event
 
-            Button levelButton= tmp.GetComponent<Button>();
+            Button levelButton = tmp.GetComponent<Button>();
             if (levelButton is not null)
             {
                 switch (_levelCollection[i].LevelDifficulty)
@@ -46,6 +46,8 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = false;
                             _hardButton.interactable = false;
+                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
+                            Debug.Log(GameManager.Instance.ActiveLevel);
                         });
                         break;
                     case ELevelDifficulty.NORMAL:
@@ -53,6 +55,8 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = true;
                             _hardButton.interactable = false;
+                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
+                            Debug.Log(GameManager.Instance.ActiveLevel);
                         });
                         break;
                     case ELevelDifficulty.HARD:
@@ -60,6 +64,8 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = true;
                             _hardButton.interactable = true;
+                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
+                            Debug.Log(GameManager.Instance.ActiveLevel);
                         });
                         break;
                     default:

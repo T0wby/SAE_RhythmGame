@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadingBar: {fileID: 242459187}
+  _continueText: {fileID: 384943790}
 --- !u!1 &242459185
 GameObject:
   m_ObjectHideFlags: 0

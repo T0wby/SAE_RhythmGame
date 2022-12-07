@@ -50,21 +50,21 @@ public class Spawner : MonoBehaviour
     }
     private void Update()
     {
-        if(!_startspawn)
-            return;
+        //if(!_startspawn)
+        //    return;
 
-        if (_conductor.CurrentBeatPos % _spawntimer == 0)
-        {
-            _newButton = _pool.GetItem().gameObject;
-            _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
-        }
+        //if (_conductor.CurrentBeatPos % _spawntimer == 0)
+        //{
+        //    _newButton = _pool.GetItem().gameObject;
+        //    _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
+        //}
     }
 
 
     IEnumerator StartSpawning()
     {
         yield return new WaitForSeconds(_startOffsetTimer);
-        //StartCoroutine(SpawnButton());
+        StartCoroutine(SpawnButton());
         _startspawn= true;
     }
 
