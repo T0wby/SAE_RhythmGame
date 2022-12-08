@@ -70,5 +70,10 @@ namespace AudioManaging
 
             m_entityRequests.Remove(_request);
         }
+
+        public void InitPool()
+        {
+            m_pool = new ObjectPool<AudioObject>(m_audioObjectPrefab, m_poolSize, transform);
+        }
     } 
 }

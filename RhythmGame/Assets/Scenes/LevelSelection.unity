@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731703, g: 0.13414727, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2853,7 +2853,7 @@ MonoBehaviour:
   m_entityRequests: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   m_mixingGroup: {fileID: 4773877607314650349, guid: b12424e80f8222c49ad7b85257b324a0,
     type: 2}
-  m_poolSize: 40
+  m_poolSize: 120
   m_audioObjectPrefab: {fileID: 2072358939382768122, guid: 02320cbab868e6249ae8a02a93f098ac,
     type: 3}
   m_entityClipCollections:

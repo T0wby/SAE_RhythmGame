@@ -60,8 +60,19 @@ public class LoadingScreen : MonoBehaviour
             List<float> list3 = new List<float>();
             foreach (XmlNode xmlNode in temp)
             {
-                Debug.Log($"Parse: {int.Parse(xmlNode.InnerText)}" +
+                //string tmpString = String.Join('.',xmlNode.InnerText.Split(':'));
+                string tmpString = String.Join('.',xmlNode.InnerText.Split(':'));
+                float tmpFloat = 0f;
+                //Debug.Log($"Parse: {float.Parse(tmpString, System.Globalization.CultureInfo.InvariantCulture)}" +
+                //    $"\n None: {xmlNode.InnerText}");
+
+                Debug.Log($"Parse: {float.TryParse(tmpString,out tmpFloat)}" +
                     $"\n None: {xmlNode.InnerText}");
+
+                for (int x = 0; x < tmpString.Length; x++)
+                {
+
+                }
 
                 //switch (i)
                 //{

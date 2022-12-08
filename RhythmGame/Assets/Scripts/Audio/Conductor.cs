@@ -2,6 +2,7 @@ using AudioManaging;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Conductor : MonoBehaviour
 {
@@ -15,6 +16,17 @@ public class Conductor : MonoBehaviour
     private bool IsSongStarted = false;
 
     public float CurrentBeatPos => _currentBeatPos;
+
+    private void Awake()
+    {
+        //Temporariy solution
+        GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
+        if (sfxManager[0])
+        {
+            if (sfxManager[0].GetComponent<SFXManager>())
+                sfxManager[0].GetComponent<SFXManager>().InitPool();
+        }
+    }
 
     private void Start()
     {
