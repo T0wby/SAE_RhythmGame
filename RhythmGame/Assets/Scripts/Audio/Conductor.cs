@@ -16,6 +16,7 @@ public class Conductor : MonoBehaviour
     private bool IsSongStarted = false;
 
     public float CurrentBeatPos => _currentBeatPos;
+    public float CurrentSongPos => _currentSongPos;
 
     private void Awake()
     {

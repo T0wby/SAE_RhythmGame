@@ -291,6 +291,10 @@ MonoBehaviour:
   _spawntimer: 3
   _startOffsetTimer: 7
   _conductor: {fileID: 1025327271}
+  _spawnTimings:
+  - 10
+  - 22
+  - 25.22
   _poolSize: 15
 --- !u!1001 &147853027
 PrefabInstance:
@@ -1547,6 +1551,10 @@ MonoBehaviour:
   _spawntimer: 3
   _startOffsetTimer: 2
   _conductor: {fileID: 1025327271}
+  _spawnTimings:
+  - 10
+  - 22
+  - 24.01
   _poolSize: 15
 --- !u!1 &550122236
 GameObject:
@@ -1651,6 +1659,10 @@ MonoBehaviour:
   _spawntimer: 3
   _startOffsetTimer: 1.5
   _conductor: {fileID: 1025327271}
+  _spawnTimings:
+  - 10
+  - 22
+  - 28.41
   _poolSize: 15
 --- !u!1001 &581625271
 PrefabInstance:
@@ -2006,6 +2018,10 @@ MonoBehaviour:
   _spawntimer: 3
   _startOffsetTimer: 5
   _conductor: {fileID: 1025327271}
+  _spawnTimings:
+  - 10
+  - 22
+  - 30.541
   _poolSize: 15
 --- !u!1 &905894242
 GameObject:

@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _spawntimer = 2f;
     [SerializeField] private float _startOffsetTimer = 2f;
     [SerializeField] private Conductor _conductor;
+    [SerializeField] private List<float> _spawnTimings;
+
 
     [Header("ObjectPool")]
     [SerializeField] private int _poolSize;
@@ -24,9 +26,7 @@ public class Spawner : MonoBehaviour
     private float _timer;
     private GameObject _newButton;
     private Coroutine _lastCoroutine;
-    private List<float> _spawnTimings;
     private int _spawnCount;
-    private bool _startspawn = false;
     #endregion
 
     public ObjectPool<ShortButton> Pool => _pool;
@@ -50,22 +50,28 @@ public class Spawner : MonoBehaviour
     }
     private void Update()
     {
-        //if(!_startspawn)
-        //    return;
-
         //if (_conductor.CurrentBeatPos % _spawntimer == 0)
         //{
         //    _newButton = _pool.GetItem().gameObject;
         //    _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
         //}
+
+        if(_spawnTimings.Count == 0)
+            return;
+
+        if (_conductor.CurrentSongPos >= _spawnTimings[0])
+        {
+            _newButton = _pool.GetItem().gameObject;
+            _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
+            _spawnTimings.RemoveAt(0);
+        }
     }
 
 
     IEnumerator StartSpawning()
     {
         yield return new WaitForSeconds(_startOffsetTimer);
-        StartCoroutine(SpawnButton());
-        _startspawn= true;
+        //StartCoroutine(SpawnButton());
     }
 
     private IEnumerator SpawnButton()
