@@ -14,8 +14,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _travelTime;
 
     [Header("SpawnSettings")]
-    [SerializeField] private float _spawntimer = 2f;
-    [SerializeField] private float _startOffsetTimer = 2f;
+    //[SerializeField] private float _spawntimer = 2f;
+    //[SerializeField] private float _startOffsetTimer = 2f;
     [SerializeField] private Conductor _conductor;
     [SerializeField] private List<float> _spawnTimings;
 
@@ -25,8 +25,8 @@ public class Spawner : MonoBehaviour
     private ObjectPool<ShortButton> _pool;
     private float _timer;
     private GameObject _newButton;
-    private Coroutine _lastCoroutine;
-    private int _spawnCount;
+    //private Coroutine _lastCoroutine;
+    //private int _spawnCount;
     #endregion
 
     public ObjectPool<ShortButton> Pool => _pool;
@@ -41,13 +41,14 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         _pool = new ObjectPool<ShortButton>(_shortButtonPrefab, _poolSize, transform);
-        _spawnCount = 0;
+        //_spawnCount = 0;
     }
 
-    private void Start()
-    {
-        StartCoroutine(StartSpawning());
-    }
+    //private void Start()
+    //{
+    //    StartCoroutine(StartSpawning());
+    //}
+
     private void Update()
     {
         //if (_conductor.CurrentBeatPos % _spawntimer == 0)
@@ -56,7 +57,7 @@ public class Spawner : MonoBehaviour
         //    _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
         //}
 
-        if(_spawnTimings.Count == 0)
+        if (_spawnTimings.Count == 0)
             return;
 
         if (_conductor.CurrentSongPos >= _spawnTimings[0])
@@ -68,21 +69,21 @@ public class Spawner : MonoBehaviour
     }
 
 
-    IEnumerator StartSpawning()
-    {
-        yield return new WaitForSeconds(_startOffsetTimer);
-        //StartCoroutine(SpawnButton());
-    }
+    //IEnumerator StartSpawning()
+    //{
+    //    yield return new WaitForSeconds(_startOffsetTimer);
+    //    StartCoroutine(SpawnButton());
+    //}
 
-    private IEnumerator SpawnButton()
-    {
-        while (true)
-        {
-            
-            _newButton = _pool.GetItem().gameObject;
-            _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
-            yield return new WaitForSeconds(_spawntimer);
-            _spawnCount++;
-        }
-    }
+    //private IEnumerator SpawnButton()
+    //{
+    //    while (true)
+    //    {
+
+    //        _newButton = _pool.GetItem().gameObject;
+    //        _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
+    //        yield return new WaitForSeconds(_spawntimer);
+    //        _spawnCount++;
+    //    }
+    //}
 }

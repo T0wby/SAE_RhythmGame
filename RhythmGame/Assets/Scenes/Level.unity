@@ -2173,7 +2173,7 @@ MonoBehaviour:
   _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
     type: 2}
   _musicOffset: 5
-  _songBPM: 60
+  _songBPM: 120
   _currentSongPos: 0
   _dspSongTime: 0
   _beatPerSec: 0
