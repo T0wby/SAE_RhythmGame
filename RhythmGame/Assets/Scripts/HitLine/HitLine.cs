@@ -52,11 +52,6 @@ public class HitLine : MonoBehaviour
     }
 
     #endregion
-    private void StartLevelMusic()
-    {
-        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, EMusicTypes.INGAMEMUSIC, Camera.main.transform));
-    }
-
 
     #endregion
 }

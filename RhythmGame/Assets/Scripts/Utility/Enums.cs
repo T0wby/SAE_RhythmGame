@@ -23,7 +23,10 @@ namespace AudioManaging
     public enum EMusicTypes
     {
         MENUMUSIC,
-        INGAMEMUSIC,
+        ABYSS,
+        DEVIL,
+        EROSION,
+        MONEYBAG,
         WINGAMEMUSIC,
         LOSEGAMEMUSIC
     }

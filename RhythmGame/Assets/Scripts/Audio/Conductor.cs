@@ -48,7 +48,7 @@ public class Conductor : MonoBehaviour
     private void StartLevelMusic()
     {
         IsSongStarted = true;
-        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, EMusicTypes.INGAMEMUSIC, Camera.main.transform));
+        //_musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, EMusicTypes.INGAMEMUSIC, Camera.main.transform));
     }
 
     private IEnumerator MusicCountdown()
