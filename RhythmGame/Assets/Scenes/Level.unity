@@ -288,8 +288,6 @@ MonoBehaviour:
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
-  _spawntimer: 3
-  _startOffsetTimer: 7
   _conductor: {fileID: 1025327271}
   _spawnTimings:
   - 10
@@ -505,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   _spawner: {fileID: 85189623}
+  _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
 --- !u!1 &230603215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   _spawner: {fileID: 874410353}
+  _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
 --- !u!1 &445129402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1337,8 @@ MonoBehaviour:
   _goodAfterLineTwo: {fileID: 213424644}
   _goodAfterLineThree: {fileID: 827555645}
   _goodAfterLineFour: {fileID: 1384739861}
+  _goodHitCounter: {fileID: 11400000, guid: 0711bab94db34514299a391452f94e51, type: 2}
+  _perfectHitCounter: {fileID: 11400000, guid: ff507befeb464964faa68b9c33b413c8, type: 2}
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
 --- !u!4 &445129404
 Transform:
@@ -1548,8 +1550,6 @@ MonoBehaviour:
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
-  _spawntimer: 3
-  _startOffsetTimer: 2
   _conductor: {fileID: 1025327271}
   _spawnTimings:
   - 10
@@ -1656,8 +1656,6 @@ MonoBehaviour:
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
-  _spawntimer: 3
-  _startOffsetTimer: 1.5
   _conductor: {fileID: 1025327271}
   _spawnTimings:
   - 10
@@ -2015,8 +2013,6 @@ MonoBehaviour:
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
-  _spawntimer: 3
-  _startOffsetTimer: 5
   _conductor: {fileID: 1025327271}
   _spawnTimings:
   - 10
@@ -2348,6 +2344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   _spawner: {fileID: 550122240}
+  _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
 --- !u!1001 &1249204285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2638,6 +2635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
   _spawner: {fileID: 541019693}
+  _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
 --- !u!1 &1651112618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,7 +3013,6 @@ GameObject:
   - component: {fileID: 2082896304}
   - component: {fileID: 2082896303}
   - component: {fileID: 2082896302}
-  - component: {fileID: 2082896306}
   m_Layer: 0
   m_Name: MissHitLine
   m_TagString: Untagged
@@ -3105,20 +3102,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
---- !u!114 &2082896306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082896301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd30501988043a42b90e5ad1f55b8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _requestCollection: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
-  _spawner: {fileID: 874410353}
 --- !u!1001 &5674772552314271114
 PrefabInstance:
   m_ObjectHideFlags: 0

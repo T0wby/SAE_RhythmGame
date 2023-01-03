@@ -1,4 +1,5 @@
 using AudioManaging;
+using Scriptable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,14 +20,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private HitArea _goodBeforeLineTwo;
     [SerializeField] private HitArea _goodBeforeLineThree;
     [SerializeField] private HitArea _goodBeforeLineFour;
-    
+
     [Header("GoodAfterHitLine")]
     [SerializeField] private HitArea _goodAfterLineOne;
     [SerializeField] private HitArea _goodAfterLineTwo;
     [SerializeField] private HitArea _goodAfterLineThree;
     [SerializeField] private HitArea _goodAfterLineFour;
 
+    [Header("Counter")]
+    [SerializeField] private Integer _goodHitCounter;
+    [SerializeField] private Integer _perfectHitCounter;
 
+    [Header("Music")]
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
 
     #endregion
@@ -57,26 +62,12 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Callbacks
-    
+
     public void OnHitOne(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            if (_perfectLineOne.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
-                _perfectLineOne.ResetArea();
-            }
-            else if (_goodBeforeLineOne.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodBeforeLineOne.ResetArea();
-            }
-            else if (_goodAfterLineOne.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodAfterLineOne.ResetArea();
-            }
+            DoActionOnLine(_perfectLineOne, _goodBeforeLineOne, _goodAfterLineOne);
         }
     }
 
@@ -84,21 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            if (_perfectLineTwo.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
-                _perfectLineTwo.ResetArea();
-            }
-            else if (_goodBeforeLineTwo.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodBeforeLineTwo.ResetArea();
-            }
-            else if (_goodAfterLineTwo.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodAfterLineTwo.ResetArea();
-            }
+            DoActionOnLine(_perfectLineTwo, _goodBeforeLineTwo, _goodAfterLineTwo);
         }
     }
 
@@ -106,21 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            if (_perfectLineThree.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
-                _perfectLineThree.ResetArea();
-            }
-            else if (_goodBeforeLineThree.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodBeforeLineThree.ResetArea();
-            }
-            else if (_goodAfterLineThree.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodAfterLineThree.ResetArea();
-            }
+            DoActionOnLine(_perfectLineThree, _goodBeforeLineThree, _goodAfterLineThree);
         }
     }
 
@@ -128,21 +91,35 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
-            if (_perfectLineFour.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
-                _perfectLineFour.ResetArea();
-            }
-            else if (_goodBeforeLineFour.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodBeforeLineFour.ResetArea();
-            }
-            else if (_goodAfterLineFour.Buttons.Count > 0)
-            {
-                _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
-                _goodAfterLineFour.ResetArea();
-            }
+            DoActionOnLine(_perfectLineFour, _goodBeforeLineFour, _goodAfterLineFour);
+        }
+    }
+
+
+
+    #endregion
+
+    #region Function
+
+    private void DoActionOnLine(HitArea perfect, HitArea goodOne, HitArea goodTwo)
+    {
+        if (perfect.Buttons.Count > 0)
+        {
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
+            perfect.ResetArea();
+            _perfectHitCounter++;
+        }
+        else if (goodOne.Buttons.Count > 0)
+        {
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
+            goodOne.ResetArea();
+            _goodHitCounter++;
+        }
+        else if (goodTwo.Buttons.Count > 0)
+        {
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
+            goodTwo.ResetArea();
+            _goodHitCounter++;
         }
     }
 

@@ -1,4 +1,5 @@
 using AudioManaging;
+using Scriptable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class MissLine : MonoBehaviour
 {
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
     [SerializeField] private Spawner _spawner;
+    [SerializeField] private Integer _missedNodes;
 
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +19,7 @@ public class MissLine : MonoBehaviour
         if (tmp is not null)
         {
             _spawner.Pool.ReturnItem(tmp);
+            _missedNodes++;
         }
     }
 }
