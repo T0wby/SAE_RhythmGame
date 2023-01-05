@@ -59,5 +59,21 @@ public class GameManager : Singleton<GameManager>
     }
     #endregion
 
+    #region Functions
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        Debug.Log("END!");
+    }
+
+    public void UnPauseGame()
+    {
+        Time.timeScale = 1.0f;
+        Debug.Log("START!");
+    }
+
+    #endregion
+
     #endregion
 }

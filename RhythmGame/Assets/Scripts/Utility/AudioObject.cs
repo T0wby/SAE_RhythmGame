@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using System;
 
 namespace AudioManaging
 {
@@ -15,6 +16,17 @@ namespace AudioManaging
         public async void SetCountdown(int _delay)
         {
             await Task.Delay(_delay);
+
+            if (m_pool is not null)
+            {
+                m_pool.ReturnItem(this);
+            }
+        }
+
+        public async void SetCountdown(int _delay, Action action)
+        {
+            await Task.Delay(_delay);
+            action.Invoke();
 
             if (m_pool is not null)
             {

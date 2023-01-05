@@ -65,7 +65,7 @@ public class MusicManager : MonoBehaviour
         tmpSource.volume = library.Volume;
 
         tmpSource.Play();
-        tmp.SetCountdown((int)(tmpSource.clip.length * 1000));
+        tmp.SetCountdown((int)(tmpSource.clip.length * 1000), UIManager.Instance.OpenEndscreen);
 
         m_entityRequests.Remove(_request);
     }
