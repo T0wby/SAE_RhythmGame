@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
+    #region Fields
     private string m_tag = "MusicManager";
 
     [SerializeField] private NotifyMusicRequestCollection m_entityRequests;
@@ -21,6 +22,18 @@ public class MusicManager : MonoBehaviour
     private Dictionary<ESources, Dictionary<EMusicTypes, ClipLibrary<EMusicTypes>>> m_entityMusicCollectionDictionary = new Dictionary<ESources, Dictionary<EMusicTypes, ClipLibrary<EMusicTypes>>>();
 
     private ObjectPool<AudioObject> m_pool;
+
+    private AudioObject _lastCreatedMusicObject = null;
+
+
+    #endregion
+
+    #region Properties
+    public AudioObject LastCreatedMusicObject { get => _lastCreatedMusicObject; }
+
+    #endregion
+
+    #region Unity
     private void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag(m_tag);
@@ -49,24 +62,27 @@ public class MusicManager : MonoBehaviour
 
         m_entityRequests.OnAdd += OnEntitySound;
     }
+    #endregion
 
+    #region Methods
     private void OnEntitySound(EntityMusicRequest _request)
     {
-        AudioObject tmp = m_pool.GetItem();
-        AudioSource tmpSource = tmp.Source;
+        _lastCreatedMusicObject = m_pool.GetItem();
+        AudioSource tmpSource = _lastCreatedMusicObject.Source;
         ClipLibrary<EMusicTypes> library = m_entityMusicCollectionDictionary[_request.Source][_request.Type];
-        tmp.name = $"{_request.Source} {_request.Type}-Sound";
+        _lastCreatedMusicObject.name = $"{_request.Source} {_request.Type}-Sound";
 
-        tmp.transform.parent = _request.Parent;
-        tmp.transform.position = _request.Position;
+        _lastCreatedMusicObject.transform.parent = _request.Parent;
+        _lastCreatedMusicObject.transform.position = _request.Position;
 
         tmpSource.outputAudioMixerGroup = m_mixingGroup;
         tmpSource.clip = library.FileList[0];
         tmpSource.volume = library.Volume;
 
         tmpSource.Play();
-        tmp.SetCountdown((int)(tmpSource.clip.length * 1000), UIManager.Instance.OpenEndscreen);
+        _lastCreatedMusicObject.SetCountdown((int)(tmpSource.clip.length * 1000), UIManager.Instance.OpenEndscreen);
 
         m_entityRequests.Remove(_request);
-    }
+    } 
+    #endregion
 }

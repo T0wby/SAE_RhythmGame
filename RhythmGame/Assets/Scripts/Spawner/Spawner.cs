@@ -21,7 +21,6 @@ public class Spawner : MonoBehaviour
     [Header("ObjectPool")]
     [SerializeField] private int _poolSize;
     private ObjectPool<ShortButton> _pool;
-    private float _timer;
     private GameObject _newButton;
     #endregion
 

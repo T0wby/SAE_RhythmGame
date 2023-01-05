@@ -44,11 +44,20 @@ namespace AudioManaging
         {
             gameObject?.SetActive(true);
         }
+
         public void Deactivate()
         {
             if (gameObject is not null)
             {
                 gameObject.SetActive(false);
+            }
+        }
+
+        public void StopSound()
+        {
+            if (m_source is not null)
+            {
+                m_source.Stop();
             }
         }
     } 

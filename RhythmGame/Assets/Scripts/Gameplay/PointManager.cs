@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointManager : MonoBehaviour
+public class PointManager : Singleton<PointManager>
 {
     [Header("Points")]
     [SerializeField] private Integer _goodNodes;
@@ -18,11 +18,25 @@ public class PointManager : MonoBehaviour
     [SerializeField] private Spawner _spawnerthree;
     [SerializeField] private Spawner _spawnerfour;
 
+    public Integer GoodNodes { get => _goodNodes; }
+    public Integer PerfectNodes { get => _perfectNodes; }
+    public Integer MissedNodes { get => _missedNodes; }
+
+
+    #region Unity
+    protected override void Awake()
+    {
+        _isInAllScenes = false;
+        base.Awake();
+    }
+
     private void Start()
     {
         _totalLevelNodes = _spawnerone.SpawnTimings.Count + _spawnertwo.SpawnTimings.Count + _spawnerthree.SpawnTimings.Count + _spawnerfour.SpawnTimings.Count;
         _missedNodes.ChangeValue += CheckLossCondition;
     }
+    #endregion
+
 
 
     #region Methods

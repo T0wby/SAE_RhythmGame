@@ -4270,6 +4270,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endscreen: {fileID: 534336893}
+  _songName: {fileID: 358254767}
+  _endScore: {fileID: 67716046}
+  _thScore: {fileID: 51248795}
+  _phScore: {fileID: 841635250}
+  _ghScore: {fileID: 283654777}
+  _missScore: {fileID: 1193751466}
+  _mcScore: {fileID: 421962498}
 --- !u!4 &846357436
 Transform:
   m_ObjectHideFlags: 0
