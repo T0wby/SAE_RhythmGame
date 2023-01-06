@@ -125,6 +125,7 @@ public class LevelManager : MonoBehaviour
     /// <param name="scoreCount">Number of scores in the List</param>
     private void FillScores(List<ScoreInfo> scoreInfos, int scoreCount)
     {
+        EmptyScores();
         for (int i = 0; i < scoreCount; i++)
         {
             GameObject tmp = Instantiate(_scoreInformation, _scoreParent.transform);

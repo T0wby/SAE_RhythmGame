@@ -41,6 +41,7 @@ public class UIManager : Singleton<UIManager>
 
     public void GoBackToMenu()
     {
+        PointManager.Instance.ResetLevelPoints();
         GameManager.Instance.UnPauseGame();
         SceneManager.LoadScene("LevelSelection");
     }

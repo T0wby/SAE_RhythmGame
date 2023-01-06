@@ -49,5 +49,12 @@ public class PointManager : Singleton<PointManager>
         }
     }
 
+
+    public void ResetLevelPoints()
+    {
+        _goodNodes.Value = 0;
+        _perfectNodes.Value = 0;
+        _missedNodes.Value = 0;
+    }
     #endregion
 }

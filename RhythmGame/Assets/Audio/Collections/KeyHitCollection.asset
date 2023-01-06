@@ -23,7 +23,7 @@ MonoBehaviour:
     m_fileReference:
       m_volume: 0.2
       m_audioClips:
-      - {fileID: 8300000, guid: 06ca0ddeadf4880488d3ec8cb2138ce1, type: 3}
+      - {fileID: 8300000, guid: d4e024e450b2a7b498ae78c451f2b461, type: 3}
   - m_type: 4
     m_fileReference:
       m_volume: 0.2
