@@ -41,7 +41,7 @@ public class Singleton<T> : MonoBehaviour where T : Component
 
     private void RemoveDuplicates()
     {
-        if (_instance is null)
+        if (_instance == null)
         {
             _instance = this as T;
             if (_isInAllScenes) DontDestroyOnLoad(this);
