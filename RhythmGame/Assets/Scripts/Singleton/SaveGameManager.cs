@@ -12,26 +12,22 @@ public class SaveGameManager : Singleton<SaveGameManager>
     private LevelSerializable[] _levelCollectionSerializable = null;
     private string _filePath;
 
-    private LevelInfo _tmpLevel;
-    private ScoreInfo _tmpScoreInfo;
 
     public LevelInfo[] LevelCollection { get => _levelCollection;}
 
     protected override void Awake()
     {
         _levelCollectionSerializable = new LevelSerializable[_levelCollection.Length];
-        _tmpLevel = new LevelInfo();
-        _tmpScoreInfo = new ScoreInfo();
 
         _filePath = $"{Application.dataPath}/levelsettings.bin";
         _isInAllScenes = true;
         base.Awake();
-        LoadLevelInformation();
+        _levelCollection = LoadLevelInformation(_levelCollection);
     }
 
-    public void SaveLevelInformation()
+    public void SaveLevelInformation(LevelInfo[] levelCollection)
     {
-        UpdateInfo();
+        UpdateInfo(levelCollection);
         using (Stream writeStream = File.OpenWrite(_filePath))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -39,10 +35,10 @@ public class SaveGameManager : Singleton<SaveGameManager>
         }
     }
 
-    public void LoadLevelInformation() 
+    public LevelInfo[] LoadLevelInformation(LevelInfo[] levelCollection) 
     {
         if (!File.Exists(_filePath))
-            return;
+            return levelCollection;
 
         using (Stream readStream = File.Open(_filePath, FileMode.Open))
         {
@@ -51,19 +47,19 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
             _levelCollectionSerializable = (LevelSerializable[])deserializedObject;
         }
-        LoadInfo();
+        return LoadInfo(levelCollection);
     }
 
     /// <summary>
     /// Take info from the scriptableobjects and fill our Serializable classes
     /// </summary>
-    private void UpdateInfo()
+    private void UpdateInfo(LevelInfo[] levelCollection)
     {
         for (int i = 0; i < _levelCollectionSerializable.Length; i++)
         {
-            LevelInfo tmp = _levelCollection[i];
+            LevelInfo tmp = levelCollection[i];
             List<ScoreSerializable> scoreCollection = new List<ScoreSerializable>();
-            List<ScoreInfo> scoreInfo = _levelCollection[i].ScoreCollection;
+            List<ScoreInfo> scoreInfo = levelCollection[i].ScoreCollection;
 
             for (int j = 0; j < scoreInfo.Count; j++)
             {
@@ -77,7 +73,7 @@ public class SaveGameManager : Singleton<SaveGameManager>
     /// <summary>
     /// Take info from our Serializable classes and fill the scriptableobjects
     /// </summary>
-    private void LoadInfo()
+    private LevelInfo[] LoadInfo(LevelInfo[] levelCollection)
     {
         for (int i = 0; i < _levelCollectionSerializable.Length; i++)
         {
@@ -87,12 +83,14 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
             for (int j = 0; j < scoreInfos.Count; j++)
             {
-                _tmpScoreInfo.Init(scoreInfos[j].Placement, scoreInfos[j].PlayerName, scoreInfos[j].Accuracy, scoreInfos[j].Score);
-                scoreCollection.Add(_tmpScoreInfo);
+                ScoreInfo tmpScoreInfo = new ScoreInfo();
+                tmpScoreInfo.Init(scoreInfos[j].Placement, scoreInfos[j].PlayerName, scoreInfos[j].Accuracy, scoreInfos[j].Score);
+                scoreCollection.Add(tmpScoreInfo);
             }
 
-            _tmpLevel.Init(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.LevelDifficulty, scoreCollection);
-            _levelCollection[i] = _tmpLevel;
+            levelCollection[i].Init(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.LevelDifficulty, scoreCollection);
         }
+
+        return levelCollection;
     }
 }

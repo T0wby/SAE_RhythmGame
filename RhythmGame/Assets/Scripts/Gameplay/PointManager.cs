@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PointManager : Singleton<PointManager>
 {
+    [Header("Level")]
+    [SerializeField] private LevelInfo[] _levelCollection = null;
+
     [Header("Points")]
     [SerializeField] private Integer _goodNodes;
     [SerializeField] private Integer _perfectNodes;
@@ -81,7 +84,7 @@ public class PointManager : Singleton<PointManager>
         Debug.Log($"ScoreCount in {GameManager.Instance.ActiveLevel}: {level.ScoreCollection.Count}");
 
         //Saveing all levels to binary file
-        SaveGameManager.Instance.SaveLevelInformation();
+        SaveGameManager.Instance.SaveLevelInformation(_levelCollection);
     }
     #endregion
 }
