@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,5 +17,13 @@ namespace Scriptable
         public string PlayerName { get => _playerName; set => _playerName = value; }
         public float Accuracy { get => _accuracy; set => _accuracy = value; }
         public float Score { get => _score; set => _score = value; }
+
+        public void Init(int placement, string playerName, float accuracy, float score)
+        {
+            _placement = placement;
+            _playerName = playerName;
+            _accuracy = accuracy;
+            _score = score;
+        }
     }
 }

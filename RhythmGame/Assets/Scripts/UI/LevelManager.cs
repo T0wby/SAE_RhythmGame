@@ -39,7 +39,7 @@ public class LevelManager : MonoBehaviour
             txtComponents[1].text = levelInfo.ArtistName;
             txtComponents[2].text = levelInfo.LevelDifficulty.ToString();
 
-            //Setting OnClick Event
+            //Setting OnClick Event depending of the unlocked Difficulty
             Button levelButton = tmp.GetComponent<Button>();
             if (levelButton is not null)
             {

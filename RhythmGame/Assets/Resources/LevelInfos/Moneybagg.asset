@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 298b7fe3ff9346b4db6c0293b21952c6, type: 3}
-  m_Name: Moneybagg Yo
+  m_Name: Moneybagg
   m_EditorClassIdentifier: 
   _songName: Moneybagg
   _artistName: Gianluca
   _isUnlocked: 1
   _price: 0
   _levelDifficulty: 0
-  _scoreCollection: []
+  _scoreCollection:
+  - {fileID: 0}

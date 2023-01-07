@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,5 +21,15 @@ namespace Scriptable
         public float Price => _price;
         public ELevelDifficulty LevelDifficulty => _levelDifficulty;
         public List<ScoreInfo> ScoreCollection => _scoreCollection;
+
+        public void Init(string songName, string artistName, bool isUnlocked, float price, ELevelDifficulty levelDifficulty, List<ScoreInfo> scoreCollection)
+        {
+            _songName = songName;
+            _artistName = artistName;
+            _isUnlocked = isUnlocked;
+            _price = price;
+            _levelDifficulty = levelDifficulty;
+            _scoreCollection = scoreCollection;
+        }
     } 
 }

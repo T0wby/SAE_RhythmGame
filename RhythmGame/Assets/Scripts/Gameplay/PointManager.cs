@@ -56,5 +56,32 @@ public class PointManager : Singleton<PointManager>
         _perfectNodes.Value = 0;
         _missedNodes.Value = 0;
     }
+
+    private ScoreInfo CreateScore()
+    {
+        ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;
+        /**TODO: Add points etc.**/
+        score.Init(0, UIManager.Instance.EnteredUserName.text, 0, 0);
+
+        return score;
+    }
+
+    public void AddScoreToLevel()
+    {
+        LevelInfo level = (LevelInfo)Resources.Load($"LevelInfos/{GameManager.Instance.ActiveLevel}");
+
+        if (level is null)
+        {
+            Debug.LogError("Level not found!");
+            return;
+        }
+
+        /**TODO: Some kind of sorting for all scores**/
+        level.ScoreCollection.Add(CreateScore());
+        Debug.Log($"ScoreCount in {GameManager.Instance.ActiveLevel}: {level.ScoreCollection.Count}");
+
+        //Saveing all levels to binary file
+        SaveGameManager.Instance.SaveLevelInformation();
+    }
     #endregion
 }

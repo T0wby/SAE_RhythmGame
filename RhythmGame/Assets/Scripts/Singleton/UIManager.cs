@@ -16,7 +16,10 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _ghScore;
     [SerializeField] private TMP_Text _missScore;
     [SerializeField] private TMP_Text _mcScore;
+    [SerializeField] private TMP_Text _enteredUserName;
     private MusicManager _musicManager;
+
+    public TMP_Text EnteredUserName { get => _enteredUserName;}
 
     #region Unity
     protected override void Awake()
