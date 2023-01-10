@@ -1,7 +1,9 @@
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 namespace Scriptable
 {
@@ -30,6 +32,25 @@ namespace Scriptable
             _price = price;
             _levelDifficulty = levelDifficulty;
             _scoreCollection = scoreCollection;
+        }
+
+        // Currently BubbleSort
+        public void SortScoreCollection()
+        {
+            ScoreInfo tmp;
+            int length = _scoreCollection.Count;
+            for (int i = 0; i < length; i++)
+            {
+                for (int n = 0; n < length - 1 - i; n++)
+                {
+                    if (_scoreCollection[n].Score < _scoreCollection[n + 1].Score)
+                    {
+                        tmp = _scoreCollection[n + 1];
+                        _scoreCollection[n + 1] = _scoreCollection[n];
+                        _scoreCollection[n] = tmp;
+                    }
+                }
+            }
         }
     } 
 }

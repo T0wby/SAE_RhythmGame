@@ -51,7 +51,6 @@ public class HitArea : MonoBehaviour
     {
         for (int i = 0; i < _buttons.Count; i++)
         {
-            //_buttons[i].gameObject.SetActive(false);
             if (_buttons[i].GetType() == typeof(ShortButton))
             {
                 _spawner.Pool.ReturnItem((ShortButton)_buttons[i]);

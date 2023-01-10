@@ -107,12 +107,15 @@ public class PlayerController : MonoBehaviour
         {
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
             perfect.ResetArea();
+            goodOne.ResetArea();
+            goodTwo.ResetArea();
             _perfectHitCounter++;
         }
         else if (goodOne.Buttons.Count > 0)
         {
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
             goodOne.ResetArea();
+            goodTwo.ResetArea();
             _goodHitCounter++;
         }
         else if (goodTwo.Buttons.Count > 0)

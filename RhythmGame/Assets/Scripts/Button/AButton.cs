@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AButton : MonoBehaviour
+public abstract class AButton : MonoBehaviour, IPoolable<AButton>
 {
     protected GameObject _target;
     protected float _travelTime = 20f;
@@ -12,6 +12,21 @@ public abstract class AButton : MonoBehaviour
     public GameObject Target { get => _target; set => _target = value; }
     public float TravelTime { get => _travelTime; set => _travelTime = value; }
     public EButtonType Type { get; set; }
+
+    public virtual void Deactivate()
+    {
+        gameObject?.SetActive(false);
+    }
+
+    public virtual void Initialize(ObjectPool<AButton> pool)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void Reset()
+    {
+        gameObject?.SetActive(true);
+    }
 
     public void StartButton(GameObject target, float travelTime)
     {

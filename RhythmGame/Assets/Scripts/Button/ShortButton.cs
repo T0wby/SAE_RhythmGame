@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShortButton : AButton, IPoolable<ShortButton>
 {
     private ObjectPool<ShortButton> _pool;
-    public void Deactivate()
+    public override void Deactivate()
     {
         gameObject?.SetActive(false);
     }
@@ -16,7 +16,7 @@ public class ShortButton : AButton, IPoolable<ShortButton>
         _pool = pool;
     }
 
-    public void Reset()
+    public override void Reset()
     {
         gameObject?.SetActive(true);
     }

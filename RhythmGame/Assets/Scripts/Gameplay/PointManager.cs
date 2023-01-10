@@ -79,8 +79,8 @@ public class PointManager : Singleton<PointManager>
             return;
         }
 
-        /**TODO: Some kind of sorting for all scores**/
         level.ScoreCollection.Add(CreateScore());
+        level.SortScoreCollection();
         Debug.Log($"ScoreCount in {GameManager.Instance.ActiveLevel}: {level.ScoreCollection.Count}");
 
         //Saveing all levels to binary file
