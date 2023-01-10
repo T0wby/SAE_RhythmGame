@@ -10,7 +10,7 @@ public class Initilaizer : MonoBehaviour
     {
         yield return new WaitForSeconds(_logoTime);
         GameManager.Instance.ChangeGamestate<GameStateMenu>();
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadSceneAsync("LevelSelection");
     }
 
     private void Awake()

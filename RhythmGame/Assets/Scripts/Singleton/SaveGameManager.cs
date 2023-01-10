@@ -83,7 +83,7 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
             for (int j = 0; j < scoreInfos.Count; j++)
             {
-                ScoreInfo tmpScoreInfo = new ScoreInfo();
+                ScoreInfo tmpScoreInfo = (ScoreInfo)ScriptableObject.CreateInstance("ScoreInfo");
                 tmpScoreInfo.Init(scoreInfos[j].Placement, scoreInfos[j].PlayerName, scoreInfos[j].Accuracy, scoreInfos[j].Score);
                 scoreCollection.Add(tmpScoreInfo);
             }

@@ -75,6 +75,7 @@ public class PointManager : Singleton<PointManager>
 
         if (level is null)
         {
+            Debug.LogError($"Active lvl: {GameManager.Instance.ActiveLevel}!");
             Debug.LogError("Level not found!");
             return;
         }
