@@ -5,11 +5,14 @@ using UnityEngine;
 
 public abstract class AButton : MonoBehaviour, IPoolable<AButton>
 {
-    protected GameObject _target;
-    protected float _travelTime = 20f;
+    protected GameObject _targetOne;
+    protected GameObject _targetTwo;
+    protected float _travelTime = 3f;
+    protected float _travelTimeExtra = 3f;
     protected EButtonType _type = EButtonType.NONE;
 
-    public GameObject Target { get => _target; set => _target = value; }
+    public GameObject TargetOne { get => _targetOne; set => _targetOne = value; }
+    public GameObject TargeTwo { get => _targetTwo; set => _targetTwo = value; }
     public float TravelTime { get => _travelTime; set => _travelTime = value; }
     public EButtonType Type { get; set; }
 
@@ -28,25 +31,43 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
         gameObject?.SetActive(true);
     }
 
-    public void StartButton(GameObject target, float travelTime)
+    public void StartButton(GameObject targetOne, GameObject targetTwo, float travelTime)
     {
-        _target = target;
+        _targetOne = targetOne;
+        _targetTwo = targetTwo;
         _travelTime = travelTime;
-        StartCoroutine(StartMovement());
+        _travelTimeExtra = travelTime * 0.1f;
+        StartCoroutine(StartMovementOne());
     }
 
-    protected IEnumerator StartMovement()
+    protected IEnumerator StartMovementOne()
     {
         float time = 0;
-        float currProg = 0;
+        float currProg;
         while (time <=_travelTime )
         {
             currProg = time / _travelTime;
-            transform.position = Vector3.Lerp(transform.parent.position, Target.transform.position, currProg);
+            transform.position = Vector3.Lerp(transform.parent.position, _targetOne.transform.position, currProg);
             yield return new WaitForEndOfFrame();
             time += Time.deltaTime;
         }
 
-        transform.position = Target.transform.position;
+        transform.position = _targetOne.transform.position;
+        StartCoroutine(StartMovementTwo());
+    }
+
+    protected IEnumerator StartMovementTwo()
+    {
+        float time = 0;
+        float currProg;
+        while (time <= _travelTimeExtra)
+        {
+            currProg = time / _travelTimeExtra;
+            transform.position = Vector3.Lerp(TargetOne.transform.position, _targetTwo.transform.position, currProg);
+            yield return new WaitForEndOfFrame();
+            time += Time.deltaTime;
+        }
+
+        transform.position = _targetTwo.transform.position;
     }
 }

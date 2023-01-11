@@ -6,18 +6,25 @@ using UnityEngine.SceneManagement;
 using System.Xml;
 using System.IO;
 using System;
+using System.Globalization;
 
 public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] private Image _loadingBar;
     [SerializeField] private GameObject _continueText;
     private TextAsset xmlRawFile;
-
+    private Char[] _trimCharacters;
+    private List<float> _spawnerOne = new List<float>();
+    private List<float> _spawnerTwo = new List<float>();
+    private List<float> _spawnerThree = new List<float>();
+    private List<float> _spawnerFour = new List<float>();
 
     private void Start()
     {
+        _trimCharacters = new Char[] {'"'};
         xmlRawFile = (TextAsset)Resources.Load($"XML/{GameManager.Instance.ActiveLevel}");
         parseXMLFile(xmlRawFile.text);
+        SetSpawnArrays();
         StartCoroutine(nameof(LoadingScreenStart));
     }
 
@@ -50,49 +57,40 @@ public class LoadingScreen : MonoBehaviour
 
         XmlNodeList elemList = xmlDoc.GetElementsByTagName("line");
 
-
         for (int i = 0; i < elemList.Count; i++)
         {
             XmlNodeList temp = elemList[i].SelectNodes("descendant::starttime");
-            List<float> list0 = new List<float>();
-            List<float> list1 = new List<float>();
-            List<float> list2 = new List<float>();
-            List<float> list3 = new List<float>();
             foreach (XmlNode xmlNode in temp)
             {
-                //string tmpString = String.Join('.',xmlNode.InnerText.Split(':'));
-                string tmpString = String.Join('.',xmlNode.InnerText.Split(':'));
-                float tmpFloat = 0f;
-                //Debug.Log($"Parse: {float.Parse(tmpString, System.Globalization.CultureInfo.InvariantCulture)}" +
-                //    $"\n None: {xmlNode.InnerText}");
-
-                Debug.Log($"Parse: {float.TryParse(tmpString,out tmpFloat)}" +
-                    $"\n None: {xmlNode.InnerText}");
-
-                for (int x = 0; x < tmpString.Length; x++)
+                switch (i)
                 {
-
+                    case 0:
+                        _spawnerOne.Add(float.Parse(xmlNode.InnerText.Trim(_trimCharacters), CultureInfo.InvariantCulture));
+                        break;
+                    case 1:
+                        _spawnerTwo.Add(float.Parse(xmlNode.InnerText.Trim(_trimCharacters), CultureInfo.InvariantCulture));
+                        break;
+                    case 2:
+                        _spawnerThree.Add(float.Parse(xmlNode.InnerText.Trim(_trimCharacters), CultureInfo.InvariantCulture));
+                        break;
+                    case 3:
+                        _spawnerFour.Add(float.Parse(xmlNode.InnerText.Trim(_trimCharacters), CultureInfo.InvariantCulture));
+                        break;
+                    default:
+                        break;
                 }
-
-                //switch (i)
-                //{
-                //    case 0:
-                //        list0.Add(float.Parse(xmlNode.InnerText));
-                //        break;
-                //    case 1:
-                //        list1.Add(float.Parse(xmlNode.InnerText));
-                //        break;
-                //    case 2:
-                //        list2.Add(float.Parse(xmlNode.InnerText));
-                //        break;
-                //    case 3:
-                //        list3.Add(float.Parse(xmlNode.InnerText));
-                //        break;
-                //    default:
-                //        break;
-                //}
             }
-
         }
+    }
+
+    private void SetSpawnArrays()
+    {
+        GameManager gameManager = GameManager.Instance;
+
+        gameManager.SpawnerOne = _spawnerOne;
+        gameManager.SpawnerTwo = _spawnerTwo;
+        gameManager.SpawnerThree = _spawnerThree;
+        gameManager.SpawnerFour = _spawnerFour;
+
     }
 }

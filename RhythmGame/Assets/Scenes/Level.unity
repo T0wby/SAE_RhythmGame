@@ -739,7 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7149a9cb4a5f05746838c364c36b99be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 226345210}
+  _target: {fileID: 942582645}
+  _targetExtra: {fileID: 226345210}
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
@@ -748,6 +749,7 @@ MonoBehaviour:
   - 13
   - 22
   - 25.22
+  _spawnerID: 3
   _poolSize: 15
 --- !u!1 &92670706
 GameObject:
@@ -3349,7 +3351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7149a9cb4a5f05746838c364c36b99be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 1426757631}
+  _target: {fileID: 905894242}
+  _targetExtra: {fileID: 1426757631}
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
@@ -3358,6 +3361,7 @@ MonoBehaviour:
   - 7
   - 22
   - 24.01
+  _spawnerID: 2
   _poolSize: 15
 --- !u!1 &550122236
 GameObject:
@@ -3455,7 +3459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7149a9cb4a5f05746838c364c36b99be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 1078316014}
+  _target: {fileID: 648581234}
+  _targetExtra: {fileID: 1078316014}
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
@@ -3464,6 +3469,7 @@ MonoBehaviour:
   - 10
   - 22
   - 28.41
+  _spawnerID: 4
   _poolSize: 15
 --- !u!1001 &581625271
 PrefabInstance:
@@ -4524,7 +4530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7149a9cb4a5f05746838c364c36b99be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 439248866}
+  _target: {fileID: 77317779}
+  _targetExtra: {fileID: 439248866}
   _shortButtonPrefab: {fileID: 5910244741295513277, guid: 10c59dc4d33c05b4b9ea4c9bb100fe14,
     type: 3}
   _travelTime: 3
@@ -4533,6 +4540,7 @@ MonoBehaviour:
   - 1
   - 22
   - 30.541
+  _spawnerID: 1
   _poolSize: 15
 --- !u!1 &905894242
 GameObject:
@@ -5153,7 +5161,7 @@ MonoBehaviour:
   _musicRequestCollection: {fileID: 11400000, guid: 423e54684eb2d204cb130f3f2bc91766,
     type: 2}
   _musicOffset: 5
-  _songBPM: 120
+  _songBPM: 145
   _currentSongPos: 0
   _dspSongTime: 0
   _beatPerSec: 0
@@ -8475,7 +8483,7 @@ MonoBehaviour:
   _goodNodes: {fileID: 11400000, guid: 0711bab94db34514299a391452f94e51, type: 2}
   _perfectNodes: {fileID: 11400000, guid: ff507befeb464964faa68b9c33b413c8, type: 2}
   _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
-  _lossPercent: 0.101
+  _lossPercent: 1
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
   _spawnerthree: {fileID: 85189623}

@@ -39,6 +39,7 @@ public class Conductor : MonoBehaviour
     {
         _beatPerSec = 60f / _songBPM;
         _dspSongTime = (float)AudioSettings.dspTime;
+        //_currentSongPos = -_musicOffset;
         StartCoroutine(MusicCountdown());
     }
 
@@ -47,7 +48,7 @@ public class Conductor : MonoBehaviour
         if (!IsSongStarted)
             return;
 
-        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime);
+        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _musicOffset);
         _currentBeatPos = _currentSongPos / _beatPerSec;
     }
 
