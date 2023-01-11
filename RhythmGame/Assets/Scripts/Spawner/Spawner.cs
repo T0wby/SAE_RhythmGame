@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
         if (_spawnTimings.Count == 0)
             return;
 
-        if (_conductor.CurrentSongPos >= _spawnTimings[0])
+        if (_conductor.CurrentSongPos >= _spawnTimings[0] && !GameManager.Instance.IsPaused)
         {
             _newButton = _pool.GetItem().gameObject;
             _newButton.GetComponent<AButton>().StartButton(_target, _travelTime);
