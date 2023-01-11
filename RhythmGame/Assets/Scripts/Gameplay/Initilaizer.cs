@@ -14,7 +14,6 @@ public class Initilaizer : MonoBehaviour
 
     private void Awake()
     {
-        GameManager.Instance.IsInAllScenes = true;
         StartCoroutine(ShowLogo());
     }
 }
