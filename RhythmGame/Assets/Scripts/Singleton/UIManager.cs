@@ -17,6 +17,12 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _missScore;
     [SerializeField] private TMP_Text _mcScore;
     [SerializeField] private TMP_Text _enteredUserName;
+
+    [Header("Countdown")]
+    [SerializeField] private GameObject _countdown;
+    [SerializeField] private TMP_Text _countdownText;
+    [SerializeField] private Conductor _conductor;
+
     private MusicManager _musicManager;
 
     public TMP_Text EnteredUserName { get => _enteredUserName;}
@@ -28,6 +34,8 @@ public class UIManager : Singleton<UIManager>
         base.Awake();
 
         _musicManager = FindObjectOfType<MusicManager>();
+
+        StartCoroutine(StartCountdown());
     }
     #endregion
 
@@ -58,6 +66,21 @@ public class UIManager : Singleton<UIManager>
         _ghScore.text = PointManager.Instance.GoodNodes.Value.ToString();
         _missScore.text = PointManager.Instance.MissedNodes.Value.ToString();
         //_mcScore.text =
+    }
+
+    #endregion
+
+    #region Enumerators
+
+    private IEnumerator StartCountdown() 
+    {
+        for (int i = 0; i < _conductor.MusicOffset; i++)
+        {
+            _countdownText.text = (_conductor.MusicOffset - i).ToString();
+
+            yield return new WaitForSeconds(1);
+        }
+        _countdown.SetActive(false);
     }
 
     #endregion
