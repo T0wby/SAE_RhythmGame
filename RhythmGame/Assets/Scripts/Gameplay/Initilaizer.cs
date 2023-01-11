@@ -9,14 +9,12 @@ public class Initilaizer : MonoBehaviour
     private IEnumerator ShowLogo()
     {
         yield return new WaitForSeconds(_logoTime);
-        GameManager.Instance.ChangeGamestate<GameStateMenu>();
         SceneManager.LoadSceneAsync("LevelSelection");
     }
 
     private void Awake()
     {
         GameManager.Instance.IsInAllScenes = true;
-        GameManager.Instance.ChangeGamestate<GameStateLogo>();
         StartCoroutine(ShowLogo());
     }
 }

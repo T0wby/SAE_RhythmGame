@@ -27,6 +27,13 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        CreateLevel();
+    }
+
+    #region Functions
+
+    private void CreateLevel()
+    {
         _filledScoreChilds = new List<GameObject>();
         for (int i = 0; i < _levelCollection.Length; i++)
         {
@@ -82,8 +89,6 @@ public class LevelManager : MonoBehaviour
             levelButton.interactable = _levelCollection[i].IsUnlocked;
         }
     }
-
-    #region Functions
 
     /// <summary>
     /// Loads Scores of a Level if it has any

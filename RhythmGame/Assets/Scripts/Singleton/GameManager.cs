@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     #region Fields
     [SerializeField] private List<GameState> _gameStates = null;
     [SerializeField] private GameState _activeState = null;
-    private string _activeLevel = string.Empty;
+    private string _activeLevel;
     private List<float> _spawnerOne = new List<float>();
     private List<float> _spawnerTwo = new List<float>();
     private List<float> _spawnerThree = new List<float>();
@@ -17,7 +17,19 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region Properties
-    public string ActiveLevel { get { return _activeLevel; } set { _activeLevel = value; } }
+    public string ActiveLevel
+    {
+        get
+        {
+            return _activeLevel;
+        }
+
+        set
+        {
+            _activeLevel = value;
+            Debug.LogError($"ActiveLevel: {_activeLevel}");
+        }
+    }
 
     public GameState ActiveState
     {
@@ -42,7 +54,7 @@ public class GameManager : Singleton<GameManager>
     {
         foreach (GameState state in _gameStates)
         {
-            if(state.GetType() == typeof(T))
+            if (state.GetType() == typeof(T))
             {
                 //_activeState.Finalize();
                 _activeState = state;
