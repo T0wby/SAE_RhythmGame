@@ -17,4 +17,5 @@ MonoBehaviour:
   _isUnlocked: 1
   _price: 0
   _levelDifficulty: 2
-  _scoreCollection: []
+  _scoreCollection:
+  - {fileID: 0}

@@ -12,7 +12,10 @@ public class Singleton<T> : MonoBehaviour where T : Component
     {
         get
         {
-            if (_instance is null) Initialize();
+            if (_instance is null)
+            {
+                //Initialize();
+            }
             else
             {
                 var name = typeof(T).Name;

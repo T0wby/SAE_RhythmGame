@@ -39,6 +39,7 @@ public class PointManager : Singleton<PointManager>
     {
         _totalLevelNodes = _spawnerone.SpawnTimings.Count + _spawnertwo.SpawnTimings.Count + _spawnerthree.SpawnTimings.Count + _spawnerfour.SpawnTimings.Count;
         _missedNodes.ChangeValue += CheckLossCondition;
+        ResetLevelPoints();
     }
     #endregion
 
@@ -67,8 +68,9 @@ public class PointManager : Singleton<PointManager>
     {
         ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;
         /**TODO: Add Score **/
-        int hitnodes = _goodNodes.Value + _perfectNodes.Value;
-        float accuracy = _missedNodes / hitnodes;
+        float hitnodes = _goodNodes.Value + _perfectNodes.Value;
+        float missednodes = _missedNodes.Value;
+        float accuracy = (hitnodes / (missednodes + hitnodes));
         score.Init(0, UIManager.Instance.EnteredUserName.text, accuracy, 0);
 
         return score;

@@ -40,7 +40,6 @@ public class UIManager : Singleton<UIManager>
 
         _musicManager = FindObjectOfType<MusicManager>();
 
-        PointManager.Instance.ComboCounter.ChangeValue += UpdateComboCounter;
 
         StartCoroutine(StartCountdown());
     }
@@ -92,12 +91,14 @@ public class UIManager : Singleton<UIManager>
 
     private IEnumerator StartCountdown() 
     {
+
         for (int i = 0; i < _conductor.MusicOffset; i++)
         {
             _countdownText.text = (_conductor.MusicOffset - i).ToString();
 
             yield return new WaitForSeconds(1);
         }
+        PointManager.Instance.ComboCounter.ChangeValue += UpdateComboCounter;
         _countdown.SetActive(false);
     }
 

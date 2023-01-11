@@ -147,6 +147,5 @@ public class LevelManager : MonoBehaviour
         _emptyScore.SetActive(false);
         _filledScore.SetActive(true);
     }
-
     #endregion
 }

@@ -8699,7 +8699,7 @@ MonoBehaviour:
   _perfectNodes: {fileID: 11400000, guid: ff507befeb464964faa68b9c33b413c8, type: 2}
   _missedNodes: {fileID: 11400000, guid: 08560caff0b5a4c49926d0123a9219b3, type: 2}
   _comboCounter: {fileID: 11400000, guid: 31f5d200e35cb2640adb5e03b41360c4, type: 2}
-  _lossPercent: 1
+  _lossPercent: 0.5
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
   _spawnerthree: {fileID: 85189623}
