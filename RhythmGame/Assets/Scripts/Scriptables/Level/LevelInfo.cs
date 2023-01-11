@@ -51,6 +51,15 @@ namespace Scriptable
                     }
                 }
             }
+            SetPlacement(length, _scoreCollection);
+        }
+
+        private void SetPlacement(int length, List<ScoreInfo> scoreCollection)
+        {
+            for (int i = 0; i < length; i++)
+            {
+                scoreCollection[i].Placement = i + 1;
+            }
         }
     } 
 }

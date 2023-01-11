@@ -27,7 +27,6 @@ public class GameManager : Singleton<GameManager>
         set
         {
             _activeLevel = value;
-            Debug.LogError($"ActiveLevel: {_activeLevel}");
         }
     }
 

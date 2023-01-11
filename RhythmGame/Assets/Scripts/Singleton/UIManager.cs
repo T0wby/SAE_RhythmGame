@@ -23,6 +23,11 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _countdownText;
     [SerializeField] private Conductor _conductor;
 
+    [Header("IngameUI")]
+    [SerializeField] private TMP_Text _scoreCount;
+    [SerializeField] private TMP_Text _comboCount;
+
+
     private MusicManager _musicManager;
 
     public TMP_Text EnteredUserName { get => _enteredUserName;}
@@ -35,7 +40,14 @@ public class UIManager : Singleton<UIManager>
 
         _musicManager = FindObjectOfType<MusicManager>();
 
+        PointManager.Instance.ComboCounter.ChangeValue += UpdateComboCounter;
+
         StartCoroutine(StartCountdown());
+    }
+
+    private void OnDisable()
+    {
+        PointManager.Instance.ComboCounter.ChangeValue -= UpdateComboCounter;
     }
     #endregion
 
@@ -59,13 +71,19 @@ public class UIManager : Singleton<UIManager>
 
     private void SetEndScreenInfo()
     {
+        PointManager pointManager = PointManager.Instance;
         _songName.text = GameManager.Instance.ActiveLevel;
         //Score _endScore
-        //_thScore.text =
-        _phScore.text = PointManager.Instance.PerfectNodes.Value.ToString();
-        _ghScore.text = PointManager.Instance.GoodNodes.Value.ToString();
-        _missScore.text = PointManager.Instance.MissedNodes.Value.ToString();
+        _thScore.text = (pointManager.PerfectNodes.Value + pointManager.GoodNodes.Value).ToString();
+        _phScore.text = pointManager.PerfectNodes.Value.ToString();
+        _ghScore.text = pointManager.GoodNodes.Value.ToString();
+        _missScore.text = pointManager.MissedNodes.Value.ToString();
         //_mcScore.text =
+    }
+
+    private void UpdateComboCounter(int value)
+    {
+        _comboCount.text = $"{value}x";
     }
 
     #endregion

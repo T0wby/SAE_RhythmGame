@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
             goodOne.ResetArea();
             goodTwo.ResetArea();
             _perfectHitCounter++;
+            PointManager.Instance.ComboCounter++;
         }
         else if (goodOne.Buttons.Count > 0)
         {
@@ -117,12 +118,14 @@ public class PlayerController : MonoBehaviour
             goodOne.ResetArea();
             goodTwo.ResetArea();
             _goodHitCounter++;
+            PointManager.Instance.ComboCounter++;
         }
         else if (goodTwo.Buttons.Count > 0)
         {
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
             goodTwo.ResetArea();
             _goodHitCounter++;
+            PointManager.Instance.ComboCounter++;
         }
     }
 

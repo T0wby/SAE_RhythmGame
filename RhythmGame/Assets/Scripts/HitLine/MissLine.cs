@@ -20,6 +20,7 @@ public class MissLine : MonoBehaviour
         {
             _spawner.Pool.ReturnItem(tmp);
             _missedNodes++;
+            PointManager.Instance.ComboCounter.Value = 0;
         }
     }
 }
