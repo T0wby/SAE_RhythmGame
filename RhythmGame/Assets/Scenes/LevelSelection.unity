@@ -240,7 +240,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2861538}
   m_OnClick:
     m_PersistentCalls:
@@ -1704,6 +1704,7 @@ MonoBehaviour:
   _easyButton: {fileID: 129769616}
   _normalButton: {fileID: 2122613076}
   _hardButton: {fileID: 1648329934}
+  _startButton: {fileID: 2861537}
   _emptyScore: {fileID: 1852955498}
   _filledScore: {fileID: 1754619490}
 --- !u!1 &559464475

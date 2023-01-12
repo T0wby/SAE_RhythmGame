@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Button _easyButton;
     [SerializeField] private Button _normalButton;
     [SerializeField] private Button _hardButton;
+    [SerializeField] private Button _startButton;
     [SerializeField] private GameObject _emptyScore;
     [SerializeField] private GameObject _filledScore;
     private List<GameObject> _filledScoreChilds;
@@ -81,6 +82,7 @@ public class LevelManager : MonoBehaviour
                 }
                 levelButton.onClick.AddListener(() =>
                 {
+                    _startButton.interactable = true;
                     LoadScores(levelInfo);
                 });
             }
