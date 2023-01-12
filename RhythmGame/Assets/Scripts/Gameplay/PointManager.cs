@@ -1,4 +1,5 @@
 using Scriptable;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -98,7 +99,8 @@ public class PointManager : Singleton<PointManager>
         ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;
         float hitnodes = _goodNodes.Value + _perfectNodes.Value;
         float missednodes = _missedNodes.Value;
-        float accuracy = (hitnodes / (missednodes + hitnodes) * 100);
+        decimal roundedAccuracy = (decimal)(hitnodes / (missednodes + hitnodes) * 100);
+        float accuracy = (float)Decimal.Round(roundedAccuracy, 2);
         score.Init(0, UIManager.Instance.EnteredUserName.text, accuracy, _scoreCounter.Value);
 
         return score;
