@@ -13,8 +13,12 @@ public class PointManager : Singleton<PointManager>
     [SerializeField] private Integer _perfectNodes;
     [SerializeField] private Integer _missedNodes;
     [SerializeField] private Integer _comboCounter;
+    [SerializeField] private Float _momentumCounter;
+    [SerializeField] private Float _scoreCounter;
     [SerializeField, Range(0 , 1)] private float _lossPercent;
     private int _totalLevelNodes = 0;
+    private float _goodNodePoints = 2.5f;
+    private float _perfectNodePoints = 3.5f;
 
     [Header("Spawner")]
     [SerializeField] private Spawner _spawnerone;
@@ -22,10 +26,33 @@ public class PointManager : Singleton<PointManager>
     [SerializeField] private Spawner _spawnerthree;
     [SerializeField] private Spawner _spawnerfour;
 
+
+    #region Properties
     public Integer GoodNodes { get => _goodNodes; }
     public Integer PerfectNodes { get => _perfectNodes; }
     public Integer MissedNodes { get => _missedNodes; }
     public Integer ComboCounter { get => _comboCounter; set => _comboCounter = value; }
+    public Float MomentumCounter
+    {
+        get
+        {
+            return _momentumCounter;
+        }
+        set
+        {
+            if (value < 0)
+                _momentumCounter.Value = 0;
+            else if (value > 1)
+                _momentumCounter.Value = 1;
+            else
+                _momentumCounter = value;
+        }
+    }
+
+    public Float ScoreCounter { get => _scoreCounter; set => _scoreCounter = value; }
+    public float GoodNodePoints { get => _goodNodePoints; }
+    public float PerfectNodePoints { get => _perfectNodePoints; }
+    #endregion
 
 
     #region Unity
@@ -62,16 +89,17 @@ public class PointManager : Singleton<PointManager>
         _perfectNodes.Value = 0;
         _missedNodes.Value = 0;
         _comboCounter.Value = 0;
+        _scoreCounter.Value = 0;
+        _momentumCounter.Value = 0;
     }
 
     private ScoreInfo CreateScore()
     {
         ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;
-        /**TODO: Add Score **/
         float hitnodes = _goodNodes.Value + _perfectNodes.Value;
         float missednodes = _missedNodes.Value;
-        float accuracy = (hitnodes / (missednodes + hitnodes));
-        score.Init(0, UIManager.Instance.EnteredUserName.text, accuracy, 0);
+        float accuracy = (hitnodes / (missednodes + hitnodes) * 100);
+        score.Init(0, UIManager.Instance.EnteredUserName.text, accuracy, _scoreCounter.Value);
 
         return score;
     }
@@ -91,6 +119,11 @@ public class PointManager : Singleton<PointManager>
 
         //Saveing all levels to binary file
         SaveGameManager.Instance.SaveLevelInformation(_levelCollection);
+    }
+
+    public void CalculateScore(float basePoint)
+    {
+        _scoreCounter.Value += basePoint * (_momentumCounter + 1) * (_comboCounter + 1);
     }
     #endregion
 }

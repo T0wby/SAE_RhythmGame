@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [Header("Music")]
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
 
+
     #endregion
 
     #region Properties
@@ -105,27 +106,36 @@ public class PlayerController : MonoBehaviour
     {
         if (perfect.Buttons.Count > 0)
         {
+            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
             perfect.ResetArea();
             goodOne.ResetArea();
             goodTwo.ResetArea();
             _perfectHitCounter++;
-            PointManager.Instance.ComboCounter++;
+            pointManager.ComboCounter++;
+            pointManager.MomentumCounter.Value += 0.1f;
+            pointManager.CalculateScore(pointManager.PerfectNodePoints);
         }
         else if (goodOne.Buttons.Count > 0)
         {
+            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
             goodOne.ResetArea();
             goodTwo.ResetArea();
             _goodHitCounter++;
-            PointManager.Instance.ComboCounter++;
+            pointManager.ComboCounter++;
+            pointManager.MomentumCounter.Value += 0.05f;
+            pointManager.CalculateScore(pointManager.GoodNodePoints);
         }
         else if (goodTwo.Buttons.Count > 0)
         {
+            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
             goodTwo.ResetArea();
             _goodHitCounter++;
-            PointManager.Instance.ComboCounter++;
+            pointManager.ComboCounter++;
+            pointManager.MomentumCounter.Value += 0.05f;
+            pointManager.CalculateScore(pointManager.GoodNodePoints);
         }
     }
 

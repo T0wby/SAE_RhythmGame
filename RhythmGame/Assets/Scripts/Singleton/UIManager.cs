@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -26,6 +27,7 @@ public class UIManager : Singleton<UIManager>
     [Header("IngameUI")]
     [SerializeField] private TMP_Text _scoreCount;
     [SerializeField] private TMP_Text _comboCount;
+    [SerializeField] private Image _momentumBar;
 
 
     private MusicManager _musicManager;
@@ -47,6 +49,8 @@ public class UIManager : Singleton<UIManager>
     private void OnDisable()
     {
         PointManager.Instance.ComboCounter.ChangeValue -= UpdateComboCounter;
+        PointManager.Instance.MomentumCounter.ChangeValue -= UpdateMomentumBar;
+        PointManager.Instance.ScoreCounter.ChangeValue -= UpdateScore;
     }
     #endregion
 
@@ -72,7 +76,7 @@ public class UIManager : Singleton<UIManager>
     {
         PointManager pointManager = PointManager.Instance;
         _songName.text = GameManager.Instance.ActiveLevel;
-        //Score _endScore
+        _endScore.text = _scoreCount.text;
         _thScore.text = (pointManager.PerfectNodes.Value + pointManager.GoodNodes.Value).ToString();
         _phScore.text = pointManager.PerfectNodes.Value.ToString();
         _ghScore.text = pointManager.GoodNodes.Value.ToString();
@@ -83,6 +87,16 @@ public class UIManager : Singleton<UIManager>
     private void UpdateComboCounter(int value)
     {
         _comboCount.text = $"{value}x";
+    }
+
+    private void UpdateMomentumBar(float value)
+    {
+        _momentumBar.fillAmount = value;
+    }
+
+    private void UpdateScore(float value)
+    {
+        _scoreCount.text = value.ToString();
     }
 
     #endregion
@@ -99,6 +113,8 @@ public class UIManager : Singleton<UIManager>
             yield return new WaitForSeconds(1);
         }
         PointManager.Instance.ComboCounter.ChangeValue += UpdateComboCounter;
+        PointManager.Instance.MomentumCounter.ChangeValue += UpdateMomentumBar;
+        PointManager.Instance.ScoreCounter.ChangeValue += UpdateScore;
         _countdown.SetActive(false);
     }
 
