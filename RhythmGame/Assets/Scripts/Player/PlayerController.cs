@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     [Header("Music")]
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
 
+    private HitArea[] _hitAreas;
 
     #endregion
 
@@ -48,6 +49,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Inputs ??= new Controller();
+        _hitAreas = new HitArea[] 
+        { 
+            _perfectLineOne, _perfectLineTwo, _perfectLineThree, _perfectLineFour,
+            _goodBeforeLineOne, _goodBeforeLineTwo, _goodBeforeLineThree, _goodBeforeLineFour,
+            _goodAfterLineOne, _goodAfterLineTwo, _goodAfterLineThree, _goodAfterLineFour
+        };
     }
 
     private void OnEnable()
@@ -136,6 +143,14 @@ public class PlayerController : MonoBehaviour
             pointManager.ComboCounter++;
             pointManager.MomentumCounter.Value += 0.05f;
             pointManager.CalculateScore(pointManager.GoodNodePoints);
+        }
+    }
+
+    public void ResetAllHitAreas()
+    {
+        for (int i = 0; i < _hitAreas.Length; i++)
+        {
+            _hitAreas[i].ResetArea();
         }
     }
 

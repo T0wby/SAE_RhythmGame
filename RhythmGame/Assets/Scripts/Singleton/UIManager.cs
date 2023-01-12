@@ -31,6 +31,7 @@ public class UIManager : Singleton<UIManager>
 
 
     private MusicManager _musicManager;
+    private PlayerController _playerController;
 
     public TMP_Text EnteredUserName { get => _enteredUserName;}
 
@@ -41,7 +42,7 @@ public class UIManager : Singleton<UIManager>
         base.Awake();
 
         _musicManager = FindObjectOfType<MusicManager>();
-
+        _playerController = FindObjectOfType<PlayerController>();
 
         StartCoroutine(StartCountdown());
     }
@@ -62,6 +63,7 @@ public class UIManager : Singleton<UIManager>
         GameManager.Instance.PauseGame();
         if (_musicManager is not null)
             _musicManager.LastCreatedMusicObject.StopSound();
+        _playerController.ResetAllHitAreas();
         SetEndScreenInfo();
     }
 

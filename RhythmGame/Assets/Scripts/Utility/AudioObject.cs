@@ -26,7 +26,8 @@ namespace AudioManaging
         public async void SetCountdown(int _delay, Action action)
         {
             await Task.Delay(_delay);
-            action.Invoke();
+            if (action is not null)
+                action.Invoke();
 
             if (m_pool is not null)
             {
