@@ -59,6 +59,15 @@ public class HitArea : MonoBehaviour
         _buttons.Clear();
     }
 
+    public void ResetAreaOne()
+    {
+        if (_buttons[0].GetType() == typeof(ShortButton))
+        {
+            _spawner.Pool.ReturnItem((ShortButton)_buttons[0]);
+            _buttons.Remove((ShortButton)_buttons[0]);
+        }
+    }
+
     #endregion
 
 
