@@ -58,7 +58,7 @@ public class Conductor : MonoBehaviour
     private void StartLevelMusic()
     {
         IsSongStarted = true;
-        EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel, true);
+        EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel.name, true);
 
         _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, Camera.main.transform));
     }

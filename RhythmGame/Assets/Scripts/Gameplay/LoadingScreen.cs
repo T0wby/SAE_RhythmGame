@@ -22,8 +22,8 @@ public class LoadingScreen : MonoBehaviour
     private void Start()
     {
         _trimCharacters = new Char[] {'"'};
-        xmlRawFile = (TextAsset)Resources.Load($"XML/{GameManager.Instance.ActiveLevel}");
-        parseXMLFile(xmlRawFile.text);
+        xmlRawFile = (TextAsset)Resources.Load($"XML/{GameManager.Instance.ActiveLevel.name}");
+        ParseXMLFile(xmlRawFile.text);
         SetSpawnArrays();
         StartCoroutine(nameof(LoadingScreenStart));
     }
@@ -50,7 +50,7 @@ public class LoadingScreen : MonoBehaviour
         SceneManager.UnloadSceneAsync("LoadingScreen");
     }
 
-    private void parseXMLFile(string xmlFile)
+    private void ParseXMLFile(string xmlFile)
     {
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.Load(new StringReader(xmlFile));
@@ -59,7 +59,8 @@ public class LoadingScreen : MonoBehaviour
 
         for (int i = 0; i < elemList.Count; i++)
         {
-            XmlNodeList temp = elemList[i].SelectNodes("descendant::starttime");
+            //XmlNodeList temp = elemList[i].SelectNodes("descendant::starttime");
+            XmlNodeList temp = elemList[i].SelectNodes("descendant::time");
             foreach (XmlNode xmlNode in temp)
             {
                 switch (i)
@@ -87,10 +88,29 @@ public class LoadingScreen : MonoBehaviour
     {
         GameManager gameManager = GameManager.Instance;
 
-        gameManager.SpawnerOne = _spawnerOne;
-        gameManager.SpawnerTwo = _spawnerTwo;
-        gameManager.SpawnerThree = _spawnerThree;
-        gameManager.SpawnerFour = _spawnerFour;
-
+        switch (gameManager.CurrentLevelDifficulty)
+        {
+            case ELevelDifficulty.EASY:
+                gameManager.SpawnerOne = _spawnerOne;
+                gameManager.SpawnerTwo = _spawnerTwo;
+                break;
+            case ELevelDifficulty.NORMAL:
+                gameManager.SpawnerOne = _spawnerOne;
+                gameManager.SpawnerTwo = _spawnerTwo;
+                gameManager.SpawnerThree = _spawnerThree;
+                break;
+            case ELevelDifficulty.HARD:
+                gameManager.SpawnerOne = _spawnerOne;
+                gameManager.SpawnerTwo = _spawnerTwo;
+                gameManager.SpawnerThree = _spawnerThree;
+                gameManager.SpawnerFour = _spawnerFour;
+                break;
+            default:
+                gameManager.SpawnerOne = _spawnerOne;
+                gameManager.SpawnerTwo = _spawnerTwo;
+                gameManager.SpawnerThree = _spawnerThree;
+                gameManager.SpawnerFour = _spawnerFour;
+                break;
+        }
     }
 }

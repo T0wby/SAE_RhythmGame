@@ -1,4 +1,5 @@
 using Scriptable;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -28,11 +29,19 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
+        SetDifficultyEvents();
+
         CreateLevel();
     }
 
-    #region Functions
+    
 
+    #region Methods
+
+
+    /// <summary>
+    /// Creates our level from the _levelCollection array
+    /// </summary>
     private void CreateLevel()
     {
         _filledScoreChilds = new List<GameObject>();
@@ -58,7 +67,6 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = false;
                             _hardButton.interactable = false;
-                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
                         });
                         break;
                     case ELevelDifficulty.NORMAL:
@@ -66,7 +74,6 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = true;
                             _hardButton.interactable = false;
-                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
                         });
                         break;
                     case ELevelDifficulty.HARD:
@@ -74,7 +81,6 @@ public class LevelManager : MonoBehaviour
                         {
                             _normalButton.interactable = true;
                             _hardButton.interactable = true;
-                            GameManager.Instance.ActiveLevel = txtComponents[0].text;
                         });
                         break;
                     default:
@@ -82,6 +88,7 @@ public class LevelManager : MonoBehaviour
                 }
                 levelButton.onClick.AddListener(() =>
                 {
+                    GetActiveLevel(txtComponents[0].text);
                     _startButton.interactable = true;
                     LoadScores(levelInfo);
                 });
@@ -89,6 +96,22 @@ public class LevelManager : MonoBehaviour
 
             //Disable Button if Level not unlocked yet
             levelButton.interactable = _levelCollection[i].IsUnlocked;
+        }
+    }
+
+    /// <summary>
+    /// Sets the current active level
+    /// </summary>
+    /// <param name="lvlName">Name of the level</param>
+    private void GetActiveLevel(string lvlName)
+    {
+        for (int i = 0; i < _levelCollection.Length; i++)
+        {
+            if (_levelCollection[i].name.ToLower() == lvlName.ToLower())
+            {
+                GameManager.Instance.ActiveLevel = _levelCollection[i];
+                break;
+            }
         }
     }
 
@@ -148,6 +171,18 @@ public class LevelManager : MonoBehaviour
 
         _emptyScore.SetActive(false);
         _filledScore.SetActive(true);
+    }
+
+    /// <summary>
+    /// Sets onclick events to our Buttons for the difficulty
+    /// </summary>
+    private void SetDifficultyEvents()
+    {
+        GameManager gameManager = GameManager.Instance;
+
+        _easyButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.EASY);
+        _normalButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.NORMAL);
+        _hardButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.HARD);
     }
     #endregion
 }

@@ -34,6 +34,9 @@ namespace Scriptable
             _scoreCollection = scoreCollection;
         }
 
+        #region Methods
+
+        #region Sorting
         // Currently BubbleSort
         public void SortScoreCollection()
         {
@@ -61,5 +64,23 @@ namespace Scriptable
                 scoreCollection[i].Placement = i + 1;
             }
         }
+        #endregion
+
+        public void UnlockNextDifficulty()
+        {
+            switch (_levelDifficulty)
+            {
+                case ELevelDifficulty.EASY:
+                    _levelDifficulty = ELevelDifficulty.NORMAL;
+                    break;
+                case ELevelDifficulty.NORMAL:
+                    _levelDifficulty = ELevelDifficulty.HARD;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        #endregion
     } 
 }

@@ -8,6 +8,7 @@ public class PointManager : Singleton<PointManager>
 {
     [Header("Level")]
     [SerializeField] private LevelInfo[] _levelCollection = null;
+    private LevelInfo _currentLevel = null;
 
     [Header("Points")]
     [SerializeField] private Integer _goodNodes;
@@ -20,6 +21,7 @@ public class PointManager : Singleton<PointManager>
     private int _totalLevelNodes = 0;
     private float _goodNodePoints = 2.5f;
     private float _perfectNodePoints = 3.5f;
+    private int _highestCombo = 0;
 
     [Header("Spawner")]
     [SerializeField] private Spawner _spawnerone;
@@ -53,6 +55,7 @@ public class PointManager : Singleton<PointManager>
     public Float ScoreCounter { get => _scoreCounter; set => _scoreCounter = value; }
     public float GoodNodePoints { get => _goodNodePoints; }
     public float PerfectNodePoints { get => _perfectNodePoints; }
+    public int HighestCombo { get => _highestCombo; }
     #endregion
 
 
@@ -67,6 +70,7 @@ public class PointManager : Singleton<PointManager>
     {
         _totalLevelNodes = _spawnerone.SpawnTimings.Count + _spawnertwo.SpawnTimings.Count + _spawnerthree.SpawnTimings.Count + _spawnerfour.SpawnTimings.Count;
         _missedNodes.ChangeValue += CheckLossCondition;
+        _comboCounter.ChangeValue += CheckMaxCombo;
         ResetLevelPoints();
     }
     #endregion
@@ -79,10 +83,17 @@ public class PointManager : Singleton<PointManager>
     {
         if (newValue > (_totalLevelNodes * _lossPercent))
         {
-            UIManager.Instance.OpenEndscreen();
+            GameManager.Instance.EndGame(false);
         }
     }
 
+    private void CheckMaxCombo(int newValue)
+    {
+        if (newValue > _highestCombo)
+        {
+            _highestCombo = newValue;
+        }
+    }
 
     public void ResetLevelPoints()
     {
@@ -92,6 +103,7 @@ public class PointManager : Singleton<PointManager>
         _comboCounter.Value = 0;
         _scoreCounter.Value = 0;
         _momentumCounter.Value = 0;
+        _highestCombo = 0;
     }
 
     private ScoreInfo CreateScore()
@@ -106,18 +118,34 @@ public class PointManager : Singleton<PointManager>
         return score;
     }
 
+    private void GetActiveLevel()
+    {
+        _currentLevel = GameManager.Instance.ActiveLevel;
+
+        //for (int i = 0; i < _levelCollection.Length; i++)
+        //{
+        //    if (_levelCollection[i].name.ToLower() == GameManager.Instance.ActiveLevel.ToLower())
+        //    {
+        //        _currentLevel = _levelCollection[i];
+        //        Debug.Log($"_currentLevel: {_currentLevel}");
+        //        break;
+        //    }
+        //}
+    }
+
     public void AddScoreToLevel()
     {
-        LevelInfo level = (LevelInfo)Resources.Load($"LevelInfos/{GameManager.Instance.ActiveLevel}");
+        GetActiveLevel();
+        //LevelInfo level = (LevelInfo)Resources.Load($"LevelInfos/{GameManager.Instance.ActiveLevel}");
 
-        if (level is null)
+        if (_currentLevel is null)
         {
             Debug.LogError("Level not found!");
             return;
         }
 
-        level.ScoreCollection.Add(CreateScore());
-        level.SortScoreCollection();
+        _currentLevel.ScoreCollection.Add(CreateScore());
+        _currentLevel.SortScoreCollection();
 
         //Saveing all levels to binary file
         SaveGameManager.Instance.SaveLevelInformation(_levelCollection);

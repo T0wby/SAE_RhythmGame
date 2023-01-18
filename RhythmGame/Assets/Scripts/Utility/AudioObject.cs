@@ -23,13 +23,13 @@ namespace AudioManaging
             }
         }
 
-        public async void SetCountdown(int _delay, Action action)
+        public async void SetCountdown(int _delay, Action<bool> action)
         {
             await Task.Delay(_delay);
-            if (action is not null)
-                action.Invoke();
+            if (action != null)
+                action.Invoke(true);
 
-            if (m_pool is not null)
+            if (m_pool != null)
             {
                 m_pool.ReturnItem(this);
             }
@@ -48,7 +48,7 @@ namespace AudioManaging
 
         public void Deactivate()
         {
-            if (gameObject is not null)
+            if (gameObject != null)
             {
                 gameObject.SetActive(false);
             }
@@ -56,7 +56,7 @@ namespace AudioManaging
 
         public void StopSound()
         {
-            if (m_source is not null)
+            if (m_source != null)
             {
                 m_source.Stop();
             }

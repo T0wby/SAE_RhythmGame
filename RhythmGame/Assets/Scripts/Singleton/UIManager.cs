@@ -1,3 +1,4 @@
+using Scriptable;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -57,14 +58,23 @@ public class UIManager : Singleton<UIManager>
 
     #region Methods
 
-    public void OpenEndscreen()
+    public void OpenEndscreen(bool wonGame, LevelInfo currentLevel)
     {
-        _endscreen.SetActive(true);
-        GameManager.Instance.PauseGame();
-        if (_musicManager is not null)
-            _musicManager.LastCreatedMusicObject.StopSound();
-        _playerController.ResetAllHitAreas();
-        SetEndScreenInfo();
+        if (_endscreen != null)
+        {
+            _endscreen.SetActive(true);
+            GameManager.Instance.PauseGame();
+            if (_musicManager is not null)
+                _musicManager.LastCreatedMusicObject.StopSound();
+            // Might want to switch the Reset of all Hit
+            _playerController.ResetAllHitAreas();
+            SetEndScreenInfo();
+
+            if (wonGame && currentLevel != null)
+            {
+                currentLevel.UnlockNextDifficulty();
+            }
+        }
     }
 
     public void GoBackToMenu()
@@ -77,13 +87,13 @@ public class UIManager : Singleton<UIManager>
     private void SetEndScreenInfo()
     {
         PointManager pointManager = PointManager.Instance;
-        _songName.text = GameManager.Instance.ActiveLevel;
+        _songName.text = GameManager.Instance.ActiveLevel.name;
         _endScore.text = _scoreCount.text;
         _thScore.text = (pointManager.PerfectNodes.Value + pointManager.GoodNodes.Value).ToString();
         _phScore.text = pointManager.PerfectNodes.Value.ToString();
         _ghScore.text = pointManager.GoodNodes.Value.ToString();
         _missScore.text = pointManager.MissedNodes.Value.ToString();
-        //_mcScore.text =
+        _mcScore.text = pointManager.HighestCombo.ToString();
     }
 
     private void UpdateComboCounter(int value)

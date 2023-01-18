@@ -80,7 +80,7 @@ public class MusicManager : MonoBehaviour
         tmpSource.volume = library.Volume;
 
         tmpSource.Play();
-        _lastCreatedMusicObject.SetCountdown((int)(tmpSource.clip.length * 1000), UIManager.Instance.OpenEndscreen);
+        _lastCreatedMusicObject.SetCountdown((int)(tmpSource.clip.length * 1000), GameManager.Instance.EndGame);
 
         m_entityRequests.Remove(_request);
     } 
