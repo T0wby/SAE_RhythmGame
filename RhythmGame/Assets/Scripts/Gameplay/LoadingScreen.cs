@@ -91,8 +91,8 @@ public class LoadingScreen : MonoBehaviour
         switch (gameManager.CurrentLevelDifficulty)
         {
             case ELevelDifficulty.EASY:
-                gameManager.SpawnerOne = _spawnerOne;
                 gameManager.SpawnerTwo = _spawnerTwo;
+                gameManager.SpawnerThree = _spawnerThree;
                 break;
             case ELevelDifficulty.NORMAL:
                 gameManager.SpawnerOne = _spawnerOne;
