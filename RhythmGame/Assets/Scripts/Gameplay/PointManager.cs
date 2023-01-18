@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PointManager : Singleton<PointManager>
 {
@@ -71,6 +72,7 @@ public class PointManager : Singleton<PointManager>
         _totalLevelNodes = _spawnerone.SpawnTimings.Count + _spawnertwo.SpawnTimings.Count + _spawnerthree.SpawnTimings.Count + _spawnerfour.SpawnTimings.Count;
         _missedNodes.ChangeValue += CheckLossCondition;
         _comboCounter.ChangeValue += CheckMaxCombo;
+        _momentumCounter.ChangeValue += CheckMomentumValue;
         ResetLevelPoints();
     }
     #endregion
@@ -78,6 +80,14 @@ public class PointManager : Singleton<PointManager>
 
 
     #region Methods
+
+    private void CheckMomentumValue(float newValue)
+    {
+        if (newValue < 0)
+            _momentumCounter.Value = 0;
+        else if (newValue > 1)
+            _momentumCounter.Value = 1;
+    }
 
     private void CheckLossCondition(int newValue)
     {
