@@ -14,7 +14,7 @@ public class Conductor : MonoBehaviour
     [SerializeField] private float _dspSongTime = 0;
     [SerializeField] private float _beatPerSec = 0;
     [SerializeField] private float _currentBeatPos = 0;
-    private bool IsSongStarted = false;
+    private bool _isSongStarted = false;
     #endregion
 
     #region Properties
@@ -27,6 +27,7 @@ public class Conductor : MonoBehaviour
     #region Unity
     private void Awake()
     {
+        GameManager.Instance.Conductor = this;
         GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
         if (sfxManager[0])
         {
@@ -45,7 +46,7 @@ public class Conductor : MonoBehaviour
 
     private void Update()
     {
-        if (!IsSongStarted)
+        if (!_isSongStarted)
             return;
 
         _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _musicOffset);
@@ -57,10 +58,15 @@ public class Conductor : MonoBehaviour
     #region Methods
     private void StartLevelMusic()
     {
-        IsSongStarted = true;
+        _isSongStarted = true;
         EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel.name, true);
 
         _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, Camera.main.transform));
+    }
+
+    public void StopConductor()
+    {
+        _isSongStarted = false;
     }
 
     #endregion

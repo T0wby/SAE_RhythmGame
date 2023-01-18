@@ -15,6 +15,6 @@ MonoBehaviour:
   _songName: Erosion
   _artistName: Gianluca
   _isUnlocked: 0
-  _price: 0
-  _levelDifficulty: 1
+  _price: 100000000
+  _levelDifficulty: 0
   _scoreCollection: []

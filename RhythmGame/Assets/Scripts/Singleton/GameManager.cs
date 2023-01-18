@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     #region Fields
     [SerializeField] private List<GameState> _gameStates = null;
     [SerializeField] private GameState _activeState = null;
+    [SerializeField] private Float _experiencePoints;
     private LevelInfo _activeLevel;
     private ELevelDifficulty _currentLevelDifficulty = ELevelDifficulty.EASY;
     private List<float> _spawnerOne = new List<float>();
@@ -15,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     private List<float> _spawnerThree = new List<float>();
     private List<float> _spawnerFour = new List<float>();
     private bool _isPaused = false;
+    private Conductor _conductor;
     #endregion
 
     #region Properties
@@ -26,7 +28,8 @@ public class GameManager : Singleton<GameManager>
     public List<float> SpawnerThree { get { return _spawnerThree; } set { _spawnerThree = value; } }
     public List<float> SpawnerFour { get { return _spawnerFour; } set { _spawnerFour = value; } }
     public bool IsPaused { get => _isPaused; set => _isPaused = value; }
-
+    public Float ExperiencePoints { get => _experiencePoints; }
+    public Conductor Conductor { get => _conductor; set => _conductor = value; }
     public LevelInfo ActiveLevel
     {
         get
@@ -52,6 +55,7 @@ public class GameManager : Singleton<GameManager>
             _currentLevelDifficulty = value;
         }
     }
+
 
     #endregion
 
@@ -100,6 +104,11 @@ public class GameManager : Singleton<GameManager>
 
     public void EndGame(bool wonGame)
     {
+        if (wonGame)
+        {
+            _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
+        }
+        _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
     }
 

@@ -745,12 +745,9 @@ MonoBehaviour:
     type: 3}
   _travelTime: 5
   _conductor: {fileID: 1025327271}
-  _spawnTimings:
-  - 13
-  - 22
-  - 25.22
+  _spawnTimings: []
   _spawnerID: 3
-  _poolSize: 15
+  _poolSize: 40
 --- !u!1 &92670706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,12 +3431,9 @@ MonoBehaviour:
     type: 3}
   _travelTime: 5
   _conductor: {fileID: 1025327271}
-  _spawnTimings:
-  - 7
-  - 22
-  - 24.01
+  _spawnTimings: []
   _spawnerID: 2
-  _poolSize: 15
+  _poolSize: 40
 --- !u!1 &550122236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,12 +3536,9 @@ MonoBehaviour:
     type: 3}
   _travelTime: 5
   _conductor: {fileID: 1025327271}
-  _spawnTimings:
-  - 10
-  - 22
-  - 28.41
+  _spawnTimings: []
   _spawnerID: 4
-  _poolSize: 15
+  _poolSize: 40
 --- !u!1 &578777374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,12 +4742,9 @@ MonoBehaviour:
     type: 3}
   _travelTime: 5
   _conductor: {fileID: 1025327271}
-  _spawnTimings:
-  - 1
-  - 22
-  - 30.541
+  _spawnTimings: []
   _spawnerID: 1
-  _poolSize: 15
+  _poolSize: 40
 --- !u!1 &905894242
 GameObject:
   m_ObjectHideFlags: 0
@@ -8714,7 +8702,7 @@ MonoBehaviour:
   _comboCounter: {fileID: 11400000, guid: 31f5d200e35cb2640adb5e03b41360c4, type: 2}
   _momentumCounter: {fileID: 11400000, guid: 46beb15df4f9f9e4e96aac94e865ab02, type: 2}
   _scoreCounter: {fileID: 11400000, guid: 58b94523653a7d34c826d68d84758673, type: 2}
-  _lossPercent: 0.3
+  _lossPercent: 1
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
   _spawnerthree: {fileID: 85189623}

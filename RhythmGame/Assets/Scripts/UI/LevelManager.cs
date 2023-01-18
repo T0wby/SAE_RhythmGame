@@ -26,15 +26,26 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject _filledScore;
     private List<GameObject> _filledScoreChilds;
 
+    [Header("Text")]
+    [SerializeField] private TMP_Text _experienceCounter;
+
 
     private void Awake()
     {
         SetDifficultyEvents();
-
+        SetExperienceCounter();
         CreateLevel();
     }
 
-    
+    private void OnEnable()
+    {
+        GameManager.Instance.ExperiencePoints.ChangeValue += SetExperienceEvent;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.ExperiencePoints.ChangeValue -= SetExperienceEvent;
+    }
 
     #region Methods
 
@@ -49,15 +60,22 @@ public class LevelManager : MonoBehaviour
         {
             LevelInfo levelInfo = _levelCollection[i];
             GameObject tmp = Instantiate(_levelInformation, _levelParent.transform);
-            TMP_Text[] txtComponents = tmp.GetComponentsInChildren<TMP_Text>();
+            GameObject levelprefab = tmp.transform.GetChild(0).gameObject;
+            GameObject saleprefab = tmp.transform.GetChild(1).gameObject;
+
+
+            TMP_Text[] levelTxtComponents = levelprefab.GetComponentsInChildren<TMP_Text>();
+            TMP_Text[] saleTxtComponents = saleprefab.GetComponentsInChildren<TMP_Text>();
 
             //Setting values
-            txtComponents[0].text = levelInfo.SongName;
-            txtComponents[1].text = levelInfo.ArtistName;
-            txtComponents[2].text = levelInfo.LevelDifficulty.ToString();
+            levelTxtComponents[0].text = levelInfo.SongName;
+            levelTxtComponents[1].text = levelInfo.ArtistName;
+            levelTxtComponents[2].text = levelInfo.LevelDifficulty.ToString();
+            saleTxtComponents[1].text = $"{levelInfo.Price} Exp";
 
             //Setting OnClick Event depending of the unlocked Difficulty
-            Button levelButton = tmp.GetComponent<Button>();
+            Button levelButton = levelprefab.GetComponent<Button>();
+
             if (levelButton is not null)
             {
                 switch (levelInfo.LevelDifficulty)
@@ -88,14 +106,36 @@ public class LevelManager : MonoBehaviour
                 }
                 levelButton.onClick.AddListener(() =>
                 {
-                    GetActiveLevel(txtComponents[0].text);
+                    GetActiveLevel(levelTxtComponents[0].text);
                     _startButton.interactable = true;
                     LoadScores(levelInfo);
                 });
             }
 
             //Disable Button if Level not unlocked yet
-            levelButton.interactable = _levelCollection[i].IsUnlocked;
+            if (levelInfo.IsUnlocked)
+            {
+                levelprefab.SetActive(true);
+                saleprefab.SetActive(false);
+            }
+            else
+            {
+                levelButton.interactable = false;
+                levelprefab.SetActive(false);
+                saleprefab.SetActive(true);
+
+                Button saleButton = saleprefab.GetComponent<Button>();
+                saleButton.onClick.AddListener(() =>
+                {
+                    if (TryToBuyLevel(levelInfo.Price))
+                    {
+                        levelInfo.IsUnlocked = true;
+                        levelprefab.SetActive(true);
+                        levelButton.interactable = true;
+                        saleprefab.SetActive(false);
+                    }
+                });
+            }
         }
     }
 
@@ -183,6 +223,41 @@ public class LevelManager : MonoBehaviour
         _easyButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.EASY);
         _normalButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.NORMAL);
         _hardButton.onClick.AddListener(() => gameManager.CurrentLevelDifficulty = ELevelDifficulty.HARD);
+    }
+
+    /// <summary>
+    /// Updates UI on value change from our experience
+    /// </summary>
+    /// <param name="newValue"></param>
+    private void SetExperienceEvent(float newValue)
+    {
+        if (_experienceCounter != null)
+        {
+            _experienceCounter.text = newValue.ToString();
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void SetExperienceCounter()
+    {
+        _experienceCounter.text = GameManager.Instance.ExperiencePoints.Value.ToString();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="price"></param>
+    /// <returns></returns>
+    private bool TryToBuyLevel(float price)
+    {
+        if (GameManager.Instance.ExperiencePoints.Value > price)
+        {
+            GameManager.Instance.ExperiencePoints.Value -= price;
+            return true;
+        }
+        return false;
     }
     #endregion
 }

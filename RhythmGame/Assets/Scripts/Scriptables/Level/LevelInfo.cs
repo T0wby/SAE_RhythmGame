@@ -19,10 +19,10 @@ namespace Scriptable
 
         public string SongName => _songName;
         public string ArtistName => _artistName;
-        public bool IsUnlocked => _isUnlocked;
         public float Price => _price;
         public ELevelDifficulty LevelDifficulty => _levelDifficulty;
         public List<ScoreInfo> ScoreCollection => _scoreCollection;
+        public bool IsUnlocked { get => _isUnlocked; set => _isUnlocked = value; }
 
         public void Init(string songName, string artistName, bool isUnlocked, float price, ELevelDifficulty levelDifficulty, List<ScoreInfo> scoreCollection)
         {
