@@ -10,7 +10,14 @@ public class SaveGameManager : Singleton<SaveGameManager>
     [Header("Collection of available Levels")]
     [SerializeField] private LevelInfo[] _levelCollection = null;
     private LevelSerializable[] _levelCollectionSerializable = null;
-    private string _filePath;
+
+    [Header("ExperiencePoints")]
+    [SerializeField] private Float _experiencePoints;
+    private ExperienceSerializable _experienceSerializable;
+
+
+    private string _filePathLevel;
+    private string _filePathExp;
 
 
     public LevelInfo[] LevelCollection { get => _levelCollection;}
@@ -19,28 +26,31 @@ public class SaveGameManager : Singleton<SaveGameManager>
     {
         _levelCollectionSerializable = new LevelSerializable[_levelCollection.Length];
 
-        _filePath = $"{Application.dataPath}/levelsettings.bin";
+        _filePathLevel = $"{Application.dataPath}/levelsettings.bin";
+        _filePathExp = $"{Application.dataPath}/expcount.bin";
         _isInAllScenes = true;
         base.Awake();
         _levelCollection = LoadLevelInformation(_levelCollection);
+        _experiencePoints = LoadLevelInformation(_experiencePoints);
     }
 
+    #region LevelInfo
     public void SaveLevelInformation(LevelInfo[] levelCollection)
     {
         UpdateInfo(levelCollection);
-        using (Stream writeStream = File.OpenWrite(_filePath))
+        using (Stream writeStream = File.OpenWrite(_filePathLevel))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             formatter.Serialize(writeStream, _levelCollectionSerializable);
         }
     }
 
-    public LevelInfo[] LoadLevelInformation(LevelInfo[] levelCollection) 
+    public LevelInfo[] LoadLevelInformation(LevelInfo[] levelCollection)
     {
-        if (!File.Exists(_filePath))
+        if (!File.Exists(_filePathLevel))
             return levelCollection;
 
-        using (Stream readStream = File.Open(_filePath, FileMode.Open))
+        using (Stream readStream = File.Open(_filePathLevel, FileMode.Open))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             object deserializedObject = formatter.Deserialize(readStream);
@@ -93,4 +103,54 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
         return levelCollection;
     }
+    #endregion
+
+    #region ExperiencePoints
+
+    public void SaveExpInformation(Float experiencePoints)
+    {
+        UpdateInfo(experiencePoints);
+        using (Stream writeStream = File.OpenWrite(_filePathExp))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(writeStream, _experienceSerializable);
+        }
+    }
+
+    public Float LoadLevelInformation(Float experiencePoints)
+    {
+        if (!File.Exists(_filePathExp))
+            return experiencePoints;
+
+        using (Stream readStream = File.Open(_filePathExp, FileMode.Open))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            object deserializedObject = formatter.Deserialize(readStream);
+
+            _experienceSerializable = (ExperienceSerializable)deserializedObject;
+        }
+        return LoadInfo(experiencePoints);
+    }
+
+    private void UpdateInfo(Float exp)
+    {
+        _experienceSerializable = new ExperienceSerializable(exp.Value);
+    }
+
+    private Float LoadInfo(Float sfloat)
+    {
+        sfloat.Value = _experienceSerializable.Value;
+        return sfloat;
+    }
+
+    #endregion
+
+
+
+
+
+
+
+
+    
 }

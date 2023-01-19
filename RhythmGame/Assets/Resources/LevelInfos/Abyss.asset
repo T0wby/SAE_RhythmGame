@@ -15,6 +15,6 @@ MonoBehaviour:
   _songName: Abyss
   _artistName: Gianluca
   _isUnlocked: 0
-  _price: 999999
+  _price: 9999999
   _levelDifficulty: 0
   _scoreCollection: []

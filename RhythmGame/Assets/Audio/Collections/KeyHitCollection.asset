@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_soundSource: 0
   m_clipLibrary:
-  - m_type: 2
+  - m_type: 4
     m_fileReference:
       m_volume: 0.2
       m_audioClips:
       - {fileID: 8300000, guid: d9c33f8c8eb287e4f90a5c4aab862012, type: 3}
-  - m_type: 3
+  - m_type: 5
     m_fileReference:
       m_volume: 0.2
       m_audioClips:
       - {fileID: 8300000, guid: d4e024e450b2a7b498ae78c451f2b461, type: 3}
-  - m_type: 4
+  - m_type: 6
     m_fileReference:
       m_volume: 0.2
       m_audioClips:

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2f3aec89a8eb14db4bb8e3422ea106, type: 3}
   m_Name: MissedNodes
   m_EditorClassIdentifier: 
-  _value: 0
+  _value: 4

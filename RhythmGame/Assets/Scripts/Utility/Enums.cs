@@ -14,6 +14,8 @@ namespace AudioManaging
     public enum ESoundTypes
     {
         HOVER,
+        HOVER2,
+        HOVER3,
         PRESS,
         KEYMISS,
         KEYGOOD,

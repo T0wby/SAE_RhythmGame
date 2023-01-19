@@ -146,7 +146,6 @@ public class PointManager : Singleton<PointManager>
     public void AddScoreToLevel()
     {
         GetActiveLevel();
-        //LevelInfo level = (LevelInfo)Resources.Load($"LevelInfos/{GameManager.Instance.ActiveLevel}");
 
         if (_currentLevel is null)
         {
