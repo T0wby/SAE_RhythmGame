@@ -15,6 +15,7 @@ public class Conductor : MonoBehaviour
     [SerializeField] private float _beatPerSec = 0;
     [SerializeField] private float _currentBeatPos = 0;
     private bool _isSongStarted = false;
+    private AudioVisualization _audioVisualization;
     #endregion
 
     #region Properties
@@ -29,6 +30,7 @@ public class Conductor : MonoBehaviour
     {
         GameManager.Instance.Conductor = this;
         GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
+        _audioVisualization = FindObjectOfType<AudioVisualization>();
         if (sfxManager[0])
         {
             if (sfxManager[0].GetComponent<SFXManager>())
@@ -76,6 +78,8 @@ public class Conductor : MonoBehaviour
     {
         yield return new WaitForSeconds(MusicOffset);
         StartLevelMusic();
+        if (_audioVisualization != null)
+            _audioVisualization.GetMusic();
     } 
     #endregion
 }
