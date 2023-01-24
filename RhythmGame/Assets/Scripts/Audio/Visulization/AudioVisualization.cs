@@ -60,6 +60,10 @@ public class AudioVisualization : MonoBehaviour
                 average += _samples[count] * (count - 1);
                 count++;
             }
+
+            if (average < 0)
+                average *= -1f;
+
             average /= count;
 
             _freqGroups[i] = average * 10;
