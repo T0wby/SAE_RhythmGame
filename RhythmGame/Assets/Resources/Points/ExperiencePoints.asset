@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1bd029976099b04280349e5d89d3557, type: 3}
   m_Name: ExperiencePoints
   m_EditorClassIdentifier: 
-  _value: 5
+  _value: 0
