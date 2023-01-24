@@ -6,11 +6,14 @@ public class AudioVisualization : MonoBehaviour
 {
     private float[] _samples = new float[512];
     private float[] _freqGroups = new float[8];
+    private float[] _groupBuffer = new float[8];
+    private float[] _bufferDecrease = new float[8];
     private AudioSource _audioSource;
     private MusicManager _musicManager;
     private bool _gotMusic = false;
 
     public float[] FreqGroups { get => _freqGroups; }
+    public float[] GroupBuffer { get => _groupBuffer; }
 
     void Awake()
     {
@@ -24,6 +27,7 @@ public class AudioVisualization : MonoBehaviour
         {
             GetSpectrum();
             CreateFreqGroups();
+            GroupBuffers();
         }
     }
 
@@ -59,6 +63,25 @@ public class AudioVisualization : MonoBehaviour
             average /= count;
 
             _freqGroups[i] = average * 10;
+        }
+    }
+
+    private void GroupBuffers()
+    {
+        for (int i = 0; i < _groupBuffer.Length; i++)
+        {
+            float freqG = _freqGroups[i];
+            float groupB = _groupBuffer[i];
+            if (freqG > groupB)
+            {
+                _groupBuffer[i] = freqG;
+                _bufferDecrease[i] = 0.005f;
+            }
+            if (freqG < groupB)
+            {
+                _groupBuffer[i] -= _bufferDecrease[i];
+                _bufferDecrease[i] *= 1.2f;
+            }
         }
     }
 }
