@@ -26,6 +26,9 @@ namespace AudioManaging
         public async void SetCountdown(int _delay, Action<bool> action)
         {
             await Task.Delay(_delay);
+            if (this == null)
+                return;
+
             if (action != null)
                 action.Invoke(true);
 
@@ -48,7 +51,7 @@ namespace AudioManaging
 
         public void Deactivate()
         {
-            if (gameObject != null)
+            if (gameObject != null && gameObject.activeSelf)
             {
                 gameObject.SetActive(false);
             }

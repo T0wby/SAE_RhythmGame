@@ -91,7 +91,7 @@ public class PointManager : Singleton<PointManager>
 
     private void CheckLossCondition(int newValue)
     {
-        if (newValue > (_totalLevelNodes * _lossPercent))
+        if (newValue > (_totalLevelNodes * _lossPercent) && !GameManager.Instance.IsPaused)
         {
             GameManager.Instance.EndGame(false);
         }

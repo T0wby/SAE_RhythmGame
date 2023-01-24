@@ -30,6 +30,10 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _comboCount;
     [SerializeField] private Image _momentumBar;
 
+    [Header("Generated Objects")]
+    [SerializeField] private GameObject _scoreInformation;
+    [SerializeField] private GameObject _scoreParent;
+    private List<GameObject> _filledScoreChilds;
 
     private MusicManager _musicManager;
     private PlayerController _playerController;
@@ -44,6 +48,7 @@ public class UIManager : Singleton<UIManager>
 
         _musicManager = FindObjectOfType<MusicManager>();
         _playerController = FindObjectOfType<PlayerController>();
+        _filledScoreChilds = new List<GameObject>();
 
         StartCoroutine(StartCountdown());
     }
@@ -66,9 +71,9 @@ public class UIManager : Singleton<UIManager>
             GameManager.Instance.PauseGame();
             if (_musicManager is not null)
                 _musicManager.LastCreatedMusicObject.StopSound();
-            // Might want to switch the Reset of all Hit
             _playerController.ResetAllHitAreas();
             SetEndScreenInfo();
+            CreateLevelScores();
 
             if (wonGame && currentLevel != null)
             {
@@ -77,11 +82,39 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    private void CreateLevelScores()
+    {
+        List<ScoreInfo> scores = GameManager.Instance.ActiveLevel.ScoreCollection;
+
+        for (int i = 0; i < scores.Count; i++)
+        {
+            ScoreInfo tmpScore = scores[i];
+            GameObject tmp = Instantiate(_scoreInformation, _scoreParent.transform);
+            _filledScoreChilds.Add(tmp);
+
+            TMP_Text[] scoreTxtComponents = tmp.GetComponentsInChildren<TMP_Text>();
+
+            scoreTxtComponents[0].text = $"#{tmpScore.Placement}: {tmpScore.Score}";
+            scoreTxtComponents[1].text = tmpScore.PlayerName;
+        }
+    }
+
     public void GoBackToMenu()
     {
+        DeleteScorePrefabs();
         PointManager.Instance.ResetLevelPoints();
         GameManager.Instance.UnPauseGame();
         SceneManager.LoadScene("LevelSelection");
+    }
+
+    private void DeleteScorePrefabs()
+    {
+         
+        for (int i = 0; i < _filledScoreChilds.Count; i++)
+        {
+            Destroy(_filledScoreChilds[i]);
+        }
+        _filledScoreChilds.Clear();
     }
 
     private void SetEndScreenInfo()
