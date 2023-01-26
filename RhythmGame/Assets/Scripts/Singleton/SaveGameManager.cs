@@ -76,7 +76,7 @@ public class SaveGameManager : Singleton<SaveGameManager>
                 scoreCollection.Add(new ScoreSerializable(scoreInfo[j].Placement, scoreInfo[j].PlayerName, scoreInfo[j].Accuracy, scoreInfo[j].Score));
             }
 
-            _levelCollectionSerializable[i] = new LevelSerializable(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.LevelDifficulty, scoreCollection);
+            _levelCollectionSerializable[i] = new LevelSerializable(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.Bpm, tmp.LevelDifficulty, scoreCollection);
         }
     }
 
@@ -98,7 +98,7 @@ public class SaveGameManager : Singleton<SaveGameManager>
                 scoreCollection.Add(tmpScoreInfo);
             }
 
-            levelCollection[i].Init(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.LevelDifficulty, scoreCollection);
+            levelCollection[i].Init(tmp.SongName, tmp.ArtistName, tmp.IsUnlocked, tmp.Price, tmp.Bpm, tmp.LevelDifficulty, scoreCollection);
         }
 
         return levelCollection;

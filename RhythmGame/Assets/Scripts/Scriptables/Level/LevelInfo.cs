@@ -14,6 +14,7 @@ namespace Scriptable
         [SerializeField] private string _artistName;
         [SerializeField] private bool _isUnlocked;
         [SerializeField] private float _price;
+        [SerializeField] private uint _bpm;
         [SerializeField] private ELevelDifficulty _levelDifficulty;
         [SerializeField] private List<ScoreInfo> _scoreCollection;
 
@@ -23,13 +24,15 @@ namespace Scriptable
         public ELevelDifficulty LevelDifficulty => _levelDifficulty;
         public List<ScoreInfo> ScoreCollection => _scoreCollection;
         public bool IsUnlocked { get => _isUnlocked; set => _isUnlocked = value; }
+        public uint Bpm { get => _bpm; set => _bpm = value; }
 
-        public void Init(string songName, string artistName, bool isUnlocked, float price, ELevelDifficulty levelDifficulty, List<ScoreInfo> scoreCollection)
+        public void Init(string songName, string artistName, bool isUnlocked, float price, uint bpm, ELevelDifficulty levelDifficulty, List<ScoreInfo> scoreCollection)
         {
             _songName = songName;
             _artistName = artistName;
             _isUnlocked = isUnlocked;
             _price = price;
+            _bpm = bpm;
             _levelDifficulty = levelDifficulty;
             _scoreCollection = scoreCollection;
         }

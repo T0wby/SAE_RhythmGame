@@ -11,6 +11,7 @@ public class LevelSerializable
     private string _artistName;
     private bool _isUnlocked;
     private float _price;
+    private uint _bpm;
     private ELevelDifficulty _levelDifficulty;
     private List<ScoreSerializable> _scoreCollection;
 
@@ -18,15 +19,17 @@ public class LevelSerializable
     public string ArtistName => _artistName;
     public bool IsUnlocked => _isUnlocked;
     public float Price => _price;
+    public uint Bpm => _bpm;
     public ELevelDifficulty LevelDifficulty => _levelDifficulty;
     public List<ScoreSerializable> ScoreCollection => _scoreCollection;
 
-    public LevelSerializable(string songName, string artistName, bool isUnlocked, float price, ELevelDifficulty levelDifficulty, List<ScoreSerializable> scoreCollection)
+    public LevelSerializable(string songName, string artistName, bool isUnlocked, float price, uint bpm, ELevelDifficulty levelDifficulty, List<ScoreSerializable> scoreCollection)
     {
         _songName = songName;
         _artistName = artistName;
         _isUnlocked = isUnlocked;
         _price = price;
+        _bpm = bpm;
         _levelDifficulty = levelDifficulty;
         _scoreCollection = scoreCollection;
     }

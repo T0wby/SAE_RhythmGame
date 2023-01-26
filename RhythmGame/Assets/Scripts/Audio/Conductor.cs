@@ -2,20 +2,20 @@ using AudioManaging;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Conductor : MonoBehaviour
 {
     #region Fields
     [SerializeField] private NotifyMusicRequestCollection _musicRequestCollection;
     [SerializeField] private float _musicOffset = 5f;
-    [SerializeField] private float _songBPM = 0;
+    [SerializeField] private uint _songBPM = 0;
     [SerializeField] private float _currentSongPos = 0;
     [SerializeField] private float _dspSongTime = 0;
     [SerializeField] private float _beatPerSec = 0;
     [SerializeField] private float _currentBeatPos = 0;
     private bool _isSongStarted = false;
     private AudioVisualization _audioVisualization;
+    private RateSpawner[] _rateSpawners= null;
     #endregion
 
     #region Properties
@@ -23,6 +23,7 @@ public class Conductor : MonoBehaviour
     public float CurrentSongPos => _currentSongPos;
 
     public float MusicOffset { get => _musicOffset; }
+    public float BeatPerSec { get => _beatPerSec; }
     #endregion
 
     #region Unity
@@ -36,13 +37,14 @@ public class Conductor : MonoBehaviour
             if (sfxManager[0].GetComponent<SFXManager>())
                 sfxManager[0].GetComponent<SFXManager>().InitPool();
         }
+        _rateSpawners = FindObjectsOfType<RateSpawner>();
     }
 
     private void Start()
     {
+        _songBPM = GameManager.Instance.ActiveLevel.Bpm;
         _beatPerSec = 60f / _songBPM;
         _dspSongTime = (float)AudioSettings.dspTime;
-        //_currentSongPos = -_musicOffset;
         StartCoroutine(MusicCountdown());
     }
 
@@ -64,6 +66,10 @@ public class Conductor : MonoBehaviour
         EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel.name, true);
 
         _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, Camera.main.transform));
+        for (int i = 0; i < _rateSpawners.Length; i++)
+        {
+            StartCoroutine(_rateSpawners[i].StartSpawning()); 
+        }
     }
 
     public void StopConductor()

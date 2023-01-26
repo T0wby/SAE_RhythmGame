@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private GameObject _endscreen;
+    [SerializeField] private GameObject _inGameUI;
 
     [Header("EndScreenInfo")]
     [SerializeField] private TMP_Text _songName;
@@ -68,6 +69,7 @@ public class UIManager : Singleton<UIManager>
         if (_endscreen != null)
         {
             _endscreen.SetActive(true);
+            _inGameUI.SetActive(false);
             GameManager.Instance.PauseGame();
             if (_musicManager is not null)
                 _musicManager.LastCreatedMusicObject.StopSound();

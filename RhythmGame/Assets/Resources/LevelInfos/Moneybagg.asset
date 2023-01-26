@@ -16,5 +16,6 @@ MonoBehaviour:
   _artistName: Gianluca
   _isUnlocked: 0
   _price: 1e+10
+  _bpm: 150
   _levelDifficulty: 0
   _scoreCollection: []
