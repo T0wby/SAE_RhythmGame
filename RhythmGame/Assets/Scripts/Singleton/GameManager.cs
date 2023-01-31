@@ -30,32 +30,8 @@ public class GameManager : Singleton<GameManager>
     public bool IsPaused { get => _isPaused; set => _isPaused = value; }
     public Float ExperiencePoints { get => _experiencePoints; }
     public Conductor Conductor { get => _conductor; set => _conductor = value; }
-    public LevelInfo ActiveLevel
-    {
-        get
-        {
-            return _activeLevel;
-        }
-
-        set
-        {
-            _activeLevel = value;
-        }
-    }
-
-    public ELevelDifficulty CurrentLevelDifficulty
-    {
-        get
-        {
-            return _currentLevelDifficulty;
-        }
-
-        set
-        {
-            _currentLevelDifficulty = value;
-        }
-    }
-
+    public LevelInfo ActiveLevel { get => _activeLevel; set => _activeLevel = value; }
+    public ELevelDifficulty CurrentLevelDifficulty { get => _currentLevelDifficulty; set => _currentLevelDifficulty = value; }
 
     #endregion
 
@@ -96,7 +72,7 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0f;
     }
 
-    public void UnPauseGame()
+    public void UnPauseGame() 
     {
         _isPaused = false;
         Time.timeScale = 1.0f;
@@ -104,12 +80,9 @@ public class GameManager : Singleton<GameManager>
 
     public void EndGame(bool wonGame)
     {
-        if (wonGame)
-        {
-            _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
-            //Save Experience Points
-            SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
-        }
+        _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
+        //Save Experience Points
+        SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
         _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
     }

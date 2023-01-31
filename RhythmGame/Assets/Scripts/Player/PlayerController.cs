@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [Header("Counter")]
     [SerializeField] private Integer _goodHitCounter;
     [SerializeField] private Integer _perfectHitCounter;
+    [SerializeField] private Integer _missCounter;
 
     [Header("Music")]
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
