@@ -116,6 +116,11 @@ public class PointManager : Singleton<PointManager>
         _highestCombo = 0;
     }
 
+    public void ResetComboCounter()
+    {
+        _comboCounter.Value = 0;
+    }
+
     private ScoreInfo CreateScore()
     {
         ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;
@@ -131,16 +136,6 @@ public class PointManager : Singleton<PointManager>
     private void GetActiveLevel()
     {
         _currentLevel = GameManager.Instance.ActiveLevel;
-
-        //for (int i = 0; i < _levelCollection.Length; i++)
-        //{
-        //    if (_levelCollection[i].name.ToLower() == GameManager.Instance.ActiveLevel.ToLower())
-        //    {
-        //        _currentLevel = _levelCollection[i];
-        //        Debug.Log($"_currentLevel: {_currentLevel}");
-        //        break;
-        //    }
-        //}
     }
 
     public void AddScoreToLevel()
