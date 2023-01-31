@@ -7,12 +7,7 @@
 	<difficult>"easy"</difficult>
 	<game>
 		<line>
-			<spawner>
-			<id>"3"</id>
-			<time>"07.48"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
+			<id>"1"</id>
 			<spawner>
 			<id>"4"</id>
 			<time>"10.91"</time>

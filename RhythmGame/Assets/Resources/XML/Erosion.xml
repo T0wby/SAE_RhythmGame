@@ -8,11 +8,6 @@
 	<game>
 		<line>
 			<id>"1"</id>
-			<id>"3"</id>
-			<time>"07.48"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
 			<spawner>
 			<id>"4"</id>
 			<time>"10.91"</time>
@@ -592,24 +587,6 @@
 			<spawner>
 			<id>"100"</id>
 			<time>"169.47"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"101"</id>
-			<time>"01.46"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"102"</id>
-			<time>"02.79"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"103"</id>
-			<time>"04.32"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
 			</spawner>
@@ -2425,6 +2402,8 @@
 		</line>
 		<line>
 			<id>"3"</id>
+			<spawner>
+			<id>"3"</id>
 			<time>"07.67"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
@@ -2990,24 +2969,6 @@
 			<spawner>
 			<id>"97"</id>
 			<time>"169.62"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"98"</id>
-			<time>"01.60"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"99"</id>
-			<time>"02.97"</time>
-			<timeValue>"0"</timeValue>
-			<presstime> "1000"</presstime>
-			</spawner>
-			<spawner>
-			<id>"100"</id>
-			<time>"04.49"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
 			</spawner>

@@ -17,5 +17,5 @@ MonoBehaviour:
   _isUnlocked: 1
   _price: 0
   _bpm: 145
-  _levelDifficulty: 0
+  _levelDifficulty: 2
   _scoreCollection: []

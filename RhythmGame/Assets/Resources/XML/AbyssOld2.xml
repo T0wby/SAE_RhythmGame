@@ -9,6 +9,12 @@
 		<line>
 			<id>"1"</id>
 			<spawner>
+			<id>"3"</id>
+			<time>"07.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
 			<id>"4"</id>
 			<time>"10.91"</time>
 			<timeValue>"0"</timeValue>
@@ -587,6 +593,30 @@
 			<spawner>
 			<id>"100"</id>
 			<time>"169.47"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"101"</id>
+			<time>"01.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"102"</id>
+			<time>"02.79"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"103"</id>
+			<time>"04.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"104"</id>
+			<time>"05.96"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
 			</spawner>
@@ -1259,6 +1289,24 @@
 			<spawner>
 			<id>"216"</id>
 			<time>"161.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"217"</id>
+			<time>"01.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"218"</id>
+			<time>"03.57"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"219"</id>
+			<time>"05.42"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
 			</spawner>
@@ -2922,6 +2970,12 @@
 			<presstime> "1000"</presstime>
 			</spawner>
 			<spawner>
+			<id>"189"</id>
+			<time>"01.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
 			<id>"190"</id>
 			<time>"24.68"</time>
 			<timeValue>"0"</timeValue>
@@ -3945,6 +3999,24 @@
 			<presstime> "1000"</presstime>
 			</spawner>
 			<spawner>
+			<id>"98"</id>
+			<time>"01.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"99"</id>
+			<time>"02.97"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"100"</id>
+			<time>"04.49"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
 			<id>"101"</id>
 			<time>"06.13"</time>
 			<timeValue>"0"</timeValue>
@@ -4343,6 +4415,18 @@
 			<spawner>
 			<id>"167"</id>
 			<time>"162.65"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"168"</id>
+			<time>"04.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"169"</id>
+			<time>"05.72"</time>
 			<timeValue>"0"</timeValue>
 			<presstime> "1000"</presstime>
 			</spawner>
