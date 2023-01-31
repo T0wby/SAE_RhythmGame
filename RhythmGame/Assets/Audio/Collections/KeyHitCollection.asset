@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24eeacc749c7b2e46b8acf9756ee13e2, type: 3}
+  m_Name: KeyHitCollection
+  m_EditorClassIdentifier: 
+  m_soundSource: 0
+  m_clipLibrary:
+  - m_type: 4
+    m_fileReference:
+      m_volume: 0.2
+      m_audioClips:
+      - {fileID: 8300000, guid: d9c33f8c8eb287e4f90a5c4aab862012, type: 3}
+  - m_type: 5
+    m_fileReference:
+      m_volume: 0.2
+      m_audioClips:
+      - {fileID: 8300000, guid: d4e024e450b2a7b498ae78c451f2b461, type: 3}
+  - m_type: 6
+    m_fileReference:
+      m_volume: 0.2
+      m_audioClips:
+      - {fileID: 8300000, guid: cd0a7292fd5cdac4380f3a84a99f8339, type: 3}
