@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5019608, g: 0.60784316, b: 0.9960785, a: 1}
+  m_Color: {r: 0.25882354, g: 0.47843137, b: 0.9607843, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2080,7 +2080,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea3f1c91b5d20614fbf85ea6e63236b6, type: 2}
+  - {fileID: 2100000, guid: 5d535c0be1ba1c546843d73cb9ae0233, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2963,8 +2963,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475652864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -17.1, z: 70.1}
+  m_LocalRotation: {x: -0.21885866, y: -0, z: -0, w: 0.9757566}
+  m_LocalPosition: {x: -4, y: 23, z: 70.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2978,7 +2978,7 @@ Transform:
   - {fileID: 622962716}
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -25.284, y: 0, z: 0}
 --- !u!114 &475652866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8624,7 +8624,7 @@ MonoBehaviour:
   _comboCounter: {fileID: 11400000, guid: 31f5d200e35cb2640adb5e03b41360c4, type: 2}
   _momentumCounter: {fileID: 11400000, guid: 46beb15df4f9f9e4e96aac94e865ab02, type: 2}
   _scoreCounter: {fileID: 11400000, guid: 58b94523653a7d34c826d68d84758673, type: 2}
-  _lossPercent: 0.2
+  _lossPercent: 0.05
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
   _spawnerthree: {fileID: 85189623}
