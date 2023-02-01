@@ -23,6 +23,7 @@ public class SceneManaging : MonoBehaviour
 
     private void EndGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
+        //Application.Quit();
     }
 }

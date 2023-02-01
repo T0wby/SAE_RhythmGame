@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 public class Initilaizer : MonoBehaviour
 {
     [SerializeField] private float _logoTime = 5f;
-    private IEnumerator ShowLogo()
-    {
-        yield return new WaitForSeconds(_logoTime);
-        SceneManager.LoadSceneAsync("LevelSelection");
-    }
-
+    
     private void Awake()
     {
         StartCoroutine(ShowLogo());
     }
+    private IEnumerator ShowLogo()
+    {
+        yield return new WaitForSeconds(_logoTime);
+        SceneManager.LoadSceneAsync("LevelSelection");
+        //SceneManager.LoadSceneAsync("MainMenu");
+    }
+
 }

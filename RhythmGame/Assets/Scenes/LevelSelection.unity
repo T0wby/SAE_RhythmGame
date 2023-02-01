@@ -1918,6 +1918,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f8d8db196868b148aee50455bc13beb, type: 2}
   - {fileID: 11400000, guid: a21733a4b552e7a48a3a6338847bc3ff, type: 2}
   - {fileID: 11400000, guid: 60a17d161861a7e4bb78a486936cc567, type: 2}
+  - {fileID: 11400000, guid: 8e7ae96fb44698f40bd6074ec72aac4b, type: 2}
   _levelInformation: {fileID: 374110976385948473, guid: dd5cbf1b3021c43409cbc4b5f9c8b9ba,
     type: 3}
   _scoreInformation: {fileID: 8529394015253160648, guid: 3af0fb4725e463f4d8e0ec03cd61986e,
