@@ -21,7 +21,7 @@ public class MissLine : MonoBehaviour
             _spawner.Pool.ReturnItem(tmp);
             _missedNodes++;
             PointManager.Instance.ResetComboCounter();
-            PointManager.Instance.MomentumCounter.Value -= 0.15f;
+            PointManager.Instance.ReduceMomentum(0.15f);
         }
     }
 }

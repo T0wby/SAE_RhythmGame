@@ -145,6 +145,12 @@ public class PlayerController : MonoBehaviour
             pointManager.MomentumCounter.Value += 0.05f;
             pointManager.CalculateScore(pointManager.GoodNodePoints);
         }
+        else
+        {
+            _missCounter++;
+            PointManager.Instance.ResetComboCounter();
+            PointManager.Instance.ReduceMomentum(0.15f);
+        }
     }
 
     public void ResetAllHitAreas()
