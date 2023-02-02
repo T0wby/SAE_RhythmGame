@@ -14,8 +14,7 @@ public class Initilaizer : MonoBehaviour
     private IEnumerator ShowLogo()
     {
         yield return new WaitForSeconds(_logoTime);
-        SceneManager.LoadSceneAsync("LevelSelection");
-        //SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
