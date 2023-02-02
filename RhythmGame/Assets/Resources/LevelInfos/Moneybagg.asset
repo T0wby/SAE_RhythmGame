@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _songName: Moneybagg
   _artistName: Gianluca
-  _isUnlocked: 1
-  _price: 0
+  _isUnlocked: 0
+  _price: 250
   _bpm: 150
-  _levelDifficulty: 2
+  _levelDifficulty: 0
   _scoreCollection: []
