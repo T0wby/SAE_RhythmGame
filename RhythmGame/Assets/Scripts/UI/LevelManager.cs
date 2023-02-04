@@ -67,13 +67,13 @@ public class LevelManager : MonoBehaviour
             TMP_Text[] levelTxtComponents = levelprefab.GetComponentsInChildren<TMP_Text>();
             TMP_Text[] saleTxtComponents = saleprefab.GetComponentsInChildren<TMP_Text>();
 
-            //Setting values
+            // Setting values
             levelTxtComponents[0].text = levelInfo.SongName;
             levelTxtComponents[1].text = levelInfo.ArtistName;
             levelTxtComponents[2].text = levelInfo.LevelDifficulty.ToString();
             saleTxtComponents[1].text = $"{levelInfo.Price} Exp";
 
-            //Setting OnClick Event depending of the unlocked Difficulty
+            // Setting OnClick Event depending of the unlocked Difficulty
             Button levelButton = levelprefab.GetComponent<Button>();
 
             if (levelButton is not null)
@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour
                 });
             }
 
-            //Disable Button if Level not unlocked yet
+            // Disable Button if Level not unlocked yet
             if (levelInfo.IsUnlocked)
             {
                 levelprefab.SetActive(true);
@@ -133,6 +133,7 @@ public class LevelManager : MonoBehaviour
                         levelprefab.SetActive(true);
                         levelButton.interactable = true;
                         saleprefab.SetActive(false);
+                        SaveGameManager.Instance.SaveLevelInformation(_levelCollection);
                     }
                 });
             }

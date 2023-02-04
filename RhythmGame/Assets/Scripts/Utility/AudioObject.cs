@@ -46,6 +46,8 @@ namespace AudioManaging
 
         public void Reset()
         {
+            if (this == null)
+                return;
             gameObject?.SetActive(true);
         }
 
