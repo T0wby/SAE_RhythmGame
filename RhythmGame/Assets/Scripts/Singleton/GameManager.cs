@@ -60,7 +60,7 @@ public class GameManager : Singleton<GameManager>
     {
         _isInAllScenes = true;
         base.Awake();
-
+        _experiencePoints.ChangeValue += SaveExp;
     }
     #endregion
 
@@ -82,9 +82,14 @@ public class GameManager : Singleton<GameManager>
     {
         _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
         //Save Experience Points
-        SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
+        //SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
         _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
+    }
+
+    private void SaveExp(float value)
+    {
+        SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
     }
 
     #endregion

@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f57dd6cc1a22ead428c1426e9f227741,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -5248,7 +5249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4509804, g: 0.4509804, b: 0.4509804, a: 1}
+  m_Color: {r: 0.23529412, g: 0.20392157, b: 0.36078432, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7242,7 +7243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4509804, g: 0.4509804, b: 0.4509804, a: 1}
+  m_Color: {r: 0.23529412, g: 0.20392157, b: 0.36078432, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8643,7 +8644,7 @@ MonoBehaviour:
   _comboCounter: {fileID: 11400000, guid: 31f5d200e35cb2640adb5e03b41360c4, type: 2}
   _momentumCounter: {fileID: 11400000, guid: 46beb15df4f9f9e4e96aac94e865ab02, type: 2}
   _scoreCounter: {fileID: 11400000, guid: 58b94523653a7d34c826d68d84758673, type: 2}
-  _lossPercent: 0.05
+  _lossPercent: 1
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
   _spawnerthree: {fileID: 85189623}
