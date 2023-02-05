@@ -115,8 +115,8 @@ public class LevelManager : MonoBehaviour
             // Disable Button if Level not unlocked yet
             if (levelInfo.IsUnlocked)
             {
-                levelprefab.SetActive(true);
                 saleprefab.SetActive(false);
+                levelprefab.SetActive(true);
             }
             else
             {
