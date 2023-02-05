@@ -42,7 +42,6 @@ namespace AudioManaging
         {
             m_pool = _pool;
             m_source = GetComponent<AudioSource>();
-            DontDestroyOnLoad(this);
         }
 
         public void Reset()
