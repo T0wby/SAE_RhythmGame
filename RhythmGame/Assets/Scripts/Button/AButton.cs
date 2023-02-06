@@ -16,6 +16,11 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
     public float TravelTime { get => _travelTime; set => _travelTime = value; }
     public EButtonType Type { get; set; }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     public virtual void Deactivate()
     {
         gameObject?.SetActive(false);
@@ -44,16 +49,24 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
     {
         float time = 0;
         float currProg;
+        
+
         while (time <=_travelTime )
         {
-            currProg = time / _travelTime;
-            transform.position = Vector3.Lerp(transform.parent.position, _targetOne.transform.position, currProg);
-            yield return new WaitForEndOfFrame();
+            if (transform != null)
+            {
+                currProg = time / _travelTime;
+                transform.position = Vector3.Lerp(transform.parent.position, _targetOne.transform.position, currProg);
+                yield return new WaitForEndOfFrame();
+            }
             time += Time.deltaTime;
         }
 
-        transform.position = _targetOne.transform.position;
-        StartCoroutine(StartMovementTwo());
+        if (transform != null)
+        {
+            transform.position = _targetOne.transform.position;
+            StartCoroutine(StartMovementTwo());
+        }
     }
 
     protected IEnumerator StartMovementTwo()
