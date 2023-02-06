@@ -121,6 +121,11 @@ public class PointManager : Singleton<PointManager>
         _comboCounter.Value = 0;
     }
 
+    public void ReduceMomentum(float value)
+    {
+        _momentumCounter.Value -= value;
+    }
+
     private ScoreInfo CreateScore()
     {
         ScoreInfo score = ScriptableObject.CreateInstance("ScoreInfo") as ScoreInfo;

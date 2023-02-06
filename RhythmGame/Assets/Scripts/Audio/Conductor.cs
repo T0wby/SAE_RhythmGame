@@ -16,6 +16,7 @@ public class Conductor : MonoBehaviour
     private bool _isSongStarted = false;
     private AudioVisualization _audioVisualization;
     private RateSpawner[] _rateSpawners= null;
+    private GameObject _musicManager;
     #endregion
 
     #region Properties
@@ -30,13 +31,14 @@ public class Conductor : MonoBehaviour
     private void Awake()
     {
         GameManager.Instance.Conductor = this;
-        GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
+        //GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
+        _musicManager = FindObjectOfType<MusicManager>().gameObject;
         _audioVisualization = FindObjectOfType<AudioVisualization>();
-        if (sfxManager[0])
-        {
-            if (sfxManager[0].GetComponent<SFXManager>())
-                sfxManager[0].GetComponent<SFXManager>().InitPool();
-        }
+        //if (sfxManager[0])
+        //{
+        //    if (sfxManager[0].GetComponent<SFXManager>())
+        //        sfxManager[0].GetComponent<SFXManager>().InitPool();
+        //}
         _rateSpawners = FindObjectsOfType<RateSpawner>();
     }
 
@@ -65,7 +67,7 @@ public class Conductor : MonoBehaviour
         _isSongStarted = true;
         EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel.name, true);
 
-        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, Camera.main.transform));
+        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, _musicManager.transform));
         for (int i = 0; i < _rateSpawners.Length; i++)
         {
             StartCoroutine(_rateSpawners[i].StartSpawning()); 

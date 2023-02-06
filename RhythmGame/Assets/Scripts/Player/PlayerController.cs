@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private NotifyEntityRequestCollection _requestCollection;
 
     private HitArea[] _hitAreas;
-
+    private GameObject _sfxManager;
     #endregion
 
     #region Properties
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        _sfxManager = FindObjectOfType<SFXManager>().gameObject;
         Inputs ??= new Controller();
         _hitAreas = new HitArea[] 
         { 
@@ -115,7 +116,7 @@ public class PlayerController : MonoBehaviour
         if (perfect.Buttons.Count > 0)
         {
             PointManager pointManager = PointManager.Instance;
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, Camera.main.transform));
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, _sfxManager.transform));
             perfect.ResetArea();
             goodOne.ResetArea();
             goodTwo.ResetArea();
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour
         else if (goodOne.Buttons.Count > 0)
         {
             PointManager pointManager = PointManager.Instance;
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, _sfxManager.transform));
             goodOne.ResetArea();
             goodTwo.ResetArea();
             _goodHitCounter++;
@@ -138,12 +139,18 @@ public class PlayerController : MonoBehaviour
         else if (goodTwo.Buttons.Count > 0)
         {
             PointManager pointManager = PointManager.Instance;
-            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, Camera.main.transform));
+            _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, _sfxManager.transform));
             goodTwo.ResetArea();
             _goodHitCounter++;
             pointManager.ComboCounter++;
             pointManager.MomentumCounter.Value += 0.05f;
             pointManager.CalculateScore(pointManager.GoodNodePoints);
+        }
+        else
+        {
+            _missCounter++;
+            PointManager.Instance.ResetComboCounter();
+            PointManager.Instance.ReduceMomentum(0.15f);
         }
     }
 

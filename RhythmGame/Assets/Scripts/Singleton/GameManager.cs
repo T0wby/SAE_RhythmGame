@@ -6,8 +6,6 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     #region Fields
-    [SerializeField] private List<GameState> _gameStates = null;
-    [SerializeField] private GameState _activeState = null;
     [SerializeField] private Float _experiencePoints;
     private LevelInfo _activeLevel;
     private ELevelDifficulty _currentLevelDifficulty = ELevelDifficulty.EASY;
@@ -22,7 +20,6 @@ public class GameManager : Singleton<GameManager>
     #region Properties
     
 
-    public GameState ActiveState{ get { return _activeState; } }
     public List<float> SpawnerOne { get { return _spawnerOne; } set { _spawnerOne = value; } }
     public List<float> SpawnerTwo { get { return _spawnerTwo; } set { _spawnerTwo = value; } }
     public List<float> SpawnerThree { get { return _spawnerThree; } set { _spawnerThree = value; } }
@@ -38,29 +35,12 @@ public class GameManager : Singleton<GameManager>
 
     #region Methods
 
-    #region Gamestates
-
-    public void ChangeGamestate<T>() where T : GameState
-    {
-        foreach (GameState state in _gameStates)
-        {
-            if (state.GetType() == typeof(T))
-            {
-                //_activeState.Finalize();
-                _activeState = state;
-                //_activeState.Initialize();
-            }
-        }
-    }
-
-    #endregion
-
     #region Unity
     protected override void Awake()
     {
         _isInAllScenes = true;
         base.Awake();
-
+        _experiencePoints.ChangeValue += SaveExp;
     }
     #endregion
 
@@ -82,9 +62,14 @@ public class GameManager : Singleton<GameManager>
     {
         _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
         //Save Experience Points
-        SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
+        //SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
         _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
+    }
+
+    private void SaveExp(float value)
+    {
+        SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
     }
 
     #endregion

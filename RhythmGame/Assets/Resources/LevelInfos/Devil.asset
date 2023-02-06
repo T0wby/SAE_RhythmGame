@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _songName: Devil
   _artistName: Gianluca
-  _isUnlocked: 1
-  _price: 0
+  _isUnlocked: 0
+  _price: 250
   _bpm: 145
-  _levelDifficulty: 2
+  _levelDifficulty: 0
   _scoreCollection: []

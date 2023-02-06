@@ -244,6 +244,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &705800016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705800018}
+  - component: {fileID: 705800017}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: SFXManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &705800017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705800016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1292ed14b9358c44fb39966d56d912da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_entityRequests: {fileID: 11400000, guid: 339a3e68370af0b49a95bc73fa02d86f, type: 2}
+  m_mixingGroup: {fileID: 4773877607314650349, guid: b12424e80f8222c49ad7b85257b324a0,
+    type: 2}
+  m_poolSize: 120
+  m_audioObjectPrefab: {fileID: 2072358939382768122, guid: 02320cbab868e6249ae8a02a93f098ac,
+    type: 3}
+  m_entityClipCollections:
+  - {fileID: 11400000, guid: 72e5060812f8d5b4bb5346d1638809ad, type: 2}
+  - {fileID: 11400000, guid: ed85989551900fe40a92953640d3cd66, type: 2}
+--- !u!4 &705800018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705800016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719942423
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +725,17 @@ PrefabInstance:
       propertyPath: _experiencePoints
       value: 
       objectReference: {fileID: 11400000, guid: fc26894488abd964c921e36013d1bf8d,
+        type: 2}
+    - target: {fileID: 7870308403421077147, guid: 0baa623c6b482cd4c9f30daaecfd25ca,
+        type: 3}
+      propertyPath: _levelCollection.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870308403421077147, guid: 0baa623c6b482cd4c9f30daaecfd25ca,
+        type: 3}
+      propertyPath: _levelCollection.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e7ae96fb44698f40bd6074ec72aac4b,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baa623c6b482cd4c9f30daaecfd25ca, type: 3}

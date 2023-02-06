@@ -51,7 +51,7 @@ namespace AudioManaging
 
         public void Deactivate()
         {
-            if (gameObject != null && gameObject.activeSelf)
+            if (this != null && gameObject != null && gameObject.activeSelf)
             {
                 gameObject.SetActive(false);
             }

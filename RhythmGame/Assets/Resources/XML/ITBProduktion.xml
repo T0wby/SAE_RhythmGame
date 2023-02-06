@@ -1,0 +1,4300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rhytmegame>
+	<title>"ITB-Produktion"</title>
+	<interpret>"Thomas Pfeiffer"</interpret>
+	<version>"1.00.00"</version>
+	<offset>"1000"</offset>
+	<difficult>"easy"</difficult>
+	<game>
+		<line>
+			<id>"1"</id>
+			<spawner>
+			<id>"5"</id>
+			<time>"05.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"6"</id>
+			<time>"05.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"7"</id>
+			<time>"06.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"8"</id>
+			<time>"06.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"9"</id>
+			<time>"13.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"10"</id>
+			<time>"14.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"11"</id>
+			<time>"15.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"12"</id>
+			<time>"16.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"13"</id>
+			<time>"16.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"14"</id>
+			<time>"17.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"15"</id>
+			<time>"17.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"16"</id>
+			<time>"18.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"17"</id>
+			<time>"19.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"18"</id>
+			<time>"19.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"19"</id>
+			<time>"20.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"20"</id>
+			<time>"21.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"21"</id>
+			<time>"21.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"22"</id>
+			<time>"22.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"23"</id>
+			<time>"22.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"24"</id>
+			<time>"23.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"25"</id>
+			<time>"23.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"26"</id>
+			<time>"23.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"27"</id>
+			<time>"24.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"28"</id>
+			<time>"24.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"29"</id>
+			<time>"25.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"30"</id>
+			<time>"25.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"31"</id>
+			<time>"26.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"32"</id>
+			<time>"28.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"33"</id>
+			<time>"29.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"34"</id>
+			<time>"30.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"35"</id>
+			<time>"30.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"36"</id>
+			<time>"31.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"37"</id>
+			<time>"31.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"38"</id>
+			<time>"32.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"39"</id>
+			<time>"32.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"40"</id>
+			<time>"33.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"41"</id>
+			<time>"34.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"42"</id>
+			<time>"34.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"43"</id>
+			<time>"35.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"44"</id>
+			<time>"35.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"45"</id>
+			<time>"36.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"46"</id>
+			<time>"37.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"47"</id>
+			<time>"37.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"48"</id>
+			<time>"38.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"49"</id>
+			<time>"39.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"50"</id>
+			<time>"39.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"51"</id>
+			<time>"40.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"52"</id>
+			<time>"41.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"53"</id>
+			<time>"41.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"54"</id>
+			<time>"42.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"55"</id>
+			<time>"43.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"56"</id>
+			<time>"44.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"57"</id>
+			<time>"44.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"58"</id>
+			<time>"45.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"59"</id>
+			<time>"46.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"60"</id>
+			<time>"47.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"61"</id>
+			<time>"48.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"62"</id>
+			<time>"48.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"63"</id>
+			<time>"49.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"64"</id>
+			<time>"50.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"65"</id>
+			<time>"51.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"66"</id>
+			<time>"52.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"67"</id>
+			<time>"53.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"68"</id>
+			<time>"55.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"69"</id>
+			<time>"55.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"70"</id>
+			<time>"56.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"71"</id>
+			<time>"57.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"72"</id>
+			<time>"57.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"73"</id>
+			<time>"58.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"74"</id>
+			<time>"59.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"75"</id>
+			<time>"60.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"76"</id>
+			<time>"60.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"77"</id>
+			<time>"61.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"78"</id>
+			<time>"61.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"79"</id>
+			<time>"63.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"80"</id>
+			<time>"63.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"81"</id>
+			<time>"64.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"82"</id>
+			<time>"64.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"83"</id>
+			<time>"65.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"84"</id>
+			<time>"66.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"85"</id>
+			<time>"66.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"86"</id>
+			<time>"67.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"87"</id>
+			<time>"68.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"88"</id>
+			<time>"68.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"89"</id>
+			<time>"69.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"90"</id>
+			<time>"70.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"91"</id>
+			<time>"70.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"92"</id>
+			<time>"71.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"93"</id>
+			<time>"72.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"94"</id>
+			<time>"72.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"95"</id>
+			<time>"72.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"96"</id>
+			<time>"73.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"97"</id>
+			<time>"74.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"98"</id>
+			<time>"74.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"99"</id>
+			<time>"75.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"100"</id>
+			<time>"75.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"101"</id>
+			<time>"76.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"102"</id>
+			<time>"77.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"103"</id>
+			<time>"78.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"104"</id>
+			<time>"79.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"105"</id>
+			<time>"83.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"106"</id>
+			<time>"85.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"107"</id>
+			<time>"85.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"108"</id>
+			<time>"86.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"109"</id>
+			<time>"87.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"110"</id>
+			<time>"87.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"111"</id>
+			<time>"88.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"112"</id>
+			<time>"89.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"113"</id>
+			<time>"89.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"114"</id>
+			<time>"90.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"115"</id>
+			<time>"90.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"116"</id>
+			<time>"91.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"117"</id>
+			<time>"92.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"118"</id>
+			<time>"92.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"119"</id>
+			<time>"93.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"120"</id>
+			<time>"94.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"121"</id>
+			<time>"95.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"122"</id>
+			<time>"96.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"123"</id>
+			<time>"96.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"124"</id>
+			<time>"98.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"125"</id>
+			<time>"98.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"126"</id>
+			<time>"99.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"127"</id>
+			<time>"99.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"128"</id>
+			<time>"100.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"129"</id>
+			<time>"100.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"130"</id>
+			<time>"100.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"131"</id>
+			<time>"101.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"132"</id>
+			<time>"101.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"133"</id>
+			<time>"103.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"134"</id>
+			<time>"104.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"135"</id>
+			<time>"105.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"136"</id>
+			<time>"106.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"137"</id>
+			<time>"107.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"138"</id>
+			<time>"108.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"139"</id>
+			<time>"109.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"140"</id>
+			<time>"112.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"141"</id>
+			<time>"113.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"142"</id>
+			<time>"115.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"143"</id>
+			<time>"117.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"144"</id>
+			<time>"118.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"145"</id>
+			<time>"120.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"146"</id>
+			<time>"123.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"147"</id>
+			<time>"124.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"148"</id>
+			<time>"124.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"149"</id>
+			<time>"124.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"150"</id>
+			<time>"125.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"151"</id>
+			<time>"125.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"152"</id>
+			<time>"125.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"153"</id>
+			<time>"126.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"154"</id>
+			<time>"126.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"155"</id>
+			<time>"127.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"156"</id>
+			<time>"127.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"157"</id>
+			<time>"128.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"158"</id>
+			<time>"128.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"159"</id>
+			<time>"128.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"160"</id>
+			<time>"129.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"161"</id>
+			<time>"129.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"162"</id>
+			<time>"129.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"163"</id>
+			<time>"130.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"164"</id>
+			<time>"130.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"165"</id>
+			<time>"131.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"166"</id>
+			<time>"131.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"167"</id>
+			<time>"132.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"168"</id>
+			<time>"135.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"169"</id>
+			<time>"139.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"170"</id>
+			<time>"141.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"171"</id>
+			<time>"141.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"172"</id>
+			<time>"142.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"173"</id>
+			<time>"142.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"174"</id>
+			<time>"143.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"175"</id>
+			<time>"143.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"176"</id>
+			<time>"144.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"177"</id>
+			<time>"144.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"178"</id>
+			<time>"144.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"179"</id>
+			<time>"144.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"180"</id>
+			<time>"145.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"181"</id>
+			<time>"145.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"182"</id>
+			<time>"145.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"183"</id>
+			<time>"146.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"184"</id>
+			<time>"146.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"185"</id>
+			<time>"146.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"186"</id>
+			<time>"147.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"187"</id>
+			<time>"147.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"188"</id>
+			<time>"148.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"189"</id>
+			<time>"148.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"190"</id>
+			<time>"148.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"191"</id>
+			<time>"148.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"192"</id>
+			<time>"149.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"193"</id>
+			<time>"149.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"194"</id>
+			<time>"150.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"195"</id>
+			<time>"150.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"196"</id>
+			<time>"150.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"197"</id>
+			<time>"151.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"198"</id>
+			<time>"151.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"199"</id>
+			<time>"152.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"200"</id>
+			<time>"152.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"201"</id>
+			<time>"152.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"202"</id>
+			<time>"153.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"203"</id>
+			<time>"153.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"204"</id>
+			<time>"154.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"205"</id>
+			<time>"154.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"206"</id>
+			<time>"155.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"207"</id>
+			<time>"156.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"208"</id>
+			<time>"156.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"209"</id>
+			<time>"157.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"210"</id>
+			<time>"157.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"211"</id>
+			<time>"158.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"212"</id>
+			<time>"159.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"213"</id>
+			<time>"159.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"214"</id>
+			<time>"160.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"215"</id>
+			<time>"160.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"216"</id>
+			<time>"161.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"217"</id>
+			<time>"162.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"218"</id>
+			<time>"162.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"219"</id>
+			<time>"163.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"220"</id>
+			<time>"164.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"221"</id>
+			<time>"164.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"222"</id>
+			<time>"164.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"223"</id>
+			<time>"165.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"224"</id>
+			<time>"165.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"225"</id>
+			<time>"166.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"226"</id>
+			<time>"167.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"227"</id>
+			<time>"167.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"228"</id>
+			<time>"168.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"229"</id>
+			<time>"168.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"230"</id>
+			<time>"169.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"231"</id>
+			<time>"170.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"232"</id>
+			<time>"171.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"233"</id>
+			<time>"172.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"234"</id>
+			<time>"172.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"235"</id>
+			<time>"173.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"236"</id>
+			<time>"173.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"237"</id>
+			<time>"174.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"238"</id>
+			<time>"174.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"239"</id>
+			<time>"175.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"240"</id>
+			<time>"176.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"241"</id>
+			<time>"176.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"242"</id>
+			<time>"177.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"243"</id>
+			<time>"178.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"244"</id>
+			<time>"178.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"245"</id>
+			<time>"179.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"246"</id>
+			<time>"179.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"247"</id>
+			<time>"180.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"248"</id>
+			<time>"180.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"249"</id>
+			<time>"181.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"250"</id>
+			<time>"181.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"251"</id>
+			<time>"181.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"252"</id>
+			<time>"182.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"253"</id>
+			<time>"183.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"254"</id>
+			<time>"184.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"255"</id>
+			<time>"184.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"256"</id>
+			<time>"193.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+		</line>
+		<line>
+			<id>"2"</id>
+			<spawner>
+			<id>"1"</id>
+			<time>"07.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"2"</id>
+			<time>"07.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"3"</id>
+			<time>"08.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"4"</id>
+			<time>"08.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"5"</id>
+			<time>"08.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"6"</id>
+			<time>"09.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"7"</id>
+			<time>"09.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"8"</id>
+			<time>"10.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"9"</id>
+			<time>"10.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"10"</id>
+			<time>"11.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"11"</id>
+			<time>"11.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"12"</id>
+			<time>"12.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"13"</id>
+			<time>"12.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"14"</id>
+			<time>"13.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"15"</id>
+			<time>"13.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"16"</id>
+			<time>"16.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"17"</id>
+			<time>"16.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"18"</id>
+			<time>"17.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"19"</id>
+			<time>"17.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"20"</id>
+			<time>"18.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"21"</id>
+			<time>"19.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"22"</id>
+			<time>"20.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"23"</id>
+			<time>"20.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"24"</id>
+			<time>"20.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"25"</id>
+			<time>"21.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"26"</id>
+			<time>"22.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"27"</id>
+			<time>"22.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"28"</id>
+			<time>"23.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"29"</id>
+			<time>"23.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"30"</id>
+			<time>"24.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"31"</id>
+			<time>"24.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"32"</id>
+			<time>"25.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"33"</id>
+			<time>"25.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"34"</id>
+			<time>"25.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"35"</id>
+			<time>"26.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"36"</id>
+			<time>"29.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"37"</id>
+			<time>"29.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"38"</id>
+			<time>"30.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"39"</id>
+			<time>"30.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"40"</id>
+			<time>"31.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"41"</id>
+			<time>"31.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"42"</id>
+			<time>"32.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"43"</id>
+			<time>"33.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"44"</id>
+			<time>"33.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"45"</id>
+			<time>"34.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"46"</id>
+			<time>"35.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"47"</id>
+			<time>"35.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"48"</id>
+			<time>"36.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"49"</id>
+			<time>"37.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"50"</id>
+			<time>"37.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"51"</id>
+			<time>"38.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"52"</id>
+			<time>"39.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"53"</id>
+			<time>"40.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"54"</id>
+			<time>"40.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"55"</id>
+			<time>"41.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"56"</id>
+			<time>"41.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"57"</id>
+			<time>"42.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"58"</id>
+			<time>"43.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"59"</id>
+			<time>"44.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"60"</id>
+			<time>"44.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"61"</id>
+			<time>"45.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"62"</id>
+			<time>"45.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"63"</id>
+			<time>"46.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"64"</id>
+			<time>"47.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"65"</id>
+			<time>"48.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"66"</id>
+			<time>"48.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"67"</id>
+			<time>"49.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"68"</id>
+			<time>"50.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"69"</id>
+			<time>"51.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"70"</id>
+			<time>"52.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"71"</id>
+			<time>"53.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"72"</id>
+			<time>"55.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"73"</id>
+			<time>"55.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"74"</id>
+			<time>"56.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"75"</id>
+			<time>"57.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"76"</id>
+			<time>"57.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"77"</id>
+			<time>"58.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"78"</id>
+			<time>"59.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"79"</id>
+			<time>"60.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"80"</id>
+			<time>"60.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"81"</id>
+			<time>"61.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"82"</id>
+			<time>"62.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"83"</id>
+			<time>"63.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"84"</id>
+			<time>"63.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"85"</id>
+			<time>"64.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"86"</id>
+			<time>"64.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"87"</id>
+			<time>"65.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"88"</id>
+			<time>"66.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"89"</id>
+			<time>"67.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"90"</id>
+			<time>"67.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"91"</id>
+			<time>"68.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"92"</id>
+			<time>"68.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"93"</id>
+			<time>"69.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"94"</id>
+			<time>"70.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"95"</id>
+			<time>"71.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"96"</id>
+			<time>"71.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"97"</id>
+			<time>"72.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"98"</id>
+			<time>"72.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"99"</id>
+			<time>"73.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"100"</id>
+			<time>"74.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"101"</id>
+			<time>"74.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"102"</id>
+			<time>"75.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"103"</id>
+			<time>"75.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"104"</id>
+			<time>"76.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"105"</id>
+			<time>"77.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"106"</id>
+			<time>"77.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"107"</id>
+			<time>"78.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"108"</id>
+			<time>"79.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"109"</id>
+			<time>"83.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"110"</id>
+			<time>"85.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"111"</id>
+			<time>"85.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"112"</id>
+			<time>"86.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"113"</id>
+			<time>"87.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"114"</id>
+			<time>"87.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"115"</id>
+			<time>"88.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"116"</id>
+			<time>"89.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"117"</id>
+			<time>"89.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"118"</id>
+			<time>"90.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"119"</id>
+			<time>"90.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"120"</id>
+			<time>"91.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"121"</id>
+			<time>"92.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"122"</id>
+			<time>"93.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"123"</id>
+			<time>"94.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"124"</id>
+			<time>"94.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"125"</id>
+			<time>"95.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"126"</id>
+			<time>"96.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"127"</id>
+			<time>"96.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"128"</id>
+			<time>"98.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"129"</id>
+			<time>"98.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"130"</id>
+			<time>"99.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"131"</id>
+			<time>"99.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"132"</id>
+			<time>"100.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"133"</id>
+			<time>"100.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"134"</id>
+			<time>"101.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"135"</id>
+			<time>"101.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"136"</id>
+			<time>"104.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"137"</id>
+			<time>"105.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"138"</id>
+			<time>"105.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"139"</id>
+			<time>"106.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"140"</id>
+			<time>"107.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"141"</id>
+			<time>"108.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"142"</id>
+			<time>"109.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"143"</id>
+			<time>"111.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"144"</id>
+			<time>"113.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"145"</id>
+			<time>"115.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"146"</id>
+			<time>"116.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"147"</id>
+			<time>"118.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"148"</id>
+			<time>"120.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"149"</id>
+			<time>"123.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"150"</id>
+			<time>"123.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"151"</id>
+			<time>"124.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"152"</id>
+			<time>"124.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"153"</id>
+			<time>"125.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"154"</id>
+			<time>"125.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"155"</id>
+			<time>"126.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"156"</id>
+			<time>"126.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"157"</id>
+			<time>"127.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"158"</id>
+			<time>"127.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"159"</id>
+			<time>"127.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"160"</id>
+			<time>"128.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"161"</id>
+			<time>"129.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"162"</id>
+			<time>"129.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"163"</id>
+			<time>"130.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"164"</id>
+			<time>"130.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"165"</id>
+			<time>"131.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"166"</id>
+			<time>"131.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"167"</id>
+			<time>"131.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"168"</id>
+			<time>"132.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"169"</id>
+			<time>"135.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"170"</id>
+			<time>"136.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"171"</id>
+			<time>"136.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"172"</id>
+			<time>"137.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"173"</id>
+			<time>"138.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"174"</id>
+			<time>"138.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"175"</id>
+			<time>"141.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"176"</id>
+			<time>"141.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"177"</id>
+			<time>"142.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"178"</id>
+			<time>"142.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"179"</id>
+			<time>"143.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"180"</id>
+			<time>"143.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"181"</id>
+			<time>"144.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"182"</id>
+			<time>"144.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"183"</id>
+			<time>"145.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"184"</id>
+			<time>"146.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"185"</id>
+			<time>"146.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"186"</id>
+			<time>"147.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"187"</id>
+			<time>"147.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"188"</id>
+			<time>"147.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"189"</id>
+			<time>"148.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"190"</id>
+			<time>"149.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"191"</id>
+			<time>"149.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"192"</id>
+			<time>"149.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"193"</id>
+			<time>"150.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"194"</id>
+			<time>"150.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"195"</id>
+			<time>"151.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"196"</id>
+			<time>"151.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"197"</id>
+			<time>"152.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"198"</id>
+			<time>"152.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"199"</id>
+			<time>"153.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"200"</id>
+			<time>"154.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"201"</id>
+			<time>"155.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"202"</id>
+			<time>"156.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"203"</id>
+			<time>"157.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"204"</id>
+			<time>"157.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"205"</id>
+			<time>"158.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"206"</id>
+			<time>"159.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"207"</id>
+			<time>"159.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"208"</id>
+			<time>"160.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"209"</id>
+			<time>"161.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"210"</id>
+			<time>"161.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"211"</id>
+			<time>"162.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"212"</id>
+			<time>"163.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"213"</id>
+			<time>"163.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"214"</id>
+			<time>"164.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"215"</id>
+			<time>"164.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"216"</id>
+			<time>"165.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"217"</id>
+			<time>"166.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"218"</id>
+			<time>"166.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"219"</id>
+			<time>"167.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"220"</id>
+			<time>"168.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"221"</id>
+			<time>"169.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"222"</id>
+			<time>"169.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"223"</id>
+			<time>"170.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"224"</id>
+			<time>"171.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"225"</id>
+			<time>"172.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"226"</id>
+			<time>"173.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"227"</id>
+			<time>"173.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"228"</id>
+			<time>"174.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"229"</id>
+			<time>"175.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"230"</id>
+			<time>"176.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"231"</id>
+			<time>"177.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"232"</id>
+			<time>"178.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"233"</id>
+			<time>"178.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"234"</id>
+			<time>"179.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"235"</id>
+			<time>"179.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"236"</id>
+			<time>"180.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"237"</id>
+			<time>"180.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"238"</id>
+			<time>"181.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"239"</id>
+			<time>"181.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"240"</id>
+			<time>"184.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"241"</id>
+			<time>"184.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"242"</id>
+			<time>"191.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+		</line>
+		<line>
+			<id>"3"</id>
+			<spawner>
+			<id>"1"</id>
+			<time>"14.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"2"</id>
+			<time>"15.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"3"</id>
+			<time>"18.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"4"</id>
+			<time>"27.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"5"</id>
+			<time>"28.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"6"</id>
+			<time>"29.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"7"</id>
+			<time>"30.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"8"</id>
+			<time>"32.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"9"</id>
+			<time>"33.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"10"</id>
+			<time>"34.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"11"</id>
+			<time>"35.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"12"</id>
+			<time>"36.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"13"</id>
+			<time>"38.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"14"</id>
+			<time>"38.72"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"15"</id>
+			<time>"39.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"16"</id>
+			<time>"42.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"17"</id>
+			<time>"43.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"18"</id>
+			<time>"44.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"19"</id>
+			<time>"44.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"20"</id>
+			<time>"46.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"21"</id>
+			<time>"47.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"22"</id>
+			<time>"47.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"23"</id>
+			<time>"49.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"24"</id>
+			<time>"50.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"25"</id>
+			<time>"51.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"26"</id>
+			<time>"51.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"27"</id>
+			<time>"52.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"28"</id>
+			<time>"54.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"29"</id>
+			<time>"55.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"30"</id>
+			<time>"56.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"31"</id>
+			<time>"58.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"32"</id>
+			<time>"59.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"33"</id>
+			<time>"60.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"34"</id>
+			<time>"62.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"35"</id>
+			<time>"63.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"36"</id>
+			<time>"65.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"37"</id>
+			<time>"66.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"38"</id>
+			<time>"67.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"39"</id>
+			<time>"69.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"40"</id>
+			<time>"70.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"41"</id>
+			<time>"71.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"42"</id>
+			<time>"71.82"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"43"</id>
+			<time>"72.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"44"</id>
+			<time>"75.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"45"</id>
+			<time>"76.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"46"</id>
+			<time>"78.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"47"</id>
+			<time>"80.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"48"</id>
+			<time>"81.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"49"</id>
+			<time>"82.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"50"</id>
+			<time>"83.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"51"</id>
+			<time>"84.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"52"</id>
+			<time>"85.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"53"</id>
+			<time>"88.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"54"</id>
+			<time>"89.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"55"</id>
+			<time>"91.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"56"</id>
+			<time>"92.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"57"</id>
+			<time>"93.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"58"</id>
+			<time>"93.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"59"</id>
+			<time>"94.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"60"</id>
+			<time>"95.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"61"</id>
+			<time>"96.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"62"</id>
+			<time>"97.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"63"</id>
+			<time>"102.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"64"</id>
+			<time>"102.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"65"</id>
+			<time>"103.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"66"</id>
+			<time>"104.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"67"</id>
+			<time>"105.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"68"</id>
+			<time>"106.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"69"</id>
+			<time>"106.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"70"</id>
+			<time>"108.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"71"</id>
+			<time>"108.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"72"</id>
+			<time>"109.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"73"</id>
+			<time>"111.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"74"</id>
+			<time>"113.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"75"</id>
+			<time>"114.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"76"</id>
+			<time>"116.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"77"</id>
+			<time>"118.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"78"</id>
+			<time>"119.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"79"</id>
+			<time>"121.42"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"80"</id>
+			<time>"132.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"81"</id>
+			<time>"132.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"82"</id>
+			<time>"133.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"83"</id>
+			<time>"133.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"84"</id>
+			<time>"134.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"85"</id>
+			<time>"134.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"86"</id>
+			<time>"135.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"87"</id>
+			<time>"135.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"88"</id>
+			<time>"136.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"89"</id>
+			<time>"136.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"90"</id>
+			<time>"137.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"91"</id>
+			<time>"138.06"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"92"</id>
+			<time>"139.94"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"93"</id>
+			<time>"153.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"94"</id>
+			<time>"155.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"95"</id>
+			<time>"157.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"96"</id>
+			<time>"158.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"97"</id>
+			<time>"160.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"98"</id>
+			<time>"161.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"99"</id>
+			<time>"162.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"100"</id>
+			<time>"163.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"101"</id>
+			<time>"164.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"102"</id>
+			<time>"166.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"103"</id>
+			<time>"167.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"104"</id>
+			<time>"168.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"105"</id>
+			<time>"169.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"106"</id>
+			<time>"170.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"107"</id>
+			<time>"171.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"108"</id>
+			<time>"172.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"109"</id>
+			<time>"173.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"110"</id>
+			<time>"174.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"111"</id>
+			<time>"175.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"112"</id>
+			<time>"176.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"113"</id>
+			<time>"182.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"114"</id>
+			<time>"183.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"115"</id>
+			<time>"184.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"116"</id>
+			<time>"185.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"117"</id>
+			<time>"186.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"118"</id>
+			<time>"186.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"119"</id>
+			<time>"187.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"120"</id>
+			<time>"187.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"121"</id>
+			<time>"189.20"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+		</line>
+		<line>
+			<id>"4"</id>
+			<spawner>
+			<id>"1"</id>
+			<time>"14.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"2"</id>
+			<time>"27.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"3"</id>
+			<time>"28.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"4"</id>
+			<time>"40.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"5"</id>
+			<time>"42.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"6"</id>
+			<time>"45.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"7"</id>
+			<time>"46.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"8"</id>
+			<time>"47.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"9"</id>
+			<time>"49.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"10"</id>
+			<time>"50.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"11"</id>
+			<time>"52.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"12"</id>
+			<time>"53.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"13"</id>
+			<time>"54.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"14"</id>
+			<time>"56.70"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"15"</id>
+			<time>"58.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"16"</id>
+			<time>"59.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"17"</id>
+			<time>"61.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"18"</id>
+			<time>"62.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"19"</id>
+			<time>"63.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"20"</id>
+			<time>"65.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"21"</id>
+			<time>"66.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"22"</id>
+			<time>"67.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"23"</id>
+			<time>"69.28"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"24"</id>
+			<time>"70.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"25"</id>
+			<time>"71.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"26"</id>
+			<time>"73.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"27"</id>
+			<time>"75.48"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"28"</id>
+			<time>"77.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"29"</id>
+			<time>"78.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"30"</id>
+			<time>"80.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"31"</id>
+			<time>"81.44"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"32"</id>
+			<time>"82.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"33"</id>
+			<time>"83.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"34"</id>
+			<time>"84.62"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"35"</id>
+			<time>"86.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"36"</id>
+			<time>"88.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"37"</id>
+			<time>"89.90"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"38"</id>
+			<time>"91.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"39"</id>
+			<time>"92.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"40"</id>
+			<time>"93.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"41"</id>
+			<time>"94.66"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"42"</id>
+			<time>"95.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"43"</id>
+			<time>"96.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"44"</id>
+			<time>"97.56"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"45"</id>
+			<time>"102.26"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"46"</id>
+			<time>"102.92"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"47"</id>
+			<time>"103.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"48"</id>
+			<time>"104.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"49"</id>
+			<time>"105.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"50"</id>
+			<time>"106.24"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"51"</id>
+			<time>"107.18"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"52"</id>
+			<time>"108.14"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"53"</id>
+			<time>"109.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"54"</id>
+			<time>"110.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"55"</id>
+			<time>"111.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"56"</id>
+			<time>"112.84"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"57"</id>
+			<time>"114.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"58"</id>
+			<time>"116.12"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"59"</id>
+			<time>"117.60"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"60"</id>
+			<time>"119.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"61"</id>
+			<time>"121.10"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"62"</id>
+			<time>"132.30"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"63"</id>
+			<time>"132.88"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"64"</id>
+			<time>"133.32"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"65"</id>
+			<time>"133.54"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"66"</id>
+			<time>"133.98"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"67"</id>
+			<time>"134.46"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"68"</id>
+			<time>"134.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"69"</id>
+			<time>"135.08"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"70"</id>
+			<time>"136.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"71"</id>
+			<time>"137.02"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"72"</id>
+			<time>"137.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"73"</id>
+			<time>"138.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"74"</id>
+			<time>"139.76"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"75"</id>
+			<time>"153.96"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"76"</id>
+			<time>"155.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"77"</id>
+			<time>"157.38"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"78"</id>
+			<time>"158.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"79"</id>
+			<time>"160.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"80"</id>
+			<time>"161.36"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"81"</id>
+			<time>"162.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"82"</id>
+			<time>"163.86"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"83"</id>
+			<time>"165.16"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"84"</id>
+			<time>"166.34"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"85"</id>
+			<time>"167.64"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"86"</id>
+			<time>"168.58"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"87"</id>
+			<time>"169.80"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"88"</id>
+			<time>"170.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"89"</id>
+			<time>"171.78"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"90"</id>
+			<time>"172.52"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"91"</id>
+			<time>"174.68"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"92"</id>
+			<time>"175.74"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"93"</id>
+			<time>"177.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"94"</id>
+			<time>"182.40"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"95"</id>
+			<time>"183.22"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"96"</id>
+			<time>"185.00"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"97"</id>
+			<time>"188.04"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+			<spawner>
+			<id>"98"</id>
+			<time>"189.50"</time>
+			<timeValue>"0"</timeValue>
+			<presstime> "1000"</presstime>
+			</spawner>
+		</line>
+	</game>
+</rhytmegame>

@@ -60,6 +60,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaleButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7510269658244532225, guid: 003683ba266aa5946a9f80c2d6fc425b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7855683095453223294, guid: 003683ba266aa5946a9f80c2d6fc425b,
         type: 3}
       propertyPath: m_Pivot.x
