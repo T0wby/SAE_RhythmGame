@@ -30,6 +30,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _scoreCount;
     [SerializeField] private TMP_Text _comboCount;
     [SerializeField] private Image _momentumBar;
+    [SerializeField] private Image _progressBar;
 
     [Header("Generated Objects")]
     [SerializeField] private GameObject _scoreInformation;
@@ -59,6 +60,7 @@ public class UIManager : Singleton<UIManager>
         PointManager.Instance.ComboCounter.ChangeValue -= UpdateComboCounter;
         PointManager.Instance.MomentumCounter.ChangeValue -= UpdateMomentumBar;
         PointManager.Instance.ScoreCounter.ChangeValue -= UpdateScore;
+        PointManager.Instance.ProgressCounter.ChangeValue -= UpdateProgressBar;
     }
     #endregion
 
@@ -145,7 +147,10 @@ public class UIManager : Singleton<UIManager>
     {
         _scoreCount.text = value.ToString();
     }
-
+    private void UpdateProgressBar(float value)
+    {
+        _progressBar.fillAmount = value;
+    }
     #endregion
 
     #region Enumerators
@@ -162,6 +167,7 @@ public class UIManager : Singleton<UIManager>
         PointManager.Instance.ComboCounter.ChangeValue += UpdateComboCounter;
         PointManager.Instance.MomentumCounter.ChangeValue += UpdateMomentumBar;
         PointManager.Instance.ScoreCounter.ChangeValue += UpdateScore;
+        PointManager.Instance.ProgressCounter.ChangeValue += UpdateProgressBar;
         _countdown.SetActive(false);
     }
 

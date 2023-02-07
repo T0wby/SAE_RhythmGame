@@ -19,6 +19,7 @@ public class PointManager : Singleton<PointManager>
     [SerializeField] private Float _momentumCounter;
     [SerializeField] private Float _scoreCounter;
     [SerializeField, Range(0 , 1)] private float _lossPercent;
+    [SerializeField] private Float _progressCounter;
     private int _totalLevelNodes = 0;
     private float _goodNodePoints = 2.5f;
     private float _perfectNodePoints = 3.5f;
@@ -57,6 +58,23 @@ public class PointManager : Singleton<PointManager>
     public float GoodNodePoints { get => _goodNodePoints; }
     public float PerfectNodePoints { get => _perfectNodePoints; }
     public int HighestCombo { get => _highestCombo; }
+    public Float ProgressCounter 
+    {
+        get
+        {
+            return _progressCounter;
+        }
+        set
+        {
+            if (value < 0)
+                _progressCounter.Value = 0;
+            else if (value > 1)
+                _progressCounter.Value = 1;
+            else
+                _progressCounter = value;
+        }
+
+    }
     #endregion
 
 
@@ -73,6 +91,7 @@ public class PointManager : Singleton<PointManager>
         _missedNodes.ChangeValue += CheckLossCondition;
         _comboCounter.ChangeValue += CheckMaxCombo;
         _momentumCounter.ChangeValue += CheckMomentumValue;
+        _progressCounter.ChangeValue += CheckProgressValue;
         ResetLevelPoints();
     }
     #endregion
@@ -104,6 +123,13 @@ public class PointManager : Singleton<PointManager>
             _highestCombo = newValue;
         }
     }
+    private void CheckProgressValue(float newValue)
+    {
+        if (newValue < 0)
+            _progressCounter.Value = 0;
+        else if (newValue > 1)
+            _progressCounter.Value = 1;
+    }
 
     public void ResetLevelPoints()
     {
@@ -114,6 +140,7 @@ public class PointManager : Singleton<PointManager>
         _scoreCounter.Value = 0;
         _momentumCounter.Value = 0;
         _highestCombo = 0;
+        _progressCounter.Value = 0;
     }
 
     public void ResetComboCounter()
@@ -124,6 +151,19 @@ public class PointManager : Singleton<PointManager>
     public void ReduceMomentum(float value)
     {
         _momentumCounter.Value -= value;
+    }
+    public float CalcProgress()
+    {
+        float _playedNodes = _missedNodes.Value + _goodNodes.Value + _perfectNodes.Value;
+        
+        if (_playedNodes == 0)
+        {
+            return 0f;
+        }
+
+        _progressCounter.Value = _playedNodes/_totalLevelNodes;
+        return _progressCounter.Value;
+
     }
 
     private ScoreInfo CreateScore()

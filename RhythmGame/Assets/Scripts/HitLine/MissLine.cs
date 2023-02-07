@@ -27,6 +27,9 @@ public class MissLine : MonoBehaviour
             _missedNodes++;
             PointManager.Instance.ResetComboCounter();
             PointManager.Instance.ReduceMomentum(0.15f);
+
+            PointManager pointManager = PointManager.Instance;
+            pointManager.ProgressCounter.Value = PointManager.Instance.CalcProgress();
         }
     }
 }
