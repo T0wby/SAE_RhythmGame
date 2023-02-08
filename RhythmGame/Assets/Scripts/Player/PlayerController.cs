@@ -113,9 +113,9 @@ public class PlayerController : MonoBehaviour
 
     private void DoActionOnLine(HitArea perfect, HitArea goodOne, HitArea goodTwo)
     {
+        PointManager pointManager = PointManager.Instance;
         if (perfect.Buttons.Count > 0)
         {
-            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, _sfxManager.transform));
             perfect.ResetArea();
             goodOne.ResetArea();
@@ -127,7 +127,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (goodOne.Buttons.Count > 0)
         {
-            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, _sfxManager.transform));
             goodOne.ResetArea();
             goodTwo.ResetArea();
@@ -138,7 +137,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (goodTwo.Buttons.Count > 0)
         {
-            PointManager pointManager = PointManager.Instance;
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYGOOD, _sfxManager.transform));
             goodTwo.ResetArea();
             _goodHitCounter++;
@@ -152,6 +150,9 @@ public class PlayerController : MonoBehaviour
             PointManager.Instance.ResetComboCounter();
             PointManager.Instance.ReduceMomentum(0.15f);
         }
+
+        pointManager.ProgressCounter.Value = PointManager.Instance.CalcProgress();
+
     }
 
     public void ResetAllHitAreas()
