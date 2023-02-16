@@ -10,6 +10,8 @@ public class OptionSetting : MonoBehaviour
     public AudioMixer audioMusic;
     public AudioMixer audioSFX;
     public TMP_Dropdown resoulutionDropdown;
+    public TMP_Text travelTimeValue;
+    public Slider travelTimeSlider;
     Resolution[] resolutions;
 
     public void Start()
@@ -25,6 +27,9 @@ public class OptionSetting : MonoBehaviour
             options.Add(option);
         }
         resoulutionDropdown.AddOptions(options);
+
+        travelTimeSlider.value = GameManager.Instance.TravelTime;
+        travelTimeValue.text = $"{GameManager.Instance.TravelTime} sec";
     }
     public void SetMasterVolume(float Volume) 
     {
@@ -45,5 +50,10 @@ public class OptionSetting : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+    public void SetTravelTimeValue(float value)
+    {
+        travelTimeValue.text = $"{value} sec";
+        GameManager.Instance.TravelTime = value;
     }
 }

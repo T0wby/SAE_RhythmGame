@@ -39,6 +39,7 @@ public class Spawner : MonoBehaviour
     {
         _pool = new ObjectPool<ShortButton>(_shortButtonPrefab, _poolSize, transform);
         SetSpawnValues();
+        _travelTime = GameManager.Instance.TravelTime;
     }
 
     private void Update()

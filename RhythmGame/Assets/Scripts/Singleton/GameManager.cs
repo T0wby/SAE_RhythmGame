@@ -15,10 +15,11 @@ public class GameManager : Singleton<GameManager>
     private List<float> _spawnerFour = new List<float>();
     private bool _isPaused = false;
     private Conductor _conductor;
+    private float _travelTime = 3f;
     #endregion
 
     #region Properties
-    
+
 
     public List<float> SpawnerOne { get { return _spawnerOne; } set { _spawnerOne = value; } }
     public List<float> SpawnerTwo { get { return _spawnerTwo; } set { _spawnerTwo = value; } }
@@ -29,6 +30,7 @@ public class GameManager : Singleton<GameManager>
     public Conductor Conductor { get => _conductor; set => _conductor = value; }
     public LevelInfo ActiveLevel { get => _activeLevel; set => _activeLevel = value; }
     public ELevelDifficulty CurrentLevelDifficulty { get => _currentLevelDifficulty; set => _currentLevelDifficulty = value; }
+    public float TravelTime { get => _travelTime; set => _travelTime = value; }
 
     #endregion
 
