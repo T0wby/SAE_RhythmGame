@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
+using static UnityEngine.Rendering.DebugUI;
+
 public class OptionSetting : MonoBehaviour
 {
     public AudioMixer audioMaster;
@@ -11,8 +14,13 @@ public class OptionSetting : MonoBehaviour
     public AudioMixer audioSFX;
     public TMP_Dropdown resoulutionDropdown;
     public TMP_Text travelTimeValue;
+    public Slider audioMasterSlider;
+    public Slider audioMusicSlider;
+    public Slider audioSFXSlider;
     public Slider travelTimeSlider;
+    public Toggle fullscreenToggle;
     Resolution[] resolutions;
+    public GameSettings gameSettings;
 
     public void Start()
     {
@@ -28,32 +36,66 @@ public class OptionSetting : MonoBehaviour
         }
         resoulutionDropdown.AddOptions(options);
 
-        travelTimeSlider.value = GameManager.Instance.TravelTime;
-        travelTimeValue.text = $"{GameManager.Instance.TravelTime} sec";
+        SetSettings();
     }
+
+    private void SetSettings()
+    {
+        //Audio
+        audioMaster.SetFloat("volumeMaster", gameSettings.MasterVolume);
+        audioMasterSlider.value = gameSettings.MasterVolume;
+        audioMaster.SetFloat("volumeMusic", gameSettings.MusicVolume);
+        audioMusicSlider.value = gameSettings.MusicVolume;
+        audioMaster.SetFloat("volumeSFX", gameSettings.SFXVolume);
+        audioSFXSlider.value = gameSettings.SFXVolume;
+
+        //Quality
+        QualitySettings.SetQualityLevel(gameSettings.QualityIndex);
+
+        //Fullscreen
+        fullscreenToggle.isOn = gameSettings.IsFullscreen;
+        Screen.fullScreen = gameSettings.IsFullscreen;
+
+        //Gameplay
+        travelTimeSlider.value = gameSettings.TravelTimeValue;
+        travelTimeValue.text = $"{gameSettings.TravelTimeValue} sec";
+        GameManager.Instance.TravelTime = gameSettings.TravelTimeValue;
+    }
+
+    public void SaveSettings()
+    {
+        SaveGameManager.Instance.SaveGameSettings();
+    }
+
     public void SetMasterVolume(float Volume) 
     {
         audioMaster.SetFloat("volumeMaster", Volume);
+        gameSettings.MasterVolume = Volume;
     }
     public void SetMusicVolume(float Volume)
     {
         audioMaster.SetFloat("volumeMusic", Volume);
+        gameSettings.MusicVolume = Volume;
     }
     public void SetSFXVolume(float Volume)
     {
         audioMaster.SetFloat("volumeSFX", Volume);
+        gameSettings.SFXVolume = Volume;
     }
     public void SetQuality(int qualityIndex) 
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        gameSettings.QualityIndex = qualityIndex;
     }
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        gameSettings.IsFullscreen = isFullscreen;
     }
     public void SetTravelTimeValue(float value)
     {
         travelTimeValue.text = $"{value} sec";
         GameManager.Instance.TravelTime = value;
+        gameSettings.TravelTimeValue = value;
     }
 }

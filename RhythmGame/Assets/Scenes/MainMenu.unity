@@ -1295,6 +1295,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 325512972}
+        m_TargetAssemblyTypeName: OptionSetting, Assembly-CSharp
+        m_MethodName: SaveSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &313983113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,7 +1414,12 @@ MonoBehaviour:
   audioSFX: {fileID: 24100000, guid: b12424e80f8222c49ad7b85257b324a0, type: 2}
   resoulutionDropdown: {fileID: 1086625261}
   travelTimeValue: {fileID: 2130210386}
+  audioMasterSlider: {fileID: 134292887}
+  audioMusicSlider: {fileID: 351702607}
+  audioSFXSlider: {fileID: 844289786}
   travelTimeSlider: {fileID: 890278354}
+  fullscreenToggle: {fileID: 1252628610}
+  gameSettings: {fileID: 11400000, guid: 2444e8721e3fa344e8e1c58754c1e2d0, type: 2}
 --- !u!1 &345549640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2185,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 690047854}
+      - m_Target: {fileID: 875403679}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3321,7 +3338,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 690047854}
+      - m_Target: {fileID: 875403679}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8948,7 +8965,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 690047854}
+      - m_Target: {fileID: 875403679}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6

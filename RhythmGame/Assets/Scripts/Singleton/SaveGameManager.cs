@@ -15,10 +15,13 @@ public class SaveGameManager : Singleton<SaveGameManager>
     [SerializeField] private Float _experiencePoints;
     private ExperienceSerializable _experienceSerializable;
 
+    [Header("GameSettings")]
+    [SerializeField] private GameSettings _gameSettings;
 
     private string _filePathLevel;
     private string _filePathExp;
-
+    private string _filePathSettings;
+    private string _saveGameSettings;
 
     public LevelInfo[] LevelCollection { get => _levelCollection;}
 
@@ -28,10 +31,14 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
         _filePathLevel = $"{Application.dataPath}/levelsettings.bin";
         _filePathExp = $"{Application.dataPath}/expcount.bin";
+        _filePathSettings = $"{Application.dataPath}/gamesettings.cgsav";
         _isInAllScenes = true;
         base.Awake();
         _levelCollection = LoadLevelInformation(_levelCollection);
         _experiencePoints = LoadLevelInformation(_experiencePoints);
+
+        // Load GameSettings
+        LoadFromJSON();
     }
 
     #region LevelInfo
@@ -145,12 +152,36 @@ public class SaveGameManager : Singleton<SaveGameManager>
 
     #endregion
 
+    #region GameSettings
+    public void SaveGameSettings()
+    {
+        _saveGameSettings = JsonUtility.ToJson(_gameSettings, true);
+
+        using (StreamWriter writer = File.CreateText(_filePathSettings))
+        {
+            writer.Write(_saveGameSettings);
+        }
+    }
+
+    private void LoadFromJSON()
+    {
+        if (!File.Exists(_filePathSettings))
+            return;
+
+        string contentSettings = string.Empty;
+
+        using (StreamReader reader = File.OpenText(_filePathSettings))
+        {
+            contentSettings = reader.ReadToEnd();
+        }
+
+        JsonUtility.FromJsonOverwrite(contentSettings, _gameSettings);
+    }
+
+    #endregion
 
 
 
 
 
-
-
-    
 }

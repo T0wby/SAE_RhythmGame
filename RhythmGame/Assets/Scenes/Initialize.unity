@@ -722,6 +722,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7870308403421077147, guid: 0baa623c6b482cd4c9f30daaecfd25ca,
         type: 3}
+      propertyPath: _gameSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 2444e8721e3fa344e8e1c58754c1e2d0,
+        type: 2}
+    - target: {fileID: 7870308403421077147, guid: 0baa623c6b482cd4c9f30daaecfd25ca,
+        type: 3}
       propertyPath: _experiencePoints
       value: 
       objectReference: {fileID: 11400000, guid: fc26894488abd964c921e36013d1bf8d,
