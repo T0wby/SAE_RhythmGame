@@ -7,10 +7,13 @@ using System.Xml;
 using System.IO;
 using System;
 using System.Globalization;
+using TMPro;
+using System.Runtime.CompilerServices;
 
 public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] private Image _loadingBar;
+    [SerializeField] private TMP_Text _loadingText;
     [SerializeField] private GameObject _continueText;
     private TextAsset xmlRawFile;
     private Char[] _trimCharacters;
@@ -18,6 +21,12 @@ public class LoadingScreen : MonoBehaviour
     private List<float> _spawnerTwo = new List<float>();
     private List<float> _spawnerThree = new List<float>();
     private List<float> _spawnerFour = new List<float>();
+    private static string[] LOADINGCOLLECTION = new string[]
+    {
+            "LOADING.",
+            "LOADING..",
+            "LOADING..."
+    };
 
     private void Start()
     {
@@ -32,15 +41,17 @@ public class LoadingScreen : MonoBehaviour
     {
         AsyncOperation loadOp = SceneManager.LoadSceneAsync("Level");
         loadOp.allowSceneActivation = false;
+        Coroutine nameChange = StartCoroutine(nameof(TextChange));
 
         while (!loadOp.isDone)
         {
             _loadingBar.fillAmount = loadOp.progress;
-
+            
             if (loadOp.progress >= 0.9f)
             {
                 _loadingBar.fillAmount = 1f;
                 _continueText.SetActive(true);
+                StopCoroutine(nameChange);
                 if (Input.GetKeyDown(KeyCode.Space))
                     loadOp.allowSceneActivation = true;
             }
@@ -48,6 +59,18 @@ public class LoadingScreen : MonoBehaviour
         }
 
         SceneManager.UnloadSceneAsync("LoadingScreen");
+    }
+
+    private IEnumerator TextChange()
+    {
+        int count = 0;
+        int length = LOADINGCOLLECTION.Length;
+        while (true)
+        {
+            _loadingText.text = LOADINGCOLLECTION[count % length];
+            count++;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     private void ParseXMLFile(string xmlFile)
