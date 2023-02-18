@@ -39,7 +39,7 @@ public class OptionSetting : MonoBehaviour
         SetSettings();
     }
 
-    private void SetSettings()
+    public void SetSettings()
     {
         //Audio
         audioMaster.SetFloat("volumeMaster", Mathf.Log10(gameSettings.MasterVolume) * 20);

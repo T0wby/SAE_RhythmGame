@@ -26,7 +26,7 @@ namespace AudioManaging
         public async void SetCountdown(int _delay, Action<bool> action)
         {
             await Task.Delay(_delay);
-            if (this == null)
+            if (this == null || this.gameObject == null || !this.gameObject.activeSelf)
                 return;
 
             if (action != null)

@@ -96,8 +96,6 @@ public class PointManager : Singleton<PointManager>
     }
     #endregion
 
-
-
     #region Methods
 
     private void CheckMomentumValue(float newValue)

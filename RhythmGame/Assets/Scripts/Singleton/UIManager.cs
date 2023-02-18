@@ -73,8 +73,12 @@ public class UIManager : Singleton<UIManager>
             _endscreen.SetActive(true);
             _inGameUI.SetActive(false);
             GameManager.Instance.PauseGame();
-            if (_musicManager is not null)
+            if (_musicManager != null && _musicManager.LastCreatedMusicObject != null)
+            {
                 _musicManager.LastCreatedMusicObject.StopSound();
+                _musicManager.LastCreatedMusicObject.Deactivate();
+            }
+                
             _playerController.ResetAllHitAreas();
             SetEndScreenInfo();
             CreateLevelScores();

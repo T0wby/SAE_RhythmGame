@@ -63,8 +63,6 @@ public class GameManager : Singleton<GameManager>
     public void EndGame(bool wonGame)
     {
         _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
-        //Save Experience Points
-        //SaveGameManager.Instance.SaveExpInformation(_experiencePoints);
         _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
     }

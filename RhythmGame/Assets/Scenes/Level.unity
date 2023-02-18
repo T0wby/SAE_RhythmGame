@@ -8799,7 +8799,7 @@ MonoBehaviour:
   _comboCounter: {fileID: 11400000, guid: 31f5d200e35cb2640adb5e03b41360c4, type: 2}
   _momentumCounter: {fileID: 11400000, guid: d21e26bbd1967414ab34c92a1537db06, type: 2}
   _scoreCounter: {fileID: 11400000, guid: 58b94523653a7d34c826d68d84758673, type: 2}
-  _lossPercent: 1
+  _lossPercent: 0.2
   _progressCounter: {fileID: 11400000, guid: 46beb15df4f9f9e4e96aac94e865ab02, type: 2}
   _spawnerone: {fileID: 874410353}
   _spawnertwo: {fileID: 541019693}
