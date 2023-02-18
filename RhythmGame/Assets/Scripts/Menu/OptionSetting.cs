@@ -42,11 +42,11 @@ public class OptionSetting : MonoBehaviour
     private void SetSettings()
     {
         //Audio
-        audioMaster.SetFloat("volumeMaster", gameSettings.MasterVolume);
+        audioMaster.SetFloat("volumeMaster", Mathf.Log10(gameSettings.MasterVolume) * 20);
         audioMasterSlider.value = gameSettings.MasterVolume;
-        audioMaster.SetFloat("volumeMusic", gameSettings.MusicVolume);
+        audioMaster.SetFloat("volumeMusic", Mathf.Log10(gameSettings.MusicVolume) * 20);
         audioMusicSlider.value = gameSettings.MusicVolume;
-        audioMaster.SetFloat("volumeSFX", gameSettings.SFXVolume);
+        audioMaster.SetFloat("volumeSFX", Mathf.Log10(gameSettings.SFXVolume) * 20);
         audioSFXSlider.value = gameSettings.SFXVolume;
 
         //Quality
@@ -69,17 +69,17 @@ public class OptionSetting : MonoBehaviour
 
     public void SetMasterVolume(float Volume) 
     {
-        audioMaster.SetFloat("volumeMaster", Volume);
+        audioMaster.SetFloat("volumeMaster", Mathf.Log10(Volume) * 20);
         gameSettings.MasterVolume = Volume;
     }
     public void SetMusicVolume(float Volume)
     {
-        audioMaster.SetFloat("volumeMusic", Volume);
+        audioMaster.SetFloat("volumeMusic", Mathf.Log10(Volume) * 20);
         gameSettings.MusicVolume = Volume;
     }
     public void SetSFXVolume(float Volume)
     {
-        audioMaster.SetFloat("volumeSFX", Volume);
+        audioMaster.SetFloat("volumeSFX", Mathf.Log10(Volume) * 20);
         gameSettings.SFXVolume = Volume;
     }
     public void SetQuality(int qualityIndex) 

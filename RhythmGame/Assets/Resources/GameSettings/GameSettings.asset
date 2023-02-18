@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f98c03eb33992349ae5bbd08576bc7b, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  MasterVolume: 1
-  MusicVolume: 1
-  SFXVolume: 1
+  MasterVolume: 0.5
+  MusicVolume: 0.5
+  SFXVolume: 0.5
   TravelTimeValue: 3
   QualityIndex: 1
   IsFullscreen: 1
