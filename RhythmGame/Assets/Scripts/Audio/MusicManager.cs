@@ -62,6 +62,14 @@ public class MusicManager : MonoBehaviour
 
         m_entityRequests.OnAdd += OnEntitySound;
     }
+
+    private void Update()
+    {
+        if (GameManager.Instance.MusicPaused && _lastCreatedMusicObject != null)
+        {
+            _lastCreatedMusicObject.ExtraDelay += Time.unscaledDeltaTime * 1000;
+        }
+    }
     #endregion
 
     #region Methods
@@ -84,5 +92,21 @@ public class MusicManager : MonoBehaviour
 
         m_entityRequests.Remove(_request);
     } 
+
+    public void PauseMusic()
+    {
+        if (_lastCreatedMusicObject != null)
+        {
+            _lastCreatedMusicObject.PauseSound();
+        }
+    }
+
+    public void ResumeMusic()
+    {
+        if (_lastCreatedMusicObject != null)
+        {
+            _lastCreatedMusicObject.ResumeSound();
+        }
+    }
     #endregion
 }

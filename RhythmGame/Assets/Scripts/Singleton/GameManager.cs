@@ -14,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     private List<float> _spawnerThree = new List<float>();
     private List<float> _spawnerFour = new List<float>();
     private bool _isPaused = false;
+    private bool _musicPaused = false;
     private Conductor _conductor;
     private float _travelTime = 3f;
     #endregion
@@ -31,6 +32,7 @@ public class GameManager : Singleton<GameManager>
     public LevelInfo ActiveLevel { get => _activeLevel; set => _activeLevel = value; }
     public ELevelDifficulty CurrentLevelDifficulty { get => _currentLevelDifficulty; set => _currentLevelDifficulty = value; }
     public float TravelTime { get => _travelTime; set => _travelTime = value; }
+    public bool MusicPaused { get => _musicPaused; set => _musicPaused = value; }
 
     #endregion
 
@@ -65,6 +67,18 @@ public class GameManager : Singleton<GameManager>
         _experiencePoints.Value += PointManager.Instance.ScoreCounter.Value;
         _conductor.StopConductor();
         UIManager.Instance.OpenEndscreen(wonGame, _activeLevel);
+    }
+
+    public void PauseMusic()
+    {
+        _musicPaused = true;
+        _conductor.StopConductor();
+    }
+
+    public void ResumeMusic()
+    {
+        _musicPaused = false;
+        _conductor.StartConductor();
     }
 
     private void SaveExp(float value)

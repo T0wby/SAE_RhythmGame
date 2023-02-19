@@ -62,6 +62,15 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenPauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""cbbf2b70-2265-49cc-9649-c8fadb2efe92"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -108,6 +117,17 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                     ""action"": ""LineFour"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46326859-056d-473a-9062-e886f045e0f3"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenPauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +140,7 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         m_PC_LineTwo = m_PC.FindAction("LineTwo", throwIfNotFound: true);
         m_PC_LineThree = m_PC.FindAction("LineThree", throwIfNotFound: true);
         m_PC_LineFour = m_PC.FindAction("LineFour", throwIfNotFound: true);
+        m_PC_OpenPauseMenu = m_PC.FindAction("OpenPauseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,6 +204,7 @@ public partial class @Controller : IInputActionCollection2, IDisposable
     private readonly InputAction m_PC_LineTwo;
     private readonly InputAction m_PC_LineThree;
     private readonly InputAction m_PC_LineFour;
+    private readonly InputAction m_PC_OpenPauseMenu;
     public struct PCActions
     {
         private @Controller m_Wrapper;
@@ -191,6 +213,7 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         public InputAction @LineTwo => m_Wrapper.m_PC_LineTwo;
         public InputAction @LineThree => m_Wrapper.m_PC_LineThree;
         public InputAction @LineFour => m_Wrapper.m_PC_LineFour;
+        public InputAction @OpenPauseMenu => m_Wrapper.m_PC_OpenPauseMenu;
         public InputActionMap Get() { return m_Wrapper.m_PC; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -212,6 +235,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                 @LineFour.started -= m_Wrapper.m_PCActionsCallbackInterface.OnLineFour;
                 @LineFour.performed -= m_Wrapper.m_PCActionsCallbackInterface.OnLineFour;
                 @LineFour.canceled -= m_Wrapper.m_PCActionsCallbackInterface.OnLineFour;
+                @OpenPauseMenu.started -= m_Wrapper.m_PCActionsCallbackInterface.OnOpenPauseMenu;
+                @OpenPauseMenu.performed -= m_Wrapper.m_PCActionsCallbackInterface.OnOpenPauseMenu;
+                @OpenPauseMenu.canceled -= m_Wrapper.m_PCActionsCallbackInterface.OnOpenPauseMenu;
             }
             m_Wrapper.m_PCActionsCallbackInterface = instance;
             if (instance != null)
@@ -228,6 +254,9 @@ public partial class @Controller : IInputActionCollection2, IDisposable
                 @LineFour.started += instance.OnLineFour;
                 @LineFour.performed += instance.OnLineFour;
                 @LineFour.canceled += instance.OnLineFour;
+                @OpenPauseMenu.started += instance.OnOpenPauseMenu;
+                @OpenPauseMenu.performed += instance.OnOpenPauseMenu;
+                @OpenPauseMenu.canceled += instance.OnOpenPauseMenu;
             }
         }
     }
@@ -238,5 +267,6 @@ public partial class @Controller : IInputActionCollection2, IDisposable
         void OnLineTwo(InputAction.CallbackContext context);
         void OnLineThree(InputAction.CallbackContext context);
         void OnLineFour(InputAction.CallbackContext context);
+        void OnOpenPauseMenu(InputAction.CallbackContext context);
     }
 }

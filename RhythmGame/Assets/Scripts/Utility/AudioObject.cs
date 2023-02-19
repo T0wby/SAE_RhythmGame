@@ -10,8 +10,11 @@ namespace AudioManaging
     {
         public AudioSource Source => m_source;
 
+        public float ExtraDelay { get => _extraDelay; set => _extraDelay = value; }
+
         private ObjectPool<AudioObject> m_pool;
         private AudioSource m_source;
+        private float _extraDelay = 0;
 
         public async void SetCountdown(int _delay)
         {
@@ -23,9 +26,34 @@ namespace AudioManaging
             }
         }
 
+        //public async void SetCountdown(int _delay, Action<bool> action)
+        //{
+        //    await Task.Delay(_delay);
+        //    if (this == null || this.gameObject == null || !this.gameObject.activeSelf)
+        //        return;
+
+        //    if (action != null)
+        //        action.Invoke(true);
+
+        //    if (m_pool != null)
+        //    {
+        //        m_pool.ReturnItem(this);
+        //    }
+        //}
+
         public async void SetCountdown(int _delay, Action<bool> action)
         {
             await Task.Delay(_delay);
+            if (this == null || this.gameObject == null || !this.gameObject.activeSelf)
+                return;
+
+            while (_extraDelay > 0)
+            {
+                float savedDelay = _extraDelay;
+                await Task.Delay((int)_extraDelay);
+                _extraDelay -= savedDelay; 
+            }
+
             if (this == null || this.gameObject == null || !this.gameObject.activeSelf)
                 return;
 
@@ -34,6 +62,7 @@ namespace AudioManaging
 
             if (m_pool != null)
             {
+                _extraDelay = 0;
                 m_pool.ReturnItem(this);
             }
         }
@@ -62,6 +91,22 @@ namespace AudioManaging
             if (m_source != null)
             {
                 m_source.Stop();
+            }
+        }
+
+        public void PauseSound()
+        {
+            if (m_source != null)
+            {
+                m_source.Pause();
+            }
+        }
+
+        public void ResumeSound()
+        {
+            if (m_source != null)
+            {
+                m_source.UnPause();
             }
         }
     } 

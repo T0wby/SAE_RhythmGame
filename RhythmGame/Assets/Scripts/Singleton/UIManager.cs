@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private GameObject _endscreen;
     [SerializeField] private GameObject _inGameUI;
+    [SerializeField] private GameObject _pauseMenu;
 
     [Header("EndScreenInfo")]
     [SerializeField] private TMP_Text _songName;
@@ -90,6 +91,20 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    public void OpenPauseMenu()
+    {
+        _pauseMenu.SetActive(true);
+        GameManager.Instance.PauseGame();
+        GameManager.Instance.PauseMusic();
+        _musicManager.PauseMusic();
+    }
+
+    public void ClosePauseMenu()
+    {
+        _pauseMenu.SetActive(false);
+        StartCoroutine(RestartGame());
+    }
+
     private void CreateLevelScores()
     {
         List<ScoreInfo> scores = GameManager.Instance.ActiveLevel.ScoreCollection;
@@ -112,6 +127,7 @@ public class UIManager : Singleton<UIManager>
         DeleteScorePrefabs();
         PointManager.Instance.ResetLevelPoints();
         GameManager.Instance.UnPauseGame();
+        GameManager.Instance.MusicPaused = false;
         SceneManager.LoadScene("LevelSelection");
     }
 
@@ -173,6 +189,23 @@ public class UIManager : Singleton<UIManager>
         PointManager.Instance.ScoreCounter.ChangeValue += UpdateScore;
         PointManager.Instance.ProgressCounter.ChangeValue += UpdateProgressBar;
         _countdown.SetActive(false);
+    }
+
+    private IEnumerator RestartGame() 
+    {
+        _countdownText.text = _conductor.MusicOffset.ToString();
+        _countdown.SetActive(true);
+
+        for (int i = 0; i < _conductor.MusicOffset; i++)
+        {
+            _countdownText.text = (_conductor.MusicOffset - i).ToString();
+
+            yield return new WaitForSecondsRealtime(1);
+        }
+        _countdown.SetActive(false);
+        GameManager.Instance.UnPauseGame();
+        GameManager.Instance.ResumeMusic();
+        _musicManager.ResumeMusic();
     }
 
     #endregion

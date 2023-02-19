@@ -49,9 +49,9 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
     {
         float time = 0;
         float currProg;
-        
 
-        while (time <=_travelTime )
+
+        while (time <= _travelTime)
         {
             if (transform != null)
             {

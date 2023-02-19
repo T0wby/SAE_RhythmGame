@@ -105,7 +105,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            UIManager.Instance.OpenPauseMenu();
+        }
+    }
 
     #endregion
 

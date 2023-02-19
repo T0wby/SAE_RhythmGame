@@ -13,10 +13,16 @@ public class Conductor : MonoBehaviour
     [SerializeField] private float _dspSongTime = 0;
     [SerializeField] private float _beatPerSec = 0;
     [SerializeField] private float _currentBeatPos = 0;
+    private double _lastDsp = 0;
+    private float _pausedDsp = 0f;
+    private float _previousDsp = 0f;
+    private float _totalPausedDsp = 0f;
     private bool _isSongStarted = false;
+    private bool _countdownEnded = false;
     private AudioVisualization _audioVisualization;
     private RateSpawner[] _rateSpawners= null;
-    private GameObject _musicManager;
+    private GameObject _musicManagerObj;
+    private MusicManager _musicManager;
     #endregion
 
     #region Properties
@@ -31,14 +37,9 @@ public class Conductor : MonoBehaviour
     private void Awake()
     {
         GameManager.Instance.Conductor = this;
-        //GameObject[] sfxManager = GameObject.FindGameObjectsWithTag("SFXManager");
-        _musicManager = FindObjectOfType<MusicManager>().gameObject;
+        _musicManager = FindObjectOfType<MusicManager>();
+        _musicManagerObj = _musicManager.gameObject;
         _audioVisualization = FindObjectOfType<AudioVisualization>();
-        //if (sfxManager[0])
-        //{
-        //    if (sfxManager[0].GetComponent<SFXManager>())
-        //        sfxManager[0].GetComponent<SFXManager>().InitPool();
-        //}
         _rateSpawners = FindObjectsOfType<RateSpawner>();
     }
 
@@ -52,10 +53,20 @@ public class Conductor : MonoBehaviour
 
     private void Update()
     {
-        if (!_isSongStarted)
-            return;
+        if (!_countdownEnded) return;
 
-        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _musicOffset);
+        if (!_isSongStarted)
+        {
+            //Debug.Log($"_pausedDsp: {_pausedDsp}");
+            //Debug.Log($"_totalPausedDsp: {_totalPausedDsp}");
+            //_pausedDsp += (float)(AudioSettings.dspTime - _lastDsp) * 0.001f;
+            //_totalPausedDsp += _pausedDsp - _previousDsp;
+            //_previousDsp = _pausedDsp; 
+            return;
+        }
+
+        _lastDsp = AudioSettings.dspTime;
+        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _musicOffset - (_musicManager.LastCreatedMusicObject.ExtraDelay * 0.001f));
         _currentBeatPos = _currentSongPos / _beatPerSec;
     }
 
@@ -64,10 +75,11 @@ public class Conductor : MonoBehaviour
     #region Methods
     private void StartLevelMusic()
     {
+        _countdownEnded = true;
         _isSongStarted = true;
         EMusicTypes types = (EMusicTypes)System.Enum.Parse(typeof(EMusicTypes), GameManager.Instance.ActiveLevel.name, true);
 
-        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, _musicManager.transform));
+        _musicRequestCollection.Add(EntityMusicRequest.Request(ESources.LEVEL, types, _musicManagerObj.transform));
         for (int i = 0; i < _rateSpawners.Length; i++)
         {
             StartCoroutine(_rateSpawners[i].StartSpawning()); 
@@ -77,6 +89,11 @@ public class Conductor : MonoBehaviour
     public void StopConductor()
     {
         _isSongStarted = false;
+    }
+
+    public void StartConductor()
+    {
+        _isSongStarted = true;
     }
 
     #endregion

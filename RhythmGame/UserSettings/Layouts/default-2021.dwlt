@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 106
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 87
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,8 +119,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -146,8 +146,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 561
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 124
+  controlID: 105
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 125
+  controlID: 93
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,8 +320,8 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 561
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -397,22 +397,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\tobia\Documents\Tobi\SAE\UnityProjekts\RhythmGame\RhythmGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 87}
-    m_SelectedIDs: c86b0000
-    m_LastClickedID: 27592
-    m_ExpandedIDs: 00000000c86b0000ca6b0000cc6b0000ce6b0000d06b0000d26b0000d46b0000d66b0000d86b0000da6b0000dc6b0000de6b000000ca9a3b
+    m_SelectedIDs: 6e710000
+    m_LastClickedID: 29038
+    m_ExpandedIDs: 000000003c7100003e71000040710000427100004471000046710000487100004a7100004c7100004e710000507100005271000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,7 +440,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c86b0000ca6b0000cc6b0000ce6b0000d06b0000d26b0000d46b0000d66b0000d86b0000da6b0000dc6b0000de6b0000
+    m_ExpandedIDs: 000000003c7100003e71000040710000427100004471000046710000487100004a7100004c7100004e7100005071000052710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -572,7 +572,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6856ffff2060ffffd870ffffcc7cffff30f8ffff30fbffffaa740000d67400000475000020750000127600003a770000bc770000208500004c8500007a8500009685000088860000b087000032880000
+      m_ExpandedIDs: 282efeff3c34feff1235feffc235feffc835feffdc35feffea35fefffc35feff7e3afeff3e3efeff1642feffe842feffb845feffc045feffde45feff0446feff1646feff6270feff3872feff6c7dfeff4082feff78bffeff4ac0feff1ac3feff22c3feff42c3feff68c3feff7ac3feff44e0feffa2f5feff74f6feff44f9feff4cf9feff6cf9feff7af9feff96f9feff1e05fffff005ffffc008ffffc808ffffe808fffff608ffff1209fffff60effff6a18ffff3c19ffffec19fffff219ffff061affff141affff261affff3626ffffac29ffff7e2affff4e2dffff562dffff762dffff9c2dffffae2dffffcc3affffca3effff8a89fffff6aaffffd0c3ffffbaf8ffff30fbfffff4ffffffb6710000e07100009e7d000042990000b6c00000f2c10000b4d40000f0d50000f2e8000012e900001ce9000052e900005ae900004cea000072ea000074eb0000f8eb000064ec00000241010022410100504101005c420100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -822,9 +822,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 988.839, y: 594.08765, z: -3.0821407}
+    m_Target: {x: 827.5665, y: 647.3034, z: -3.316187}
     speed: 2
-    m_Value: {x: 988.839, y: 594.08765, z: -3.0821407}
+    m_Value: {x: 827.5665, y: 647.3034, z: -3.316187}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -875,9 +875,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 569.007
+    m_Target: 591.0074
     speed: 2
-    m_Value: 569.007
+    m_Value: 591.0074
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 634
-    width: 719
+    width: 776
     height: 365
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
