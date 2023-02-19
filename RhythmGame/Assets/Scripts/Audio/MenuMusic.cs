@@ -10,15 +10,4 @@ public class MenuMusic : MonoBehaviour
     [SerializeField] private AudioSource _menuSource;
     //private MusicManager _musicManager;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            _menuSource.Pause();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            _menuSource.UnPause();
-        }
-    }
 }

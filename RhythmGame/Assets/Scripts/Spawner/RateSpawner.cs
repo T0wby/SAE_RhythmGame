@@ -14,6 +14,8 @@ public class RateSpawner : MonoBehaviour
     [Header("SpawnSettings")]
     [SerializeField] private Conductor _conductor;
     private float _rateSpawnTimes;
+    private float _time;
+    private bool _allowedToSpawn = false;
 
 
     [Header("ObjectPool")]
@@ -29,15 +31,44 @@ public class RateSpawner : MonoBehaviour
         _pool = new ObjectPool<RateObject>(_rateObjectPrefab, _poolSize, transform);
     }
 
-
-    public IEnumerator StartSpawning()
+    private void Start()
     {
         _rateSpawnTimes = _conductor.BeatPerSec * 4;
-        while (!GameManager.Instance.IsPaused)
+        _travelTime = GameManager.Instance.TravelTime;
+        _time = _rateSpawnTimes;
+    }
+
+    private void Update()
+    {
+        if (!GameManager.Instance.IsPaused && _allowedToSpawn)
         {
-            _newButton = _pool.GetItem().gameObject;
-            _newButton.GetComponent<RateObject>().StartButton(_target, _travelTime);
-            yield return new WaitForSecondsRealtime(_rateSpawnTimes);
+            if (_time <= _rateSpawnTimes)
+            {
+                _time += Time.deltaTime;
+            }
+            else
+            {
+                _time = 0;
+                _newButton = _pool.GetItem().gameObject;
+                _newButton.GetComponent<RateObject>().StartButton(_target, _travelTime);
+            }
         }
+    }
+
+    //public IEnumerator StartSpawning()
+    //{
+    //    while (true)
+    //    {
+    //        if (!GameManager.Instance.IsPaused)
+    //        {
+    //            _newButton = _pool.GetItem().gameObject;
+    //            _newButton.GetComponent<RateObject>().StartButton(_target, _travelTime);
+    //            yield return new WaitForSecondsRealtime(_rateSpawnTimes);
+    //        }
+    //    }
+    //}
+    public void StartSpawning()
+    {
+        _allowedToSpawn = true;
     }
 }
