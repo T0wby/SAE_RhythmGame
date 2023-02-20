@@ -26,20 +26,6 @@ namespace AudioManaging
             }
         }
 
-        //public async void SetCountdown(int _delay, Action<bool> action)
-        //{
-        //    await Task.Delay(_delay);
-        //    if (this == null || this.gameObject == null || !this.gameObject.activeSelf)
-        //        return;
-
-        //    if (action != null)
-        //        action.Invoke(true);
-
-        //    if (m_pool != null)
-        //    {
-        //        m_pool.ReturnItem(this);
-        //    }
-        //}
 
         public async void SetCountdown(int _delay, Action<bool> action)
         {

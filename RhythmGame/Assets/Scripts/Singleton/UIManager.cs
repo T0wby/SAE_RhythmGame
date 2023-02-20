@@ -128,6 +128,11 @@ public class UIManager : Singleton<UIManager>
         PointManager.Instance.ResetLevelPoints();
         GameManager.Instance.UnPauseGame();
         GameManager.Instance.MusicPaused = false;
+        if (_musicManager != null && _musicManager.LastCreatedMusicObject != null)
+        {
+            _musicManager.LastCreatedMusicObject.StopSound();
+            _musicManager.LastCreatedMusicObject.Deactivate();
+        }
         SceneManager.LoadScene("LevelSelection");
     }
 

@@ -13,6 +13,7 @@ public class Conductor : MonoBehaviour
     [SerializeField] private float _dspSongTime = 0;
     [SerializeField] private float _beatPerSec = 0;
     [SerializeField] private float _currentBeatPos = 0;
+    private float _pauseTime = 0;
     private bool _countdownEnded = false;
     private AudioVisualization _audioVisualization;
     private RateSpawner[] _rateSpawners= null;
@@ -48,9 +49,14 @@ public class Conductor : MonoBehaviour
 
     private void Update()
     {
-        if (!_countdownEnded) return;
+        if (!_countdownEnded)
+        {
+            _pauseTime += Time.unscaledDeltaTime;
+            return;
+        }
 
-        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _musicOffset - (_musicManager.LastCreatedMusicObject.ExtraDelay * 0.001f));
+        // Issues with game not being in focus
+        _currentSongPos = (float) (AudioSettings.dspTime - _dspSongTime - _pauseTime);
         _currentBeatPos = _currentSongPos / _beatPerSec;
     }
 
