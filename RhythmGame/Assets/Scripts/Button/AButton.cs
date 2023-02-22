@@ -53,7 +53,7 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
 
         while (time <= _travelTime)
         {
-            if (transform != null)
+            if (transform != null && _targetOne != null)
             {
                 currProg = time / _travelTime;
                 transform.position = Vector3.Lerp(transform.parent.position, _targetOne.transform.position, currProg);
@@ -62,7 +62,7 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
             time += Time.deltaTime;
         }
 
-        if (transform != null)
+        if (transform != null && _targetOne != null)
         {
             transform.position = _targetOne.transform.position;
             StartCoroutine(StartMovementTwo());
@@ -75,9 +75,12 @@ public abstract class AButton : MonoBehaviour, IPoolable<AButton>
         float currProg;
         while (time <= _travelTimeExtra)
         {
-            currProg = time / _travelTimeExtra;
-            transform.position = Vector3.Lerp(TargetOne.transform.position, _targetTwo.transform.position, currProg);
-            yield return new WaitForEndOfFrame();
+            if (transform != null && _targetTwo != null)
+            {
+                currProg = time / _travelTimeExtra;
+                transform.position = Vector3.Lerp(TargetOne.transform.position, _targetTwo.transform.position, currProg);
+                yield return new WaitForEndOfFrame();
+            }
             time += Time.deltaTime;
         }
 
