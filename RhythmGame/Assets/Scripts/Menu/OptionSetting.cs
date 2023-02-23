@@ -25,7 +25,7 @@ public class OptionSetting : MonoBehaviour
     public void Start()
     {
         List<string> options = new List<string>();
-
+        int currentResolutionIndex = 0;
         resolutions = Screen.resolutions;
         resoulutionDropdown.ClearOptions();
 
@@ -33,9 +33,16 @@ public class OptionSetting : MonoBehaviour
         {
             string option = resolutions[i].width + " X " + resolutions[i].height;
             options.Add(option);
+
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
         }
         resoulutionDropdown.AddOptions(options);
-
+        resoulutionDropdown.value = currentResolutionIndex;
+        resoulutionDropdown.RefreshShownValue();
         SetSettings();
     }
 
@@ -65,6 +72,11 @@ public class OptionSetting : MonoBehaviour
     public void SaveSettings()
     {
         SaveGameManager.Instance.SaveGameSettings();
+    }
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void SetMasterVolume(float Volume) 

@@ -15,7 +15,7 @@ MonoBehaviour:
   _songName: ITBProduktion
   _artistName: Thomas Pfeiffer
   _isUnlocked: 0
-  _price: 1000
+  _price: 2500
   _bpm: 134
   _levelDifficulty: 0
   _scoreCollection: []
