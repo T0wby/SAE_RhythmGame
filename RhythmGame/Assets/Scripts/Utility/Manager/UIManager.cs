@@ -21,6 +21,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TMP_Text _missScore;
     [SerializeField] private TMP_Text _mcScore;
     [SerializeField] private TMP_Text _enteredUserName;
+    [SerializeField] private TMP_Text _savedPrompt;
 
     [Header("Countdown")]
     [SerializeField] private GameObject _countdown;
@@ -136,6 +137,11 @@ public class UIManager : Singleton<UIManager>
         SceneManager.LoadScene("LevelSelection");
     }
 
+    public void ShowSavedPrompt()
+    {
+        StartCoroutine(ShowPrompt());
+    }
+
     private void DeleteScorePrefabs()
     {
          
@@ -212,6 +218,26 @@ public class UIManager : Singleton<UIManager>
         GameManager.Instance.ResumeMusic();
         _musicManager.ResumeMusic();
     }
+    private IEnumerator ShowPrompt()
+    {
+        Color color = _savedPrompt.color;
+        color.a = 1f;
+        float alpha = 0f;
+        float counter = 3f;
+        float currProg = 0f;
+        float time = 0;
 
+        while (time < counter)
+        {
+            currProg = time / counter;
+            alpha = Mathf.Lerp(1, 0, currProg);
+            time += Time.unscaledDeltaTime;
+            _savedPrompt.color = new Color(color.r, color.g, color.b, alpha);
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(3);
+        _savedPrompt.color = new Color(color.r, color.g, color.b, 0); ;
+    }
     #endregion
 }
