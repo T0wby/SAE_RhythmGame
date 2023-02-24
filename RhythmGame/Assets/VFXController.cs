@@ -34,7 +34,7 @@ public class VFXController : MonoBehaviour
 
     private IEnumerator SpawnElecticity(VisualEffect visualEffect)
     {
-        visualEffect.SetFloat("SpawnRate", 45f);
+        visualEffect.SetFloat("SpawnRate", 100f);
         yield return new WaitForSecondsRealtime(_vfxTime);
         visualEffect.SetFloat("SpawnRate", 0f);
     }
