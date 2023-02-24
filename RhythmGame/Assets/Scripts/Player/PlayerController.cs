@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private HitArea[] _hitAreas;
     private GameObject _sfxManager;
+    private VFXController _vFXController;
     #endregion
 
     #region Properties
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _sfxManager = FindObjectOfType<SFXManager>().gameObject;
+        _vFXController = FindObjectOfType<VFXController>();
         Inputs ??= new Controller();
         _hitAreas = new HitArea[] 
         { 
@@ -123,6 +125,7 @@ public class PlayerController : MonoBehaviour
         if (perfect.Buttons.Count > 0)
         {
             _requestCollection.Add(EntityAudioRequest.Request(ESources.KEY, ESoundTypes.KEYPERFECT, _sfxManager.transform));
+            _vFXController.StartEffect(perfect.Number);
             perfect.ResetArea();
             goodOne.ResetArea();
             goodTwo.ResetArea();

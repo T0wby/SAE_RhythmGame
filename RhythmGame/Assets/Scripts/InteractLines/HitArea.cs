@@ -9,6 +9,7 @@ public class HitArea : MonoBehaviour
     [SerializeField] private Spawner _spawner;
     private List<AButton> _buttons;
     private AButton _tmp;
+    public int Number;
 
     #endregion
 
@@ -69,8 +70,4 @@ public class HitArea : MonoBehaviour
     }
 
     #endregion
-
-
-
-
 }
