@@ -10,6 +10,7 @@ public class VFXController : MonoBehaviour
     [SerializeField] private VisualEffect _electricityTwo;
     [SerializeField] private VisualEffect _electricityThree;
     [SerializeField] private VisualEffect _electricityFour;
+    [SerializeField] private VisualEffect _electricityMomentum;
 
     public void StartEffect(int lineNumber)
     {
@@ -29,6 +30,22 @@ public class VFXController : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    public void ContoleMomentum(bool isOn)
+    {
+        if (isOn)
+        {
+            if (_electricityMomentum.GetFloat("SpawnRate") == 200f)
+                return;
+            _electricityMomentum.SetFloat("SpawnRate", 200f);
+        }
+        else
+        {
+            if (_electricityMomentum.GetFloat("SpawnRate") == 0f)
+                return;
+            _electricityMomentum.SetFloat("SpawnRate", 0f);
         }
     }
 

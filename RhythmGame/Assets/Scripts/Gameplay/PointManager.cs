@@ -24,6 +24,7 @@ public class PointManager : Singleton<PointManager>
     private float _goodNodePoints = 2.5f;
     private float _perfectNodePoints = 3.5f;
     private int _highestCombo = 0;
+    private VFXController _vFXController;
 
     [Header("Spawner")]
     [SerializeField] private Spawner _spawnerone;
@@ -77,12 +78,12 @@ public class PointManager : Singleton<PointManager>
     }
     #endregion
 
-
     #region Unity
     protected override void Awake()
     {
         _isInAllScenes = false;
         base.Awake();
+        _vFXController = FindObjectOfType<VFXController>();
     }
 
     private void Start()
@@ -104,6 +105,11 @@ public class PointManager : Singleton<PointManager>
             _momentumCounter.Value = 0;
         else if (newValue > 1)
             _momentumCounter.Value = 1;
+
+        if (newValue >= 1)
+            _vFXController.ContoleMomentum(true);
+        else
+            _vFXController.ContoleMomentum(false);
     }
 
     private void CheckLossCondition(int newValue)
