@@ -6,6 +6,11 @@ TagManager:
   tags:
   - SFXManager
   - MusicManager
+  - ElectOne
+  - ElectTwo
+  - ElectThree
+  - ElectFour
+  - ElectMom
   layers:
   - Default
   - TransparentFX
