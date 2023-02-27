@@ -15,7 +15,7 @@ MonoBehaviour:
   _songName: Devil
   _artistName: Gianluca
   _isUnlocked: 0
-  _price: 30000
+  _price: 300000
   _bpm: 145
   _levelDifficulty: 0
   _scoreCollection: []
